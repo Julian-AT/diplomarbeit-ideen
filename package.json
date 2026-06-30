@@ -23,7 +23,8 @@
     "env:check:example": "tsx scripts/validate-env.ts --example",
     "corpus:extract": "python scripts/extract-corpus-text.py",
     "corpus:ingest:dry-run": "tsx scripts/ingest-corpus.ts --dry-run --mock-embeddings",
-    "corpus:ingest": "tsx scripts/ingest-corpus.ts --upsert"
+    "corpus:ingest": "tsx scripts/ingest-corpus.ts --upsert",
+    "quality:proposal": "tsx scripts/evaluate-idea-quality.ts"
   },
   "dependencies": {
     "@ai-sdk/provider": "^3.0.3",

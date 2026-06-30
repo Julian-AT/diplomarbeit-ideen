@@ -3,6 +3,11 @@ import { z } from "zod";
 import type { ArtifactKind } from "@/components/chat/artifact";
 import type { createDocument } from "./ai/tools/create-document";
 import type { getWeather } from "./ai/tools/get-weather";
+import type {
+  findThesisExtensions,
+  getThesisById,
+  searchPriorWork,
+} from "./ai/tools/prior-work";
 import type { requestSuggestions } from "./ai/tools/request-suggestions";
 import type { updateDocument } from "./ai/tools/update-document";
 import type { Suggestion } from "./db/schema";
@@ -19,12 +24,18 @@ type updateDocumentTool = InferUITool<ReturnType<typeof updateDocument>>;
 type requestSuggestionsTool = InferUITool<
   ReturnType<typeof requestSuggestions>
 >;
+type searchPriorWorkTool = InferUITool<typeof searchPriorWork>;
+type getThesisByIdTool = InferUITool<typeof getThesisById>;
+type findThesisExtensionsTool = InferUITool<typeof findThesisExtensions>;
 
 export type ChatTools = {
   getWeather: weatherTool;
   createDocument: createDocumentTool;
   updateDocument: updateDocumentTool;
   requestSuggestions: requestSuggestionsTool;
+  searchPriorWork: searchPriorWorkTool;
+  getThesisById: getThesisByIdTool;
+  findThesisExtensions: findThesisExtensionsTool;
 };
 
 export type CustomUIDataTypes = {

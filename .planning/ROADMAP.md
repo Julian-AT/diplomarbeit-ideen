@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Corpus Discovery and Design Approval** - Inspect the archive and confirm the ingestion/retrieval design before indexing. (completed 2026-06-30)
 - [x] **Phase 2: Template and Cloud Foundation** - Set up the Vercel Chatbot baseline, cloud configuration, and test harness. (completed 2026-06-30)
 - [x] **Phase 3: Ingestion and Hybrid Retrieval Engine** - Build idempotent corpus indexing and Qdrant hybrid retrieval. (completed 2026-06-30)
-- [ ] **Phase 4: Grounded Ideation Flows and Proposal Artifact** - Deliver both chat modes, citations, quality checks, and the custom artifact.
+- [x] **Phase 4: Grounded Ideation Flows and Proposal Artifact** - Deliver both chat modes, citations, quality checks, and the custom artifact. (completed 2026-06-30)
 
 ## Phase Details
 
@@ -102,13 +102,13 @@ Plans:
   5. Student can create, edit, and version a `thesis-proposal` artifact with preserved citations.
   6. E2E tests cover both chat flows and artifact editing/versioning, and the idea-quality check can be applied.
 
-**Plans**: 3 plans
+**Plans**: 3/3 plans executed
 
 Plans:
 
-- [ ] 04-01: Implement AI SDK tools and grounding prompt for both chat modes.
-- [ ] 04-02: Implement `thesis-proposal` artifact and structured citation persistence.
-- [ ] 04-03: Add E2E tests and idea-quality checks.
+- [x] 04-01: Implement AI SDK tools and grounding prompt for both chat modes.
+- [x] 04-02: Implement `thesis-proposal` artifact and structured citation persistence.
+- [x] 04-03: Add E2E tests and idea-quality checks.
 
 ## Progress
 
@@ -120,4 +120,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Corpus Discovery and Design Approval | 3/3 | Complete    | 2026-06-30 |
 | 2. Template and Cloud Foundation | 3/3 | Complete    | 2026-06-30 |
 | 3. Ingestion and Hybrid Retrieval Engine | 3/3 | Complete    | 2026-06-30 |
-| 4. Grounded Ideation Flows and Proposal Artifact | 0/3 | Not started | - |
+| 4. Grounded Ideation Flows and Proposal Artifact | 3/3 | Complete    | 2026-06-30 |
