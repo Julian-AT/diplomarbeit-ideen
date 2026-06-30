@@ -78,33 +78,33 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CORP-01 | Unmapped | Pending |
-| CORP-02 | Unmapped | Pending |
-| CORP-03 | Unmapped | Pending |
-| CORP-04 | Unmapped | Pending |
-| CORP-05 | Unmapped | Pending |
-| FND-01 | Unmapped | Pending |
-| FND-02 | Unmapped | Pending |
-| FND-03 | Unmapped | Pending |
-| RETR-01 | Unmapped | Pending |
-| RETR-02 | Unmapped | Pending |
-| RETR-03 | Unmapped | Pending |
-| RETR-04 | Unmapped | Pending |
-| CHAT-01 | Unmapped | Pending |
-| CHAT-02 | Unmapped | Pending |
-| CHAT-03 | Unmapped | Pending |
-| CHAT-04 | Unmapped | Pending |
-| ART-01 | Unmapped | Pending |
-| ART-02 | Unmapped | Pending |
-| QUAL-01 | Unmapped | Pending |
-| QUAL-02 | Unmapped | Pending |
-| QUAL-03 | Unmapped | Pending |
+| CORP-01 | Phase 1 | Pending |
+| CORP-02 | Phase 1 | Pending |
+| CORP-03 | Phase 1 | Pending |
+| CORP-04 | Phase 1 | Pending |
+| CORP-05 | Phase 1 | Pending |
+| FND-01 | Phase 2 | Pending |
+| FND-02 | Phase 2 | Pending |
+| FND-03 | Phase 2 | Pending |
+| RETR-01 | Phase 3 | Pending |
+| RETR-02 | Phase 3 | Pending |
+| RETR-03 | Phase 3 | Pending |
+| RETR-04 | Phase 3 | Pending |
+| CHAT-01 | Phase 4 | Pending |
+| CHAT-02 | Phase 4 | Pending |
+| CHAT-03 | Phase 4 | Pending |
+| CHAT-04 | Phase 4 | Pending |
+| ART-01 | Phase 4 | Pending |
+| ART-02 | Phase 4 | Pending |
+| QUAL-01 | Phase 3 | Pending |
+| QUAL-02 | Phase 4 | Pending |
+| QUAL-03 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 21 total
-- Mapped to phases: 0
-- Unmapped: 21
+- Mapped to phases: 21
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-06-30*
-*Last updated: 2026-06-30 after initial definition*
+*Last updated: 2026-06-30 after roadmap creation*
