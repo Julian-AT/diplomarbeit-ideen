@@ -1,0 +1,18 @@
+{
+  "name": "Diplomarbeit Ideen",
+  "short_name": "DA Ideen",
+  "description": "KI-gestuetzte Themenfindung fuer HTL-Diplomarbeiten mit Archivbelegen.",
+  "lang": "de-AT",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/images/htl-donaustadt-logo.png",
+      "sizes": "801x801",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

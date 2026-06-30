@@ -13,8 +13,8 @@ import { createResumableStreamContext } from "resumable-stream";
 import { auth, type UserType } from "@/app/(auth)/auth";
 import { entitlementsByUserType } from "@/lib/ai/entitlements";
 import {
-  getCapabilities,
   getDefaultChatModel,
+  getModelCapabilities,
   isAllowedChatModelId,
   isGatewayModelId,
 } from "@/lib/ai/models";
@@ -64,8 +64,6 @@ function getStreamContext() {
     return null;
   }
 }
-
-export { getStreamContext };
 
 export async function POST(request: Request) {
   let requestBody: PostRequestBody;
@@ -190,8 +188,7 @@ export async function POST(request: Request) {
       });
     }
 
-    const modelCapabilities = getCapabilities();
-    const capabilities = modelCapabilities[chatModel];
+    const capabilities = getModelCapabilities(chatModel);
     const isReasoningModel = capabilities?.reasoning === true;
     const supportsTools = capabilities?.tools === true;
 

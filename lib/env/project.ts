@@ -48,7 +48,7 @@ type ProjectEnvKey = (typeof projectEnvKeys)[number];
 
 export type GeminiEmbeddingModel = (typeof geminiEmbeddingModels)[number];
 export type GeminiChatModel = (typeof geminiChatModels)[number];
-export type GatewayChatModel = (typeof gatewayChatModels)[number];
+export type GatewayChatModel = string;
 export type ProjectEnvIssue = {
   key: ProjectEnvKey | "ENV_FILE";
   message: string;
@@ -56,6 +56,7 @@ export type ProjectEnvIssue = {
 };
 
 const qdrantCollectionPattern = /^[a-zA-Z0-9_-]+$/;
+const gatewayChatModelPattern = /^[a-z0-9][a-z0-9._-]*\/[a-z0-9][a-z0-9._-]*$/i;
 const placeholderPattern = /^(\*+|change-?me|todo|your[-_].*|example[-_].*)$/i;
 const requiredProjectEnvSet = new Set<string>(requiredProjectEnvKeys);
 
@@ -98,7 +99,11 @@ export const projectEnvSchema = z.object({
     .default(projectEnvDefaults.GEMINI_EMBEDDING_MODEL),
   AI_GATEWAY_API_KEY: z.string().optional(),
   GATEWAY_CHAT_MODEL: z
-    .enum(gatewayChatModels)
+    .string()
+    .regex(gatewayChatModelPattern, {
+      message:
+        "Use provider/model format, for example anthropic/claude-sonnet-5.",
+    })
     .default(projectEnvDefaults.GATEWAY_CHAT_MODEL),
 });
 

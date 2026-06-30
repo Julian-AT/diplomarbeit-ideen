@@ -1,52 +1,73 @@
-# Thesis Idea Engine
+# Diplomarbeit Ideen
 
-Cloud-hosted chatbot for software-engineering students who need realistic, cited diploma-thesis ideas grounded in a prior thesis archive.
+AI/ML thesis idea engine for HTL Donaustadt. The app helps students find realistic Diplomarbeit topics by retrieving prior projects from the archive, grounding every idea in cited evidence, and routing generation through Gemini or Vercel AI Gateway depending on available quota.
 
-This repository is based on the Vercel Chatbot template imported from `vercel/ai-chatbot` at commit `2becdb4a56e7683ae08aef927cec1c6c52dfad5e`. The project keeps the template's Next.js App Router app, AI SDK chat flow, Auth.js integration, persistence, artifacts system, and Playwright setup, then adds the corpus-grounded prior-work engine on top.
+## Core Pipeline
 
-## Foundation
-
-The current foundation includes:
-
-- Next.js 16 App Router and AI SDK 6 from the official chatbot template.
-- Direct Gemini chat/title generation through `@ai-sdk/google` and `gemini-3.5-flash`, with optional Vercel AI Gateway support. When Gateway credentials are present, `anthropic/claude-sonnet-5` becomes the active chat default.
-- Neon/Postgres, Redis, Vercel Blob, and Auth.js persistence from the template.
-- Qdrant Cloud plus Gemini embeddings for the thesis archive retrieval engine.
-- A Windows-safe Playwright command and a focused Vitest unit-test command.
-- Env, ingestion, and production smoke-check CLIs.
-
-## Local Setup
-
-```bash
-pnpm install
-pnpm env:check:example
+```mermaid
+flowchart LR
+  A[Archive PDFs, docs, slides] --> B[Text extraction]
+  B --> C[Chunking plus metadata]
+  C --> D[Gemini embeddings]
+  C --> E[German sparse terms]
+  D --> F[(Qdrant dense vectors)]
+  E --> G[(Qdrant sparse vectors)]
+  F --> H[Hybrid retrieval]
+  G --> H
+  H --> I[Evidence grounded idea generation]
 ```
 
-Create `.env.local` or `.env` from `.env.example`, fill real cloud secrets, then run:
+The retrieval layer is corpus first. Prior theses are normalized into stable project IDs, source paths, chunk text, titles, departments, years, and retrieval links. Qdrant stores dense semantic vectors plus sparse lexical signals so German compounds, acronyms, project names, and exact technology terms stay searchable.
+
+## Runtime Flow
+
+```mermaid
+sequenceDiagram
+  participant Student
+  participant Chat as Next.js Chat API
+  participant Tools as Prior Work Tools
+  participant Qdrant
+  participant LLM as Gemini or Gateway Model
+
+  Student->>Chat: German idea request
+  Chat->>Tools: searchPriorWork or findThesisExtensions
+  Tools->>Qdrant: hybrid dense plus sparse query
+  Qdrant-->>Tools: cited chunks and source links
+  Tools-->>LLM: structured evidence
+  LLM-->>Student: 3 to 5 feasible ideas with references
+```
+
+The assistant is optimized for German Diplomarbeit workflows. Prompts require archive lookup before ideation, concise proposals, direct source labels, feasibility notes, and evaluation criteria.
+
+## Model Routing
+
+```mermaid
+flowchart TD
+  A[/api/models/] --> B{AI Gateway auth?}
+  B -- no --> C[Gemini 3.5 Flash via @ai-sdk/google]
+  B -- yes --> D[Fetch Gateway models]
+  D --> E{Positive Gateway balance?}
+  E -- yes --> F[Default Claude Sonnet 5]
+  E -- no --> C
+  D --> G[Selector order: Gemini, Sonnet 5, Gateway Gemini, all discovered models]
+```
+
+Default generation uses `gemini-3.5-flash` through `@ai-sdk/google`. Gateway support remains enabled when `AI_GATEWAY_API_KEY` or Vercel OIDC is present. The selector fetches the live Gateway catalog, prioritizes Sonnet 5, and keeps every other available language model selectable.
+
+## Stack
+
+- Next.js App Router and Vercel AI SDK for streaming chat, tools, auth, persistence, and artifacts.
+- `@ai-sdk/google` for direct Gemini chat, title generation, and embeddings.
+- Vercel AI Gateway for optional multi-provider model routing.
+- Qdrant Cloud for hybrid dense plus sparse retrieval.
+- Neon Postgres, Redis, and Vercel Blob for template persistence.
+
+## Checks
 
 ```bash
 pnpm env:check
-pnpm db:migrate
-pnpm corpus:extract
-pnpm corpus:ingest
-pnpm prod:check -- --min-points 2000
-pnpm dev
-```
-
-The app runs on `http://localhost:3000` once the required Vercel/Neon/Redis/Blob/Qdrant/Gemini variables are present. `AI_GATEWAY_API_KEY` is optional; if set, the model selector enables Gateway models and defaults new chats to Sonnet 5.
-
-## Verification Commands
-
-```bash
-pnpm env:check:example
+pnpm corpus:ingest:dry-run
 pnpm test:unit
-pnpm typecheck
-pnpm prod:check -- --min-points 2000
-pnpm test:e2e
+pnpm check
+pnpm build
 ```
-
-`pnpm test:e2e` starts the Next.js dev server through Playwright and requires a complete local environment. Without real cloud credentials, use `pnpm env:check:example`, `pnpm test:unit`, and `pnpm corpus:ingest:dry-run` for offline verification.
-
-## Corpus Artifacts
-
-Corpus reports and approval artifacts live under `.planning/corpus/`. The raw archive extraction and original zip are intentionally ignored by git.

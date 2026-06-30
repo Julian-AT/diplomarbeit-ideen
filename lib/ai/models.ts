@@ -21,6 +21,19 @@ export type ChatModel = {
   capabilities: ModelCapabilities;
 };
 
+export type GatewayEnv = Record<string, string | undefined>;
+
+export type GatewayModelEntryLike = {
+  id: string;
+  name?: string | null;
+  description?: string | null;
+  modelType?: string | null;
+  specification?: {
+    provider?: string;
+    modelId?: string;
+  };
+};
+
 export const titleModel: ChatModel = {
   id: DIRECT_GEMINI_CHAT_MODEL,
   name: "Gemini 3.5 Flash",
@@ -62,18 +75,18 @@ const gatewayGeminiModel: ChatModel = {
 
 export const chatModels: ChatModel[] = [directGeminiModel];
 
-type GatewayEnv = Record<string, string | undefined>;
-
 export const gatewayChatModels: ChatModel[] = [
   gatewaySonnetModel,
   gatewayGeminiModel,
 ];
 
-const gatewayModelIds = new Set(gatewayChatModels.map((model) => model.id));
+const fallbackGatewayModelIds = new Set(
+  gatewayChatModels.map((model) => model.id)
+);
 const directModelIds = new Set(chatModels.map((model) => model.id));
 
 export function isGatewayModelId(modelId: string): boolean {
-  return gatewayModelIds.has(modelId);
+  return modelId.includes("/") && !directModelIds.has(modelId);
 }
 
 export function isDirectGoogleModelId(modelId: string): boolean {
@@ -87,13 +100,17 @@ export function isGatewayAvailable(env: GatewayEnv = process.env): boolean {
 }
 
 function configuredGatewayDefault(env: GatewayEnv): string {
-  return gatewayModelIds.has(env.GATEWAY_CHAT_MODEL ?? "")
-    ? String(env.GATEWAY_CHAT_MODEL)
+  const configured = env.GATEWAY_CHAT_MODEL?.trim();
+  return configured && isGatewayModelId(configured)
+    ? configured
     : GATEWAY_SONNET_CHAT_MODEL;
 }
 
-export function getDefaultChatModel(env: GatewayEnv = process.env) {
-  return isGatewayAvailable(env)
+export function getDefaultChatModel(
+  env: GatewayEnv = process.env,
+  options: { gatewayUsageAvailable?: boolean } = {}
+) {
+  return isGatewayAvailable(env) && options.gatewayUsageAvailable === true
     ? configuredGatewayDefault(env)
     : DEFAULT_CHAT_MODEL;
 }
@@ -114,22 +131,13 @@ export function getActiveModels(env: GatewayEnv = process.env): ChatModel[] {
     return chatModels;
   }
 
-  const gatewayDefault = configuredGatewayDefault(env);
-  const orderedGatewayModels = [
-    gatewayChatModels.find((model) => model.id === gatewayDefault) ??
-      gatewaySonnetModel,
-    ...gatewayChatModels,
-  ];
-
-  return uniqueModels([...orderedGatewayModels, directGeminiModel]);
+  return prioritizeChatModels(gatewayChatModels);
 }
 
 export function getCapabilities(
   env: GatewayEnv = process.env
 ): Record<string, ModelCapabilities> {
-  return Object.fromEntries(
-    getActiveModels(env).map((model) => [model.id, model.capabilities])
-  );
+  return getCapabilitiesForModels(getActiveModels(env));
 }
 
 export type GatewayModelWithCapabilities = ChatModel & {
@@ -148,7 +156,11 @@ export function isAllowedChatModelId(
   modelId: string,
   env: GatewayEnv = process.env
 ): boolean {
-  return getAllowedModelIds(env).has(modelId);
+  if (isDirectGoogleModelId(modelId)) {
+    return true;
+  }
+
+  return isGatewayAvailable(env) && isGatewayModelId(modelId);
 }
 
 export const allowedModelIds = new Set([
@@ -166,3 +178,112 @@ export const modelsByProvider = getActiveModels().reduce(
   },
   {} as Record<string, ChatModel[]>
 );
+
+function prettifyModelName(modelId: string): string {
+  return (
+    modelId
+      .split("/")
+      .at(-1)
+      ?.split(/[-_.]/)
+      .filter(Boolean)
+      .map((part) =>
+        /^\d/.test(part)
+          ? part
+          : `${part.slice(0, 1).toUpperCase()}${part.slice(1)}`
+      )
+      .join(" ") ?? modelId
+  );
+}
+
+function inferGatewayCapabilities(modelId: string): ModelCapabilities {
+  const normalized = modelId.toLowerCase();
+  const vision =
+    /vision|vl|image|gemini|claude|gpt-4o|gpt-5|grok-2-vision|qwen3-vl/.test(
+      normalized
+    );
+  const reasoning =
+    /sonnet|opus|reasoning|thinking|gpt-5|o[134]|gemini-3|deepseek-r1|grok-4|qwen3.*thinking/.test(
+      normalized
+    );
+
+  return { tools: true, vision, reasoning };
+}
+
+export function getModelCapabilities(modelId: string): ModelCapabilities {
+  const knownModel = [...chatModels, ...gatewayChatModels].find(
+    (model) => model.id === modelId
+  );
+
+  if (knownModel) {
+    return knownModel.capabilities;
+  }
+
+  if (isGatewayModelId(modelId)) {
+    return inferGatewayCapabilities(modelId);
+  }
+
+  return { tools: false, vision: false, reasoning: false };
+}
+
+export function gatewayEntryToChatModel(
+  entry: GatewayModelEntryLike
+): ChatModel | null {
+  if (entry.modelType && entry.modelType !== "language") {
+    return null;
+  }
+
+  const id = entry.id.trim();
+  if (!id) {
+    return null;
+  }
+
+  const provider = id.includes("/")
+    ? id.split("/")[0]
+    : (entry.specification?.provider ?? "ai");
+
+  return {
+    id,
+    name: entry.name?.trim() || prettifyModelName(id),
+    provider,
+    description:
+      entry.description?.trim() ||
+      `AI Gateway language model ${prettifyModelName(id)}`,
+    route: "gateway",
+    capabilities: inferGatewayCapabilities(id),
+  };
+}
+
+export function prioritizeChatModels(models: ChatModel[]): ChatModel[] {
+  const merged = uniqueModels([directGeminiModel, ...models]);
+  const byId = new Map(merged.map((model) => [model.id, model]));
+  const preferred: ChatModel[] = [directGeminiModel];
+
+  preferred.push(byId.get(GATEWAY_SONNET_CHAT_MODEL) ?? gatewaySonnetModel);
+
+  const gatewayGemini = byId.get(GATEWAY_GEMINI_CHAT_MODEL);
+  if (gatewayGemini) {
+    preferred.push(gatewayGemini);
+  }
+
+  return uniqueModels([
+    ...preferred,
+    ...merged
+      .filter((model) => model.id !== DIRECT_GEMINI_CHAT_MODEL)
+      .sort((a, b) => {
+        const providerComparison = a.provider.localeCompare(b.provider);
+        return providerComparison || a.name.localeCompare(b.name);
+      }),
+  ]);
+}
+
+export function getCapabilitiesForModels(
+  models: ChatModel[]
+): Record<string, ModelCapabilities> {
+  return Object.fromEntries(
+    models.map((model) => [model.id, model.capabilities])
+  );
+}
+
+export function isFallbackGatewayModelId(modelId: string): boolean {
+  return fallbackGatewayModelIds.has(modelId);
+}

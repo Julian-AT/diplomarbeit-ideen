@@ -6,9 +6,9 @@ current_phase: 4
 current_phase_name: Grounded Ideation Flows and Proposal Artifact
 status: complete
 stopped_at: Milestone source-complete; cloud runtime UAT pending credentials
-last_updated: "2026-07-01T01:18:00.000+02:00"
+last_updated: "2026-07-01T01:47:00.000+02:00"
 last_activity: 2026-07-01
-last_activity_desc: Optional AI Gateway Sonnet 5 default, German onboarding, and archive evidence source-card UX completed
+last_activity_desc: SEO logo, dynamic Gateway catalog fallback, deterministic Webpack build, and technical README completed
 progress:
   total_phases: 4
   completed_phases: 4
@@ -24,14 +24,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-30)
 
 **Core value:** Students can get creative but feasible thesis proposals that are grounded in, cite, and build on real prior theses from the archive.
-**Current focus:** v1.0 production data path verified with direct Gemini, optional AI Gateway, and live Qdrant evidence links
+**Current focus:** v1.0 production data path verified with direct Gemini, optional AI Gateway catalog fallback, German SEO, and live Qdrant evidence links
 
 ## Current Position
 
 Phase: 4 of 4 (Grounded Ideation Flows and Proposal Artifact)
 Plan: 3 of 3 in current phase
 Status: Complete with production data smoke and evidence UX verified
-Last activity: 2026-07-01 - Optional AI Gateway Sonnet 5 default, German onboarding, and archive evidence source-card UX completed
+Last activity: 2026-07-01 - SEO logo, dynamic Gateway catalog fallback, deterministic Webpack build, and technical README completed
 
 Progress: [##########] 100%
 
@@ -81,6 +81,9 @@ Recent decisions affecting current work:
 - Quick 20260701: Production chat/title generation uses direct `@ai-sdk/google` Gemini Interactions with `gemini-3.5-flash`; optional AI Gateway remains supported and defaults to `anthropic/claude-sonnet-5` when Gateway credentials are present.
 - Quick 20260701: Live Qdrant collection `diplomarbeiten` contains 2,747 corpus chunk points with 3,072-dimensional Gemini embeddings and German retrieval smoke checks passing.
 - Quick 20260701: Prior-work tool results now render as linked source cards; `/api/prior-work/source` opens authenticated source-context previews for retrieved archive chunks.
+- Quick 20260701: SEO now uses the HTL Donaustadt logo for app icons, manifest, Open Graph/Twitter metadata, German `lang=de`, and app preview branding.
+- Quick 20260701: `/api/models` checks AI Gateway credits, keeps direct Gemini first, defaults to Gemini when Gateway usage is unavailable, defaults to Sonnet 5 when credits are available, and uses a raw Gateway config fallback when SDK model metadata parsing fails.
+- Quick 20260701: Production builds now use `next build --webpack` and no longer depend on remote Google Fonts.
 
 ### Pending Todos
 
@@ -88,7 +91,8 @@ Recent decisions affecting current work:
 
 ### Blockers/Concerns
 
-- Local production-server smoke was blocked by the Windows sandbox process launcher, but `pnpm build` and `pnpm prod:check` passed.
+- No current production build or retrieval blockers; `pnpm build` and `pnpm prod:check` passed.
+- Full browser E2E with live AI remains optional and was not rerun in this quick pass.
 - `.env` contains live secrets and is ignored; keep it uncommitted.
 
 ## Deferred Items
@@ -100,6 +104,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-07-01T00:50:00+02:00
-Stopped at: v1.0 production data smoke verified
+Last session: 2026-07-01T01:47:00+02:00
+Stopped at: SEO, Gateway catalog fallback, README, production build verified
 Resume file: .planning/ROADMAP.md

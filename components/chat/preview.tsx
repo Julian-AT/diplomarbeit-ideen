@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { suggestions } from "@/lib/constants";
-import { SparklesIcon } from "./icons";
 
 export function Preview() {
   const router = useRouter();
@@ -15,8 +15,14 @@ export function Preview() {
   return (
     <div className="flex h-full flex-col overflow-hidden rounded-tl-2xl bg-background">
       <div className="flex h-14 shrink-0 items-center gap-3 border-b border-border/20 px-5">
-        <div className="flex size-5 items-center justify-center rounded bg-muted/60 ring-1 ring-border/50">
-          <SparklesIcon size={10} />
+        <div className="relative flex size-6 items-center justify-center overflow-hidden rounded bg-white ring-1 ring-border/50">
+          <Image
+            alt="HTL Donaustadt"
+            className="object-contain p-0.5"
+            fill
+            sizes="24px"
+            src="/images/htl-donaustadt-logo.png"
+          />
         </div>
         <span className="text-[13px] text-muted-foreground">
           Diplomarbeit Ideen

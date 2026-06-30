@@ -77,10 +77,19 @@ describe("validateProjectEnv", () => {
     );
   });
 
-  it("rejects unsupported Gateway chat model identifiers", () => {
+  it("accepts dynamic Gateway chat model identifiers", () => {
     const result = validateProjectEnv({
       ...validEnv,
       GATEWAY_CHAT_MODEL: "anthropic/claude-sonnet-4.5",
+    });
+
+    expect(result.ok).toBe(true);
+  });
+
+  it("rejects malformed Gateway chat model identifiers", () => {
+    const result = validateProjectEnv({
+      ...validEnv,
+      GATEWAY_CHAT_MODEL: "claude-sonnet-4.5",
     });
 
     expect(result.ok).toBe(false);

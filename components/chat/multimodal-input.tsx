@@ -669,9 +669,20 @@ function PureModelSelectorCompact({
               grouped[model.provider].push(model);
             }
 
-            const sortedKeys = Object.keys(grouped).sort((a, b) =>
-              a.localeCompare(b)
-            );
+            const providerPriority = ["google", "anthropic"];
+            const sortedKeys = Object.keys(grouped).sort((a, b) => {
+              const aPriority = providerPriority.indexOf(a);
+              const bPriority = providerPriority.indexOf(b);
+
+              if (aPriority !== bPriority) {
+                return (
+                  (aPriority === -1 ? 99 : aPriority) -
+                  (bPriority === -1 ? 99 : bPriority)
+                );
+              }
+
+              return a.localeCompare(b);
+            });
 
             const providerNames: Record<string, string> = {
               alibaba: "Alibaba",

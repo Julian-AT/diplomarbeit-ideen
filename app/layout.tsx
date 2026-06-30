@@ -1,32 +1,81 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 import "./globals.css";
 import { SessionProvider } from "next-auth/react";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_APP_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "https://diplomarbeit-ideen.vercel.app");
+const seoTitle = "Diplomarbeit Ideen";
+const seoDescription =
+  "KI-gestützte Diplomarbeitensuche für HTL-Softwareprojekte mit Archivbelegen, Qdrant Hybrid Retrieval und Gemini Embeddings.";
+const logoImage = "/images/htl-donaustadt-logo.png";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://chat.vercel.ai"),
-  title: "Next.js Chatbot Template",
-  description: "Next.js chatbot template using the AI SDK.",
+  metadataBase: new URL(siteUrl),
+  applicationName: seoTitle,
+  title: {
+    default: `${seoTitle} | HTL Donaustadt`,
+    template: `%s | ${seoTitle}`,
+  },
+  description: seoDescription,
+  keywords: [
+    "Diplomarbeit Ideen",
+    "HTL Donaustadt",
+    "Diplomarbeit Software Engineering",
+    "KI Themenfindung",
+    "Qdrant Hybrid Retrieval",
+    "Gemini Embeddings",
+    "RAG Diplomarbeit",
+  ],
+  authors: [{ name: "HTL Donaustadt" }],
+  creator: "HTL Donaustadt",
+  publisher: "HTL Donaustadt",
+  category: "education",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "de_AT",
+    url: "/",
+    siteName: seoTitle,
+    title: `${seoTitle} | Archivgestützte Themenfindung`,
+    description: seoDescription,
+    images: [
+      {
+        url: logoImage,
+        width: 801,
+        height: 801,
+        alt: "HTL Donaustadt Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: `${seoTitle} | Archivgestützte Themenfindung`,
+    description: seoDescription,
+    images: [logoImage],
+  },
+  icons: {
+    icon: [
+      { url: "/icon.png", sizes: "801x801", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "801x801", type: "image/png" }],
+  },
+  manifest: "/manifest.webmanifest",
 };
 
 export const viewport = {
   maximumScale: 1,
 };
-
-const geist = Geist({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-geist",
-});
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-geist-mono",
-});
 
 const LIGHT_THEME_COLOR = "hsl(0 0% 100%)";
 const DARK_THEME_COLOR = "hsl(240deg 10% 3.92%)";
@@ -54,11 +103,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      className={`${geist.variable} ${geistMono.variable}`}
-      lang="en"
-      suppressHydrationWarning
-    >
+    <html lang="de" suppressHydrationWarning>
       <head>
         <script
           // biome-ignore lint/security/noDangerouslySetInnerHtml: "Required"

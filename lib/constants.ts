@@ -13,8 +13,8 @@ export const guestRegex = /^guest-\d+$/;
 export const DUMMY_PASSWORD = generateDummyPassword();
 
 export const suggestions = [
-  "Finde 5 Diplomarbeit-Ideen zu KI und Schule, mit direkten Archiv-Belegen.",
-  "Welche bestehenden Projekte eignen sich am besten für eine moderne Erweiterung?",
-  "Baue auf dem Projekt Airchif auf und nenne konkrete nächste Schritte.",
-  "Vergleiche ähnliche Archiv-Projekte und schlage ein realistisches Thema vor.",
+  "Schlag mir eine komplett neue Idee vor.",
+  "Welche alten Projekte gibt es zu Web-Apps?",
+  "Wie könnte man auf dem Projekt Airchif aufbauen?",
+  "Wie könnte ich eine alte Arbeit erweitern?",
 ];
