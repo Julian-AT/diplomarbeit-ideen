@@ -1,5 +1,7 @@
+import { existsSync } from "node:fs";
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { config } from "dotenv";
 import { validateProjectEnv } from "../lib/env/project";
 import { chunkExtractedDocuments } from "../lib/retrieval/chunking";
 import {
@@ -21,6 +23,8 @@ import {
   encodeSparseText,
 } from "../lib/retrieval/sparse";
 import type { CorpusChunk } from "../lib/retrieval/types";
+
+config({ path: existsSync(".env.local") ? ".env.local" : ".env" });
 
 type CliOptions = {
   extractedFile: string;

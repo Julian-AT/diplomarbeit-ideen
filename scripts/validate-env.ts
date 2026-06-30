@@ -40,7 +40,11 @@ const useExample = process.argv.includes("--example");
 const allowPlaceholders =
   useExample || process.argv.includes("--allow-placeholders");
 const explicitEnvFile = readArg("--env-file");
-const envFile = explicitEnvFile ?? (useExample ? ".env.example" : ".env.local");
+const defaultEnvFile = existsSync(path.resolve(process.cwd(), ".env.local"))
+  ? ".env.local"
+  : ".env";
+const envFile =
+  explicitEnvFile ?? (useExample ? ".env.example" : defaultEnvFile);
 const envPath = path.resolve(process.cwd(), envFile);
 
 if (existsSync(envPath)) {

@@ -1,4 +1,4 @@
-import type { CorpusChunk, SparseVector } from "./types";
+﻿import type { CorpusChunk, SparseVector } from "./types";
 
 export type SparseCorpusStats = {
   documentCount: number;
@@ -7,40 +7,106 @@ export type SparseCorpusStats = {
 };
 
 const tokenPattern = /[\p{L}\p{N}][\p{L}\p{N}_-]{1,}/gu;
+const splitPattern = /[_-]+/g;
+const camelBoundaryPattern = /([\p{Ll}\p{N}])([\p{Lu}])/gu;
 const stopWords = new Set([
+  "a",
+  "an",
   "and",
-  "the",
-  "for",
-  "with",
-  "that",
-  "this",
-  "from",
   "are",
+  "as",
+  "at",
+  "by",
+  "for",
+  "from",
+  "in",
+  "is",
+  "of",
+  "on",
+  "or",
+  "that",
+  "the",
+  "this",
+  "to",
   "was",
   "were",
-  "und",
-  "der",
-  "die",
+  "with",
+  "aber",
+  "als",
+  "am",
+  "an",
+  "auch",
+  "auf",
+  "aus",
+  "bei",
   "das",
-  "den",
   "dem",
+  "den",
+  "der",
+  "des",
+  "die",
   "ein",
   "eine",
+  "einem",
+  "einen",
   "einer",
-  "mit",
+  "eines",
+  "für",
   "fuer",
-  "von",
+  "im",
+  "in",
   "ist",
+  "mit",
+  "nach",
+  "oder",
   "sind",
-  "auf",
-  "zur",
+  "sowie",
+  "und",
+  "von",
+  "zu",
   "zum",
+  "zur",
 ]);
 
+function foldGermanUmlauts(token: string): string {
+  return token
+    .replace(/ä/g, "ae")
+    .replace(/ö/g, "oe")
+    .replace(/ü/g, "ue")
+    .replace(/ß/g, "ss");
+}
+
+function normalizeToken(rawToken: string): string {
+  return rawToken.normalize("NFKC").toLowerCase();
+}
+
+function tokenPieces(token: string): string[] {
+  const camelSplit = token.replace(camelBoundaryPattern, "$1 $2");
+  return camelSplit
+    .split(splitPattern)
+    .flatMap((piece) => piece.split(/\s+/g))
+    .map((piece) => piece.trim())
+    .filter((piece) => piece.length > 1);
+}
+
+function expandToken(rawToken: string): string[] {
+  const normalized = normalizeToken(rawToken);
+  const variants = new Set<string>([normalized, foldGermanUmlauts(normalized)]);
+
+  for (const piece of tokenPieces(normalized)) {
+    variants.add(piece);
+    variants.add(foldGermanUmlauts(piece));
+  }
+
+  return Array.from(variants).filter(
+    (token) => token.length > 1 && !stopWords.has(token)
+  );
+}
+
 export function tokenizeSparse(text: string): string[] {
-  return Array.from(text.normalize("NFKC").toLowerCase().matchAll(tokenPattern))
-    .map((match) => match[0])
-    .filter((token) => token.length > 1 && !stopWords.has(token));
+  return Array.from(text.normalize("NFKC").matchAll(tokenPattern)).flatMap(
+    (match) => expandToken(match[0])
+  );
 }
 
 export function hashTokenToSparseIndex(token: string): number {

@@ -8,15 +8,16 @@ The v1 foundation is cloud-first:
 - Neon Postgres through `POSTGRES_URL` for template persistence.
 - Redis through `REDIS_URL` for resumable stream support.
 - Vercel Blob through `BLOB_READ_WRITE_TOKEN` for files.
-- Vercel AI Gateway through `AI_GATEWAY_API_KEY` for chat models during local development.
+- Gemini API through `GEMINI_API_KEY` for chat/title generation and embeddings.
 - Qdrant Cloud through `QDRANT_URL`, `QDRANT_API_KEY`, and `QDRANT_COLLECTION` for hybrid retrieval.
-- Gemini API through `GEMINI_API_KEY` and `GEMINI_EMBEDDING_MODEL` for embeddings.
 
 ## Environment Contract
 
-Copy `.env.example` to `.env.local` and fill the placeholders.
+Copy `.env.example` to `.env.local` or `.env` and fill the placeholders. Local scripts prefer `.env.local` when present and otherwise load `.env`.
 
-`GEMINI_EMBEDDING_MODEL` defaults to `gemini-embedding-2-preview` because Phase 1 found high visual density and approved evaluating multimodal embeddings first. Use `gemini-embedding-001` only if the later ingestion phase confirms that text-only extraction is sufficient and the index will be built in that vector space.
+`GEMINI_CHAT_MODEL` defaults to `gemini-3.5-flash` and the app uses it through `@ai-sdk/google`'s Gemini Interactions provider, not Vercel AI Gateway.
+
+`GEMINI_EMBEDDING_MODEL` defaults to `gemini-embedding-2-preview` because Phase 1 found high visual density and approved evaluating multimodal embeddings first. Use `gemini-embedding-001` only if text-only extraction is sufficient and the index will be rebuilt in that vector space.
 
 Run these checks before starting runtime code that calls cloud services:
 
@@ -27,11 +28,21 @@ pnpm env:check
 
 `pnpm env:check:example` validates that the committed example has the right keys and model identifiers while accepting placeholder secrets. `pnpm env:check` validates `.env.local` strictly.
 
+## Production Data Setup
+
+```bash
+pnpm db:migrate
+pnpm corpus:extract
+pnpm corpus:ingest
+pnpm prod:check -- --min-points 2000
+```
+
+`pnpm corpus:ingest` loads `.env.local`, creates the Qdrant hybrid collection if it does not exist, creates payload indexes, embeds the approved corpus with Gemini, and upserts deterministic chunk points. `pnpm prod:check` verifies Postgres connectivity, Qdrant collection presence/count, and German retrieval smoke queries.
+
 ## Development Commands
 
 ```bash
 pnpm install
-pnpm db:migrate
 pnpm dev
 ```
 
@@ -43,4 +54,4 @@ Template source: `https://github.com/vercel/ai-chatbot`
 
 Pinned commit: `2becdb4a56e7683ae08aef927cec1c6c52dfad5e`
 
-The import intentionally keeps the template's auth, persistence, chat route, artifacts system, multimodal input, and in-browser code execution so later phases can add the prior-work tools and `thesis-proposal` artifact without rebuilding the baseline app.
+The import intentionally keeps the template's auth, persistence, chat route, artifacts system, multimodal input, and in-browser code execution so the prior-work tools and `thesis-proposal` artifact build on the baseline app instead of replacing it.

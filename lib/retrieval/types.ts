@@ -76,6 +76,8 @@ export type DenseVector = number[];
 
 export type RetrievalFilters = {
   projectSlug?: string;
+  thesisId?: string;
+  sourcePath?: string;
   documentTypes?: string[];
   language?: string;
   year?: number;

@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import {
   buildSparseCorpusStats,
   encodeSparseText,
@@ -40,6 +40,22 @@ describe("sparse encoding", () => {
     ).toEqual(
       expect.arrayContaining(["smart-home", "anwendung", "sensor", "fusion"])
     );
+  });
+
+  it("adds German umlaut-folded and split token variants", () => {
+    expect(
+      tokenizeSparse("K\u00fcnstliche-Intelligenz f\u00fcr Diplomarbeitsideen")
+    ).toEqual(
+      expect.arrayContaining([
+        "k\u00fcnstliche-intelligenz",
+        "kuenstliche-intelligenz",
+        "k\u00fcnstliche",
+        "kuenstliche",
+        "intelligenz",
+        "diplomarbeitsideen",
+      ])
+    );
+    expect(tokenizeSparse("f\u00fcr und mit")).toEqual([]);
   });
 
   it("creates deterministic sorted sparse vectors", () => {

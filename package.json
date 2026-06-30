@@ -24,9 +24,11 @@
     "corpus:extract": "python scripts/extract-corpus-text.py",
     "corpus:ingest:dry-run": "tsx scripts/ingest-corpus.ts --dry-run --mock-embeddings",
     "corpus:ingest": "tsx scripts/ingest-corpus.ts --upsert",
+    "prod:check": "tsx scripts/prod-check.ts",
     "quality:proposal": "tsx scripts/evaluate-idea-quality.ts"
   },
   "dependencies": {
+    "@ai-sdk/google": "^3.0.87",
     "@ai-sdk/provider": "^3.0.3",
     "@ai-sdk/react": "3.0.118",
     "@codemirror/lang-python": "^6.1.6",

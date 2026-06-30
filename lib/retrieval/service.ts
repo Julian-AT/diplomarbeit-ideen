@@ -1,7 +1,11 @@
-import { validateProjectEnv } from "../env/project";
+﻿import { validateProjectEnv } from "../env/project";
 import { GeminiEmbeddingProvider } from "./embeddings";
 import { getLocalThesisContext, searchLocalChunks } from "./local";
-import { createQdrantClientFromEnv, queryHybridPriorWork } from "./qdrant";
+import {
+  createQdrantClientFromEnv,
+  queryHybridPriorWork,
+  scrollPriorWorkByFilter,
+} from "./qdrant";
 import { encodeSparseText } from "./sparse";
 import type { RetrievalFilters, RetrievalResult } from "./types";
 
@@ -11,16 +15,67 @@ export type PriorWorkSearchOptions = {
   limit?: number;
 };
 
+const germanDiplomaIdeaTerms = [
+  "Diplomarbeit",
+  "Diplomarbeiten",
+  "Abschlussarbeit",
+  "Thesis",
+  "Thema",
+  "Themenvorschlag",
+  "Idee",
+  "Ideen",
+  "Projektarbeit",
+  "Matura",
+  "HTL",
+];
+
+const germanResearchTerms = [
+  "Zielsetzung",
+  "Problemstellung",
+  "Umsetzung",
+  "Evaluierung",
+  "Erweiterung",
+  "Ausblick",
+  "Anforderungen",
+  "Prototyp",
+  "Machbarkeit",
+];
+
 function canUseCloudRetrieval(env: NodeJS.ProcessEnv): boolean {
   const validation = validateProjectEnv(env);
 
   return validation.ok;
 }
 
+export function expandGermanPriorWorkQuery(query: string): string {
+  const lowerQuery = query.toLowerCase();
+  const expansions = new Set<string>();
+
+  if (/diplom|thesis|abschluss|matura|idee|thema|topic/.test(lowerQuery)) {
+    for (const term of germanDiplomaIdeaTerms) {
+      expansions.add(term);
+    }
+  }
+
+  if (
+    /erweiter|extension|future|ausblick|risk|scope|method|evalu/.test(
+      lowerQuery
+    )
+  ) {
+    for (const term of germanResearchTerms) {
+      expansions.add(term);
+    }
+  }
+
+  return [query, ...expansions].join(" ").trim();
+}
+
 export async function searchPriorWorkRecords(
   options: PriorWorkSearchOptions,
   env: NodeJS.ProcessEnv = process.env
 ): Promise<{ source: "qdrant" | "local"; results: RetrievalResult[] }> {
+  const expandedQuery = expandGermanPriorWorkQuery(options.query);
+
   if (canUseCloudRetrieval(env)) {
     const validation = validateProjectEnv(env);
     if (validation.env) {
@@ -28,11 +83,11 @@ export async function searchPriorWorkRecords(
         apiKey: validation.env.GEMINI_API_KEY,
         model: validation.env.GEMINI_EMBEDDING_MODEL,
       });
-      const [denseVector] = await provider.embedTexts([options.query]);
+      const [denseVector] = await provider.embedTexts([expandedQuery]);
       if (!denseVector) {
         throw new Error("Embedding provider returned no vector.");
       }
-      const sparseVector = encodeSparseText(options.query);
+      const sparseVector = encodeSparseText(expandedQuery);
       const client = createQdrantClientFromEnv(env);
       const results = await queryHybridPriorWork(client, {
         collectionName: validation.env.QDRANT_COLLECTION,
@@ -48,15 +103,32 @@ export async function searchPriorWorkRecords(
 
   return {
     source: "local",
-    results: await searchLocalChunks(options),
+    results: await searchLocalChunks({ ...options, query: expandedQuery }),
   };
 }
 
-export async function getThesisContextRecords(options: {
-  thesisId?: string;
-  projectSlug?: string;
-  limit?: number;
-}): Promise<{ source: "local"; results: RetrievalResult[] }> {
+export async function getThesisContextRecords(
+  options: { thesisId?: string; projectSlug?: string; limit?: number },
+  env: NodeJS.ProcessEnv = process.env
+): Promise<{ source: "qdrant" | "local"; results: RetrievalResult[] }> {
+  if (canUseCloudRetrieval(env)) {
+    const validation = validateProjectEnv(env);
+    if (validation.env) {
+      const client = createQdrantClientFromEnv(env);
+      return {
+        source: "qdrant",
+        results: await scrollPriorWorkByFilter(client, {
+          collectionName: validation.env.QDRANT_COLLECTION,
+          filters: {
+            projectSlug: options.projectSlug,
+            thesisId: options.thesisId,
+          },
+          limit: options.limit,
+        }),
+      };
+    }
+  }
+
   return {
     source: "local",
     results: await getLocalThesisContext(options),

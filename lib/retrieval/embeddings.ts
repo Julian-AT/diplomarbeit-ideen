@@ -1,4 +1,4 @@
-import type { GeminiEmbeddingModel } from "../env/project";
+﻿import type { GeminiEmbeddingModel } from "../env/project";
 import { projectEnvDefaults } from "../env/project";
 import type { DenseVector } from "./types";
 
@@ -29,31 +29,57 @@ export class GeminiEmbeddingProvider implements EmbeddingProvider {
       "https://generativelanguage.googleapis.com/v1beta/openai/embeddings";
   }
 
+  private async requestEmbeddings(
+    input: string | string[]
+  ): Promise<DenseVector[]> {
+    const response = await fetch(this.endpoint, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${this.apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ input, model: this.model }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Gemini embedding request failed: ${response.status}`);
+    }
+
+    const json = (await response.json()) as GeminiEmbeddingResponse;
+    const vectors = json.data?.map((item) => item.embedding).filter(Boolean);
+
+    if (!vectors?.length) {
+      throw new Error("Gemini embedding response did not include vectors.");
+    }
+
+    return vectors as DenseVector[];
+  }
+
   async embedTexts(texts: string[]): Promise<DenseVector[]> {
-    const vectors: DenseVector[] = [];
+    if (texts.length === 0) {
+      return [];
+    }
 
-    for (const text of texts) {
-      const response = await fetch(this.endpoint, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${this.apiKey}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ input: text, model: this.model }),
-      });
+    if (texts.length === 1) {
+      return this.requestEmbeddings(texts[0]);
+    }
 
-      if (!response.ok) {
-        throw new Error(`Gemini embedding request failed: ${response.status}`);
+    try {
+      const vectors = await this.requestEmbeddings(texts);
+      if (vectors.length === texts.length) {
+        return vectors;
       }
+    } catch {
+      // Fall back to documented single-input requests below.
+    }
 
-      const json = (await response.json()) as GeminiEmbeddingResponse;
-      const embedding = json.data?.[0]?.embedding;
-
-      if (!embedding || embedding.length === 0) {
+    const vectors: DenseVector[] = [];
+    for (const text of texts) {
+      const [vector] = await this.requestEmbeddings(text);
+      if (!vector) {
         throw new Error("Gemini embedding response did not include a vector.");
       }
-
-      vectors.push(embedding);
+      vectors.push(vector);
     }
 
     return vectors;

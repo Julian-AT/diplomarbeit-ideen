@@ -69,6 +69,8 @@ describe("qdrant wrapper", () => {
       },
       upsert: () => Promise.resolve(),
       query: () => Promise.resolve({ points: [] }),
+      scroll: () => Promise.resolve({ points: [] }),
+      count: () => Promise.resolve({ count: 0 }),
     };
 
     await ensureHybridCollection(client, {
@@ -88,7 +90,7 @@ describe("qdrant wrapper", () => {
     });
     expect(
       calls.filter((call) => call.method === "createPayloadIndex")
-    ).toHaveLength(5);
+    ).toHaveLength(9);
   });
 
   it("builds filtered RRF hybrid query requests", async () => {
@@ -98,6 +100,8 @@ describe("qdrant wrapper", () => {
       createCollection: () => Promise.resolve(),
       createPayloadIndex: () => Promise.resolve(),
       upsert: () => Promise.resolve(),
+      scroll: () => Promise.resolve({ points: [] }),
+      count: () => Promise.resolve({ count: 0 }),
       query: (_collectionName: string, args: unknown) => {
         requests.push(args);
         return Promise.resolve({

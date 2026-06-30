@@ -6,9 +6,9 @@ current_phase: 4
 current_phase_name: Grounded Ideation Flows and Proposal Artifact
 status: complete
 stopped_at: Milestone source-complete; cloud runtime UAT pending credentials
-last_updated: "2026-06-30T22:15:00.000Z"
-last_activity: 2026-06-30
-last_activity_desc: Phase 4 complete; grounded ideation tools, proposal artifact, quality checks, and gated E2E coverage added
+last_updated: "2026-07-01T00:50:00.000+02:00"
+last_activity: 2026-07-01
+last_activity_desc: Production Gemini provider, German retrieval optimization, live Qdrant ingestion, and prod smoke verification completed
 progress:
   total_phases: 4
   completed_phases: 4
@@ -24,14 +24,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-30)
 
 **Core value:** Students can get creative but feasible thesis proposals that are grounded in, cite, and build on real prior theses from the archive.
-**Current focus:** v1.0 source-complete; full cloud runtime UAT pending complete credentials
+**Current focus:** v1.0 production data path verified with direct Gemini and live Qdrant retrieval
 
 ## Current Position
 
 Phase: 4 of 4 (Grounded Ideation Flows and Proposal Artifact)
 Plan: 3 of 3 in current phase
-Status: Complete at source level
-Last activity: 2026-06-30 - Phase 4 complete; grounded ideation tools, proposal artifact, quality checks, and gated E2E coverage added
+Status: Complete with production data smoke verified
+Last activity: 2026-07-01 - Production Gemini provider, German retrieval optimization, live Qdrant ingestion, and prod smoke verification completed
 
 Progress: [##########] 100%
 
@@ -72,23 +72,23 @@ Recent decisions affecting current work:
 - Phase 1: Text extraction is generally good but visual density is high: 50 PDFs, 16 videos, 9 PPTX, 8 PNG, 4 MOV, 3 DOCX; 12 PDFs are OCR candidates.
 - Phase 1: Approval manifest recommends evaluating Gemini Embedding 2 Preview for multimodal/visual coverage, with `gemini-embedding-001` as the text-only fallback if OCR/text extraction is approved as sufficient.
 - Phase 2: Vercel Chatbot template imported at `vercel/ai-chatbot` commit `2becdb4a56e7683ae08aef927cec1c6c52dfad5e`.
-- Phase 2: Env contract now covers Vercel/Neon/Redis/Blob/AI Gateway/Qdrant/Gemini and can be validated with `pnpm env:check`.
+- Phase 2: Env contract now covers Vercel/Neon/Redis/Blob/Qdrant/Gemini and can be validated with `pnpm env:check`.
 - Phase 3: Extraction and dry-run ingestion are source-complete. `pnpm corpus:extract` produced 62 text documents with 0 errors; `pnpm corpus:ingest:dry-run` produced 2,747 chunks and sparse vectors with mock dense embeddings.
 - Phase 3: Qdrant wrapper uses named vectors `text_dense` and `text_sparse`, payload indexes for approved filter fields, idempotent point IDs, and RRF query fusion.
 - Phase 4: Chat route exposes `searchPriorWork`, `getThesisById`, and `findThesisExtensions`; tools use Qdrant/Gemini when env is complete and local chunks otherwise.
 - Phase 4: `thesis-proposal` is a first-class artifact kind with streaming Markdown generation, persistence registration, editing, versioning, and citation-focused toolbar actions.
 - Phase 4: Idea-quality scoring checks proposal sections, citation signals, source paths, novelty/gap framing, and feasibility signals.
+- Quick 20260701: Production chat/title generation now uses direct `@ai-sdk/google` Gemini Interactions with `gemini-3.5-flash`, not Vercel AI Gateway.
+- Quick 20260701: Live Qdrant collection `diplomarbeiten` contains 2,747 corpus chunk points with 3,072-dimensional Gemini embeddings and German retrieval smoke checks passing.
 
 ### Pending Todos
 
-- Provision complete `.env.local` credentials for Vercel/Neon/Redis/Blob/AI Gateway/Qdrant/Gemini.
-- Run real `pnpm corpus:ingest` against Qdrant Cloud.
-- Start the dev server and run full `pnpm test:e2e` with `E2E_FULL_CLOUD=1`.
+- Run full `pnpm test:e2e` with `E2E_FULL_CLOUD=1` if a browser-level live AI smoke is required.
 
 ### Blockers/Concerns
 
-- Runtime cloud verification is pending user-provisioned Vercel/Neon/Redis/Blob/AI Gateway/Qdrant/Gemini credentials.
-- A local ignored env copy contains secret-looking partial values but still leaves required Blob/Qdrant/Gemini placeholders. Keep it ignored and do not commit it.
+- Local production-server smoke was blocked by the Windows sandbox process launcher, but `pnpm build` and `pnpm prod:check` passed.
+- `.env` contains live secrets and is ignored; keep it uncommitted.
 
 ## Deferred Items
 
@@ -99,6 +99,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-06-30T22:15:00Z
-Stopped at: v1.0 source-complete; cloud runtime UAT pending credentials
+Last session: 2026-07-01T00:50:00+02:00
+Stopped at: v1.0 production data smoke verified
 Resume file: .planning/ROADMAP.md

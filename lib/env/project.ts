@@ -1,13 +1,14 @@
-import { z } from "zod";
+﻿import { z } from "zod";
 
 export const geminiEmbeddingModels = [
   "gemini-embedding-2-preview",
   "gemini-embedding-001",
 ] as const;
 
+export const geminiChatModels = ["gemini-3.5-flash"] as const;
+
 export const projectEnvKeys = [
   "AUTH_SECRET",
-  "AI_GATEWAY_API_KEY",
   "BLOB_READ_WRITE_TOKEN",
   "POSTGRES_URL",
   "REDIS_URL",
@@ -15,12 +16,12 @@ export const projectEnvKeys = [
   "QDRANT_API_KEY",
   "QDRANT_COLLECTION",
   "GEMINI_API_KEY",
+  "GEMINI_CHAT_MODEL",
   "GEMINI_EMBEDDING_MODEL",
 ] as const;
 
 export const requiredProjectEnvKeys = [
   "AUTH_SECRET",
-  "AI_GATEWAY_API_KEY",
   "BLOB_READ_WRITE_TOKEN",
   "POSTGRES_URL",
   "REDIS_URL",
@@ -31,12 +32,14 @@ export const requiredProjectEnvKeys = [
 
 export const projectEnvDefaults = {
   QDRANT_COLLECTION: "thesis_ideas",
+  GEMINI_CHAT_MODEL: "gemini-3.5-flash",
   GEMINI_EMBEDDING_MODEL: "gemini-embedding-2-preview",
 } as const;
 
 type ProjectEnvKey = (typeof projectEnvKeys)[number];
 
 export type GeminiEmbeddingModel = (typeof geminiEmbeddingModels)[number];
+export type GeminiChatModel = (typeof geminiChatModels)[number];
 export type ProjectEnvIssue = {
   key: ProjectEnvKey | "ENV_FILE";
   message: string;
@@ -65,7 +68,6 @@ function urlWithProtocols(protocols: string[]) {
 
 export const projectEnvSchema = z.object({
   AUTH_SECRET: z.string().min(1),
-  AI_GATEWAY_API_KEY: z.string().min(1),
   BLOB_READ_WRITE_TOKEN: z.string().min(1),
   POSTGRES_URL: urlWithProtocols(["postgres:", "postgresql:"]),
   REDIS_URL: urlWithProtocols(["redis:", "rediss:"]),
@@ -79,6 +81,9 @@ export const projectEnvSchema = z.object({
     })
     .default(projectEnvDefaults.QDRANT_COLLECTION),
   GEMINI_API_KEY: z.string().min(1),
+  GEMINI_CHAT_MODEL: z
+    .enum(geminiChatModels)
+    .default(projectEnvDefaults.GEMINI_CHAT_MODEL),
   GEMINI_EMBEDDING_MODEL: z
     .enum(geminiEmbeddingModels)
     .default(projectEnvDefaults.GEMINI_EMBEDDING_MODEL),
@@ -110,6 +115,8 @@ function replacementFor(key: ProjectEnvKey): string {
       return "https://example.qdrant.tech";
     case "QDRANT_COLLECTION":
       return projectEnvDefaults.QDRANT_COLLECTION;
+    case "GEMINI_CHAT_MODEL":
+      return projectEnvDefaults.GEMINI_CHAT_MODEL;
     case "GEMINI_EMBEDDING_MODEL":
       return projectEnvDefaults.GEMINI_EMBEDDING_MODEL;
     default:
@@ -138,7 +145,6 @@ export function validateProjectEnv(
   const issues: ProjectEnvIssue[] = [];
   const candidate: Record<ProjectEnvKey, string | undefined> = {
     AUTH_SECRET: input.AUTH_SECRET,
-    AI_GATEWAY_API_KEY: input.AI_GATEWAY_API_KEY,
     BLOB_READ_WRITE_TOKEN: input.BLOB_READ_WRITE_TOKEN,
     POSTGRES_URL: input.POSTGRES_URL,
     REDIS_URL: input.REDIS_URL,
@@ -146,6 +152,7 @@ export function validateProjectEnv(
     QDRANT_API_KEY: input.QDRANT_API_KEY,
     QDRANT_COLLECTION: input.QDRANT_COLLECTION,
     GEMINI_API_KEY: input.GEMINI_API_KEY,
+    GEMINI_CHAT_MODEL: input.GEMINI_CHAT_MODEL,
     GEMINI_EMBEDDING_MODEL: input.GEMINI_EMBEDDING_MODEL,
   };
 

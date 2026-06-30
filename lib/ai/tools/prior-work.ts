@@ -128,7 +128,7 @@ export const findThesisExtensions = tool({
       .join(" ");
     const { source, results } = await searchPriorWorkRecords({
       query,
-      filters: { projectSlug },
+      filters: { projectSlug, thesisId },
       limit,
     });
 

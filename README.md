@@ -4,15 +4,16 @@ Cloud-hosted chatbot for software-engineering students who need realistic, cited
 
 This repository is based on the Vercel Chatbot template imported from `vercel/ai-chatbot` at commit `2becdb4a56e7683ae08aef927cec1c6c52dfad5e`. The project keeps the template's Next.js App Router app, AI SDK chat flow, Auth.js integration, persistence, artifacts system, and Playwright setup, then adds the corpus-grounded prior-work engine on top.
 
-## Phase 2 Foundation
+## Foundation
 
 The current foundation includes:
 
 - Next.js 16 App Router and AI SDK 6 from the official chatbot template.
-- Neon/Postgres, Redis, Vercel Blob, Auth.js, and Vercel AI Gateway env slots from the template.
-- Qdrant Cloud and Gemini embedding env slots for the thesis archive retrieval engine.
+- Direct Gemini chat/title generation through `@ai-sdk/google` and `gemini-3.5-flash`.
+- Neon/Postgres, Redis, Vercel Blob, and Auth.js persistence from the template.
+- Qdrant Cloud plus Gemini embeddings for the thesis archive retrieval engine.
 - A Windows-safe Playwright command and a focused Vitest unit-test command.
-- An env validation CLI that can check `.env.example` without real secrets and `.env.local` strictly before runtime cloud calls.
+- Env, ingestion, and production smoke-check CLIs.
 
 ## Local Setup
 
@@ -21,15 +22,18 @@ pnpm install
 pnpm env:check:example
 ```
 
-Create `.env.local` from `.env.example`, fill real cloud secrets, then run:
+Create `.env.local` or `.env` from `.env.example`, fill real cloud secrets, then run:
 
 ```bash
 pnpm env:check
 pnpm db:migrate
+pnpm corpus:extract
+pnpm corpus:ingest
+pnpm prod:check -- --min-points 2000
 pnpm dev
 ```
 
-The app runs on `http://localhost:3000` once the required Vercel/Neon/Redis/Blob/AI Gateway/Qdrant/Gemini variables are present.
+The app runs on `http://localhost:3000` once the required Vercel/Neon/Redis/Blob/Qdrant/Gemini variables are present.
 
 ## Verification Commands
 
@@ -37,10 +41,11 @@ The app runs on `http://localhost:3000` once the required Vercel/Neon/Redis/Blob
 pnpm env:check:example
 pnpm test:unit
 pnpm typecheck
+pnpm prod:check -- --min-points 2000
 pnpm test:e2e
 ```
 
-`pnpm test:e2e` starts the Next.js dev server through Playwright and requires a complete local environment. Without real cloud credentials, use `pnpm env:check:example` and `pnpm test:unit` for offline verification.
+`pnpm test:e2e` starts the Next.js dev server through Playwright and requires a complete local environment. Without real cloud credentials, use `pnpm env:check:example`, `pnpm test:unit`, and `pnpm corpus:ingest:dry-run` for offline verification.
 
 ## Corpus Artifacts
 

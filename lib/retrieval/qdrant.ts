@@ -1,4 +1,4 @@
-import { QdrantClient } from "@qdrant/js-client-rest";
+﻿import { QdrantClient } from "@qdrant/js-client-rest";
 import type {
   CorpusChunk,
   DenseVector,
@@ -14,10 +14,14 @@ export const qdrantVectorNames = {
 
 export const qdrantPayloadIndexes = [
   { field_name: "project_slug", field_schema: "keyword" },
+  { field_name: "thesis_id", field_schema: "keyword" },
   { field_name: "document_type", field_schema: "keyword" },
   { field_name: "language", field_schema: "keyword" },
   { field_name: "year", field_schema: "integer" },
   { field_name: "ocr_required", field_schema: "bool" },
+  { field_name: "text_yield", field_schema: "keyword" },
+  { field_name: "source_path", field_schema: "keyword" },
+  { field_name: "title", field_schema: "text" },
 ] as const;
 
 type QdrantPoint = {
@@ -29,6 +33,11 @@ type QdrantPoint = {
 type QdrantScoredPoint = {
   id: string | number;
   score: number;
+  payload?: Record<string, unknown> | null;
+};
+
+type QdrantScrollPoint = {
+  id: string | number;
   payload?: Record<string, unknown> | null;
 };
 
@@ -50,6 +59,14 @@ export type QdrantLikeClient = {
     collectionName: string,
     args: Record<string, unknown>
   ): Promise<{ points: QdrantScoredPoint[] }>;
+  scroll(
+    collectionName: string,
+    args: Record<string, unknown>
+  ): Promise<{ points: QdrantScrollPoint[] }>;
+  count(
+    collectionName: string,
+    args?: Record<string, unknown>
+  ): Promise<{ count: number }>;
 };
 
 export function createQdrantClientFromEnv(
@@ -164,6 +181,14 @@ export function buildPayloadFilter(filters: RetrievalFilters = {}) {
     must.push({ key: "project_slug", match: { value: filters.projectSlug } });
   }
 
+  if (filters.thesisId) {
+    must.push({ key: "thesis_id", match: { value: filters.thesisId } });
+  }
+
+  if (filters.sourcePath) {
+    must.push({ key: "source_path", match: { value: filters.sourcePath } });
+  }
+
   if (filters.documentTypes?.length) {
     must.push({ key: "document_type", match: { any: filters.documentTypes } });
   }
@@ -181,6 +206,21 @@ export function buildPayloadFilter(filters: RetrievalFilters = {}) {
   }
 
   return must.length > 0 ? { must } : undefined;
+}
+
+function resultFromPayload(
+  id: string | number,
+  score: number,
+  payload: Record<string, unknown> | null | undefined
+): RetrievalResult {
+  const safePayload = payload ?? {};
+
+  return {
+    id: String(id),
+    score,
+    text: typeof safePayload.text === "string" ? safePayload.text : null,
+    payload: safePayload as RetrievalResult["payload"],
+  };
 }
 
 export async function queryHybridPriorWork(
@@ -214,19 +254,44 @@ export async function queryHybridPriorWork(
 
   const response = await client.query(options.collectionName, {
     prefetch,
-    query: { rrf: { k: 60, weights: [0.55, 0.45] } },
+    query: { rrf: { k: 60, weights: [0.45, 0.55] } },
     limit: options.limit ?? 10,
     with_payload: true,
   });
 
-  return response.points.map((point) => {
-    const payload = point.payload ?? {};
+  return response.points.map((point) =>
+    resultFromPayload(point.id, point.score, point.payload)
+  );
+}
 
-    return {
-      id: String(point.id),
-      score: point.score,
-      text: typeof payload.text === "string" ? payload.text : null,
-      payload: payload as RetrievalResult["payload"],
-    };
+export async function scrollPriorWorkByFilter(
+  client: QdrantLikeClient,
+  options: {
+    collectionName: string;
+    filters: RetrievalFilters;
+    limit?: number;
+  }
+): Promise<RetrievalResult[]> {
+  const filter = buildPayloadFilter(options.filters);
+  const response = await client.scroll(options.collectionName, {
+    ...(filter ? { filter } : {}),
+    limit: options.limit ?? 16,
+    with_payload: true,
+    with_vector: false,
   });
+
+  return response.points
+    .map((point) => resultFromPayload(point.id, 1, point.payload))
+    .sort(
+      (left, right) =>
+        (left.payload.chunk_index ?? 0) - (right.payload.chunk_index ?? 0)
+    );
+}
+
+export async function countCollectionPoints(
+  client: QdrantLikeClient,
+  collectionName: string
+): Promise<number> {
+  const result = await client.count(collectionName, { exact: true });
+  return result.count;
 }
