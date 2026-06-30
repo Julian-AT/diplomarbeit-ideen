@@ -13,9 +13,10 @@ import { createResumableStreamContext } from "resumable-stream";
 import { auth, type UserType } from "@/app/(auth)/auth";
 import { entitlementsByUserType } from "@/lib/ai/entitlements";
 import {
-  allowedModelIds,
-  DEFAULT_CHAT_MODEL,
   getCapabilities,
+  getDefaultChatModel,
+  isAllowedChatModelId,
+  isGatewayModelId,
 } from "@/lib/ai/models";
 import { type RequestHints, systemPrompt } from "@/lib/ai/prompts";
 import { getLanguageModel } from "@/lib/ai/providers";
@@ -51,6 +52,11 @@ import { type PostRequestBody, postRequestBodySchema } from "./schema";
 
 export const maxDuration = 60;
 
+function isGatewayActivationError(error: unknown): boolean {
+  const message = error instanceof Error ? error.message : String(error ?? "");
+  return /AI Gateway|credit card|credits?|billing|payment/i.test(message);
+}
+
 function getStreamContext() {
   try {
     return createResumableStreamContext({ waitUntil: after });
@@ -84,9 +90,9 @@ export async function POST(request: Request) {
       return new ChatbotError("unauthorized:chat").toResponse();
     }
 
-    const chatModel = allowedModelIds.has(selectedChatModel)
+    const chatModel = isAllowedChatModelId(selectedChatModel)
       ? selectedChatModel
-      : DEFAULT_CHAT_MODEL;
+      : getDefaultChatModel();
 
     await checkIpRateLimit(ipAddress(request));
 
@@ -184,7 +190,7 @@ export async function POST(request: Request) {
       });
     }
 
-    const modelCapabilities = await getCapabilities();
+    const modelCapabilities = getCapabilities();
     const capabilities = modelCapabilities[chatModel];
     const isReasoningModel = capabilities?.reasoning === true;
     const supportsTools = capabilities?.tools === true;
@@ -293,7 +299,13 @@ export async function POST(request: Request) {
           });
         }
       },
-      onError: () => "Oops, an error occurred!",
+      onError: (error) => {
+        if (isGatewayModelId(chatModel) && isGatewayActivationError(error)) {
+          return new ChatbotError("bad_request:activate_gateway").message;
+        }
+
+        return "Oops, an error occurred!";
+      },
     });
 
     return createUIMessageStreamResponse({
@@ -322,6 +334,10 @@ export async function POST(request: Request) {
 
     if (error instanceof ChatbotError) {
       return error.toResponse();
+    }
+
+    if (isGatewayActivationError(error)) {
+      return new ChatbotError("bad_request:activate_gateway").toResponse();
     }
 
     console.error("Unhandled error in chat API:", error, { vercelId });

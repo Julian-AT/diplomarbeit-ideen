@@ -73,7 +73,13 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
 
   const chatId = chatIdFromUrl ?? newChatIdRef.current;
 
+  const { data: modelSettings } = useSWR<{ defaultModelId?: string }>(
+    `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/api/models`,
+    fetcher,
+    { revalidateOnFocus: false, dedupingInterval: 3_600_000 }
+  );
   const [currentModelId, setCurrentModelId] = useState(DEFAULT_CHAT_MODEL);
+  const [initialModelReady, setInitialModelReady] = useState(false);
   const currentModelIdRef = useRef(currentModelId);
   useEffect(() => {
     currentModelIdRef.current = currentModelId;
@@ -197,23 +203,32 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
     }
   }, [chatId, isNewChat, setMessages]);
 
+  const hasAppliedInitialModelRef = useRef(false);
   useEffect(() => {
-    if (chatData && !isNewChat) {
-      const cookieModel = document.cookie
-        .split("; ")
-        .find((row) => row.startsWith("chat-model="))
-        ?.split("=")[1];
-      if (cookieModel) {
-        setCurrentModelId(decodeURIComponent(cookieModel));
-      }
+    if (hasAppliedInitialModelRef.current) {
+      return;
     }
-  }, [chatData, isNewChat]);
+
+    const cookieModel = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("chat-model="))
+      ?.split("=")[1];
+    const preferredModel = cookieModel
+      ? decodeURIComponent(cookieModel)
+      : modelSettings?.defaultModelId;
+
+    if (preferredModel) {
+      hasAppliedInitialModelRef.current = true;
+      setCurrentModelId(preferredModel);
+      setInitialModelReady(true);
+    }
+  }, [modelSettings?.defaultModelId]);
 
   const hasAppendedQueryRef = useRef(false);
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const query = params.get("query");
-    if (query && !hasAppendedQueryRef.current) {
+    if (query && !hasAppendedQueryRef.current && initialModelReady) {
       hasAppendedQueryRef.current = true;
       window.history.replaceState(
         {},
@@ -225,7 +240,7 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
         parts: [{ type: "text", text: query }],
       });
     }
-  }, [sendMessage, chatId]);
+  }, [sendMessage, chatId, initialModelReady]);
 
   useAutoResume({
     autoResume: !isNewChat && !!chatData,

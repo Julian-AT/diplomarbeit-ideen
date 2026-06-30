@@ -4,6 +4,7 @@ import path from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 import { writeJsonLines } from "../../../lib/retrieval/corpus-io";
 import {
+  getLocalSourceContext,
   getLocalThesisContext,
   searchLocalChunks,
 } from "../../../lib/retrieval/local";
@@ -92,6 +93,19 @@ describe("local retrieval", () => {
       id: chunks[0].id,
       payload: { project_slug: "hybrid-search" },
     });
+  });
+
+  it("returns context for direct source preview links", async () => {
+    const chunksPath = await writeChunksFile();
+    const results = await getLocalSourceContext({
+      sourcePath: "archive/hybrid-search/hybrid.pdf",
+      chunksPath,
+    });
+
+    expect(results).toHaveLength(1);
+    expect(results[0].payload.source_path).toBe(
+      "archive/hybrid-search/hybrid.pdf"
+    );
   });
 
   it("returns context for build-on-top thesis selection", async () => {

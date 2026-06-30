@@ -1,4 +1,4 @@
-﻿import { z } from "zod";
+import { z } from "zod";
 
 export const geminiEmbeddingModels = [
   "gemini-embedding-2-preview",
@@ -6,6 +6,11 @@ export const geminiEmbeddingModels = [
 ] as const;
 
 export const geminiChatModels = ["gemini-3.5-flash"] as const;
+
+export const gatewayChatModels = [
+  "anthropic/claude-sonnet-5",
+  "google/gemini-3.5-flash",
+] as const;
 
 export const projectEnvKeys = [
   "AUTH_SECRET",
@@ -18,6 +23,8 @@ export const projectEnvKeys = [
   "GEMINI_API_KEY",
   "GEMINI_CHAT_MODEL",
   "GEMINI_EMBEDDING_MODEL",
+  "AI_GATEWAY_API_KEY",
+  "GATEWAY_CHAT_MODEL",
 ] as const;
 
 export const requiredProjectEnvKeys = [
@@ -34,12 +41,14 @@ export const projectEnvDefaults = {
   QDRANT_COLLECTION: "thesis_ideas",
   GEMINI_CHAT_MODEL: "gemini-3.5-flash",
   GEMINI_EMBEDDING_MODEL: "gemini-embedding-2-preview",
+  GATEWAY_CHAT_MODEL: "anthropic/claude-sonnet-5",
 } as const;
 
 type ProjectEnvKey = (typeof projectEnvKeys)[number];
 
 export type GeminiEmbeddingModel = (typeof geminiEmbeddingModels)[number];
 export type GeminiChatModel = (typeof geminiChatModels)[number];
+export type GatewayChatModel = (typeof gatewayChatModels)[number];
 export type ProjectEnvIssue = {
   key: ProjectEnvKey | "ENV_FILE";
   message: string;
@@ -87,6 +96,10 @@ export const projectEnvSchema = z.object({
   GEMINI_EMBEDDING_MODEL: z
     .enum(geminiEmbeddingModels)
     .default(projectEnvDefaults.GEMINI_EMBEDDING_MODEL),
+  AI_GATEWAY_API_KEY: z.string().optional(),
+  GATEWAY_CHAT_MODEL: z
+    .enum(gatewayChatModels)
+    .default(projectEnvDefaults.GATEWAY_CHAT_MODEL),
 });
 
 export type ProjectEnv = z.infer<typeof projectEnvSchema>;
@@ -119,6 +132,8 @@ function replacementFor(key: ProjectEnvKey): string {
       return projectEnvDefaults.GEMINI_CHAT_MODEL;
     case "GEMINI_EMBEDDING_MODEL":
       return projectEnvDefaults.GEMINI_EMBEDDING_MODEL;
+    case "GATEWAY_CHAT_MODEL":
+      return projectEnvDefaults.GATEWAY_CHAT_MODEL;
     default:
       return "placeholder-secret";
   }
@@ -154,6 +169,8 @@ export function validateProjectEnv(
     GEMINI_API_KEY: input.GEMINI_API_KEY,
     GEMINI_CHAT_MODEL: input.GEMINI_CHAT_MODEL,
     GEMINI_EMBEDDING_MODEL: input.GEMINI_EMBEDDING_MODEL,
+    AI_GATEWAY_API_KEY: input.AI_GATEWAY_API_KEY,
+    GATEWAY_CHAT_MODEL: input.GATEWAY_CHAT_MODEL,
   };
 
   for (const key of requiredProjectEnvKeys) {

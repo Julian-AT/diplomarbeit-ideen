@@ -18,6 +18,26 @@ const documentTypeSchema = z.enum([
   "word-document",
 ]);
 
+function sourceUrl(
+  result: Awaited<ReturnType<typeof searchPriorWorkRecords>>["results"][number]
+) {
+  const params = new URLSearchParams({
+    sourcePath: result.payload.source_path,
+  });
+
+  if (result.payload.thesis_id) {
+    params.set("thesisId", result.payload.thesis_id);
+  }
+  if (result.payload.project_slug) {
+    params.set("projectSlug", result.payload.project_slug);
+  }
+  if (result.payload.page_start) {
+    params.set("page", String(result.payload.page_start));
+  }
+
+  return `/api/prior-work/source?${params.toString()}`;
+}
+
 function serializeResults(
   results: Awaited<ReturnType<typeof searchPriorWorkRecords>>["results"]
 ) {
@@ -33,12 +53,13 @@ function serializeResults(
     sourcePath: result.payload.source_path,
     pageStart: result.payload.page_start,
     pageEnd: result.payload.page_end,
+    sourceUrl: sourceUrl(result),
   }));
 }
 
 export const searchPriorWork = tool({
   description:
-    "Search the approved prior thesis corpus. Use this before proposing thesis ideas, comparing past work, or making claims about what the archive contains. Returns cited excerpts.",
+    "Search the approved prior thesis corpus. Use this before proposing thesis ideas, comparing past work, or making claims about what the archive contains. Returns cited excerpts plus sourceUrl links; ideas must be grounded in these results, not generic examples.",
   inputSchema: z.object({
     query: z.string().min(2).describe("Natural-language search query."),
     projectSlug: z
@@ -104,7 +125,7 @@ export const getThesisById = tool({
 
 export const findThesisExtensions = tool({
   description:
-    "Find cited extension opportunities by searching future-work, risks, limitations, methodology, and related-work evidence for a selected thesis/project.",
+    "Find cited extension opportunities by searching future-work, risks, limitations, methodology, and related-work evidence for a selected thesis/project. Use returned excerpts and sourceUrl links as the direct basis for build-on-top ideas.",
   inputSchema: z.object({
     projectSlug: z
       .string()

@@ -1,14 +1,24 @@
-﻿import { getActiveModels, getCapabilities } from "@/lib/ai/models";
+import { headers } from "next/headers";
+import {
+  getActiveModels,
+  getCapabilities,
+  getDefaultChatModel,
+} from "@/lib/ai/models";
 
 export async function GET() {
-  const headers = {
-    "Cache-Control": "public, max-age=86400, s-maxage=86400",
+  await headers();
+  const responseHeaders = {
+    "Cache-Control": "private, max-age=60",
   };
 
-  const capabilities = await getCapabilities();
+  const capabilities = getCapabilities();
 
   return Response.json(
-    { capabilities, models: getActiveModels() },
-    { headers }
+    {
+      capabilities,
+      defaultModelId: getDefaultChatModel(),
+      models: getActiveModels(),
+    },
+    { headers: responseHeaders }
   );
 }

@@ -1,7 +1,7 @@
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
-import { customProvider } from "ai";
+import { customProvider, gateway } from "ai";
 import { isTestEnvironment } from "../constants";
-import { titleModel } from "./models";
+import { isGatewayModelId, titleModel } from "./models";
 
 export const myProvider = isTestEnvironment
   ? (() => {
@@ -22,6 +22,10 @@ function getGoogleProvider() {
 export function getLanguageModel(modelId: string) {
   if (isTestEnvironment && myProvider) {
     return myProvider.languageModel(modelId);
+  }
+
+  if (isGatewayModelId(modelId)) {
+    return gateway(modelId);
   }
 
   return getGoogleProvider().interactions(modelId);

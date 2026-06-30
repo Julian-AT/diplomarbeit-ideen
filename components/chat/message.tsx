@@ -19,6 +19,7 @@ import { SparklesIcon } from "./icons";
 import { MessageActions } from "./message-actions";
 import { MessageReasoning } from "./message-reasoning";
 import { PreviewAttachment } from "./preview-attachment";
+import { PriorWorkToolResult } from "./prior-work-result";
 import { Weather } from "./weather";
 
 const PurePreviewMessage = ({
@@ -218,6 +219,36 @@ const PurePreviewMessage = ({
       );
     }
 
+    if (
+      type === "tool-searchPriorWork" ||
+      type === "tool-getThesisById" ||
+      type === "tool-findThesisExtensions"
+    ) {
+      const { toolCallId, state } = part;
+
+      return (
+        <Tool
+          className="w-[min(100%,720px)]"
+          defaultOpen={true}
+          key={toolCallId}
+        >
+          <ToolHeader state={state} type={type} />
+          <ToolContent>
+            {(state === "input-available" ||
+              state === "approval-requested" ||
+              state === "approval-responded") && (
+              <ToolInput input={part.input} />
+            )}
+            {state === "output-available" && (
+              <ToolOutput
+                errorText={undefined}
+                output={<PriorWorkToolResult output={part.output} />}
+              />
+            )}
+          </ToolContent>
+        </Tool>
+      );
+    }
     if (type === "tool-createDocument") {
       const { toolCallId } = part;
 

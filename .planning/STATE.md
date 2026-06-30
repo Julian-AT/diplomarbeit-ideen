@@ -6,9 +6,9 @@ current_phase: 4
 current_phase_name: Grounded Ideation Flows and Proposal Artifact
 status: complete
 stopped_at: Milestone source-complete; cloud runtime UAT pending credentials
-last_updated: "2026-07-01T00:50:00.000+02:00"
+last_updated: "2026-07-01T01:18:00.000+02:00"
 last_activity: 2026-07-01
-last_activity_desc: Production Gemini provider, German retrieval optimization, live Qdrant ingestion, and prod smoke verification completed
+last_activity_desc: Optional AI Gateway Sonnet 5 default, German onboarding, and archive evidence source-card UX completed
 progress:
   total_phases: 4
   completed_phases: 4
@@ -24,14 +24,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-30)
 
 **Core value:** Students can get creative but feasible thesis proposals that are grounded in, cite, and build on real prior theses from the archive.
-**Current focus:** v1.0 production data path verified with direct Gemini and live Qdrant retrieval
+**Current focus:** v1.0 production data path verified with direct Gemini, optional AI Gateway, and live Qdrant evidence links
 
 ## Current Position
 
 Phase: 4 of 4 (Grounded Ideation Flows and Proposal Artifact)
 Plan: 3 of 3 in current phase
-Status: Complete with production data smoke verified
-Last activity: 2026-07-01 - Production Gemini provider, German retrieval optimization, live Qdrant ingestion, and prod smoke verification completed
+Status: Complete with production data smoke and evidence UX verified
+Last activity: 2026-07-01 - Optional AI Gateway Sonnet 5 default, German onboarding, and archive evidence source-card UX completed
 
 Progress: [##########] 100%
 
@@ -78,8 +78,9 @@ Recent decisions affecting current work:
 - Phase 4: Chat route exposes `searchPriorWork`, `getThesisById`, and `findThesisExtensions`; tools use Qdrant/Gemini when env is complete and local chunks otherwise.
 - Phase 4: `thesis-proposal` is a first-class artifact kind with streaming Markdown generation, persistence registration, editing, versioning, and citation-focused toolbar actions.
 - Phase 4: Idea-quality scoring checks proposal sections, citation signals, source paths, novelty/gap framing, and feasibility signals.
-- Quick 20260701: Production chat/title generation now uses direct `@ai-sdk/google` Gemini Interactions with `gemini-3.5-flash`, not Vercel AI Gateway.
+- Quick 20260701: Production chat/title generation uses direct `@ai-sdk/google` Gemini Interactions with `gemini-3.5-flash`; optional AI Gateway remains supported and defaults to `anthropic/claude-sonnet-5` when Gateway credentials are present.
 - Quick 20260701: Live Qdrant collection `diplomarbeiten` contains 2,747 corpus chunk points with 3,072-dimensional Gemini embeddings and German retrieval smoke checks passing.
+- Quick 20260701: Prior-work tool results now render as linked source cards; `/api/prior-work/source` opens authenticated source-context previews for retrieved archive chunks.
 
 ### Pending Todos
 

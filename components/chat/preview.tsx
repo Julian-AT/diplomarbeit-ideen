@@ -18,16 +18,19 @@ export function Preview() {
         <div className="flex size-5 items-center justify-center rounded bg-muted/60 ring-1 ring-border/50">
           <SparklesIcon size={10} />
         </div>
-        <span className="text-[13px] text-muted-foreground">Chatbot</span>
+        <span className="text-[13px] text-muted-foreground">
+          Diplomarbeit Ideen
+        </span>
       </div>
 
       <div className="flex flex-1 flex-col items-center justify-center gap-8 px-8">
         <div className="text-center">
           <h2 className="text-xl font-semibold tracking-tight">
-            What can I help with?
+            Welche Diplomarbeit passt?
           </h2>
           <p className="mt-1.5 text-sm text-muted-foreground">
-            Ask a question, write code, or explore ideas.
+            Starte mit einem Interesse oder baue direkt auf Archiv-Projekten
+            auf.
           </p>
         </div>
 
@@ -51,7 +54,7 @@ export function Preview() {
           onClick={() => handleAction()}
           type="button"
         >
-          Ask anything...
+          Frag nach einer belegten Diplomarbeit-Idee...
         </button>
       </div>
     </div>

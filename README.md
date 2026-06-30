@@ -9,7 +9,7 @@ This repository is based on the Vercel Chatbot template imported from `vercel/ai
 The current foundation includes:
 
 - Next.js 16 App Router and AI SDK 6 from the official chatbot template.
-- Direct Gemini chat/title generation through `@ai-sdk/google` and `gemini-3.5-flash`.
+- Direct Gemini chat/title generation through `@ai-sdk/google` and `gemini-3.5-flash`, with optional Vercel AI Gateway support. When Gateway credentials are present, `anthropic/claude-sonnet-5` becomes the active chat default.
 - Neon/Postgres, Redis, Vercel Blob, and Auth.js persistence from the template.
 - Qdrant Cloud plus Gemini embeddings for the thesis archive retrieval engine.
 - A Windows-safe Playwright command and a focused Vitest unit-test command.
@@ -33,7 +33,7 @@ pnpm prod:check -- --min-points 2000
 pnpm dev
 ```
 
-The app runs on `http://localhost:3000` once the required Vercel/Neon/Redis/Blob/Qdrant/Gemini variables are present.
+The app runs on `http://localhost:3000` once the required Vercel/Neon/Redis/Blob/Qdrant/Gemini variables are present. `AI_GATEWAY_API_KEY` is optional; if set, the model selector enables Gateway models and defaults new chats to Sonnet 5.
 
 ## Verification Commands
 

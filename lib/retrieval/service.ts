@@ -1,6 +1,10 @@
-﻿import { validateProjectEnv } from "../env/project";
+import { validateProjectEnv } from "../env/project";
 import { GeminiEmbeddingProvider } from "./embeddings";
-import { getLocalThesisContext, searchLocalChunks } from "./local";
+import {
+  getLocalSourceContext,
+  getLocalThesisContext,
+  searchLocalChunks,
+} from "./local";
 import {
   createQdrantClientFromEnv,
   queryHybridPriorWork,
@@ -135,6 +139,46 @@ export async function getThesisContextRecords(
   };
 }
 
+export async function getSourceContextRecords(
+  options: {
+    sourcePath: string;
+    thesisId?: string;
+    projectSlug?: string;
+    limit?: number;
+  },
+  env: NodeJS.ProcessEnv = process.env
+): Promise<{ source: "qdrant" | "local"; results: RetrievalResult[] }> {
+  const filters: RetrievalFilters = {
+    sourcePath: options.sourcePath,
+    thesisId: options.thesisId,
+    projectSlug: options.projectSlug,
+  };
+
+  if (canUseCloudRetrieval(env)) {
+    const validation = validateProjectEnv(env);
+    if (validation.env) {
+      const client = createQdrantClientFromEnv(env);
+      return {
+        source: "qdrant",
+        results: await scrollPriorWorkByFilter(client, {
+          collectionName: validation.env.QDRANT_COLLECTION,
+          filters,
+          limit: options.limit,
+        }),
+      };
+    }
+  }
+
+  return {
+    source: "local",
+    results: await getLocalSourceContext({
+      sourcePath: options.sourcePath,
+      thesisId: options.thesisId,
+      projectSlug: options.projectSlug,
+      limit: options.limit,
+    }),
+  };
+}
 export function summarizeRetrievalResults(results: RetrievalResult[]): string {
   return results
     .map((result, index) => {

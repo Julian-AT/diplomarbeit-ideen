@@ -25,6 +25,14 @@ function matchesFilters(
     return false;
   }
 
+  if (filters.thesisId && chunk.payload.thesis_id !== filters.thesisId) {
+    return false;
+  }
+
+  if (filters.sourcePath && chunk.payload.source_path !== filters.sourcePath) {
+    return false;
+  }
+
   if (
     filters.documentTypes?.length &&
     !filters.documentTypes.includes(chunk.payload.document_type)
@@ -111,6 +119,41 @@ export async function getLocalThesisContext(options: {
 }): Promise<RetrievalResult[]> {
   const chunks = await loadLocalChunks(options.chunksPath);
   const selected = chunks.filter((chunk) => {
+    if (options.thesisId && chunk.payload.thesis_id !== options.thesisId) {
+      return false;
+    }
+
+    if (
+      options.projectSlug &&
+      chunk.payload.project_slug !== options.projectSlug
+    ) {
+      return false;
+    }
+
+    return true;
+  });
+
+  return selected.slice(0, options.limit ?? 12).map((chunk) => ({
+    id: chunk.id,
+    score: 1,
+    text: chunk.text,
+    payload: chunk.payload,
+  }));
+}
+
+export async function getLocalSourceContext(options: {
+  sourcePath: string;
+  thesisId?: string;
+  projectSlug?: string;
+  limit?: number;
+  chunksPath?: string;
+}): Promise<RetrievalResult[]> {
+  const chunks = await loadLocalChunks(options.chunksPath);
+  const selected = chunks.filter((chunk) => {
+    if (chunk.payload.source_path !== options.sourcePath) {
+      return false;
+    }
+
     if (options.thesisId && chunk.payload.thesis_id !== options.thesisId) {
       return false;
     }

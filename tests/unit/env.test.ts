@@ -1,4 +1,4 @@
-﻿import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { projectEnvDefaults, validateProjectEnv } from "../../lib/env/project";
 
 const validEnv = {
@@ -24,6 +24,9 @@ describe("validateProjectEnv", () => {
     );
     expect(result.env?.GEMINI_EMBEDDING_MODEL).toBe(
       projectEnvDefaults.GEMINI_EMBEDDING_MODEL
+    );
+    expect(result.env?.GATEWAY_CHAT_MODEL).toBe(
+      projectEnvDefaults.GATEWAY_CHAT_MODEL
     );
   });
 
@@ -70,6 +73,20 @@ describe("validateProjectEnv", () => {
     expect(result.issues).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ key: "GEMINI_CHAT_MODEL" }),
+      ])
+    );
+  });
+
+  it("rejects unsupported Gateway chat model identifiers", () => {
+    const result = validateProjectEnv({
+      ...validEnv,
+      GATEWAY_CHAT_MODEL: "anthropic/claude-sonnet-4.5",
+    });
+
+    expect(result.ok).toBe(false);
+    expect(result.issues).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ key: "GATEWAY_CHAT_MODEL" }),
       ])
     );
   });
