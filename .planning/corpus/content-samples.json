@@ -1,0 +1,1371 @@
+{
+  "generated_at": "2026-06-30T21:08:44+00:00",
+  "pdf_samples": [
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-aba-antrag.pdf",
+      "project_slug": "airchif",
+      "parser": "pymupdf",
+      "page_count": 2,
+      "sampled_pages": 2,
+      "sample_text_chars": 5358,
+      "chars_per_sampled_page": 2679,
+      "image_count_sample": 0,
+      "images_per_sampled_page": 0.0,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "high",
+        "german_hits": 91,
+        "english_hits": 4
+      },
+      "excerpt": "DA-Antrag Titel: AirChif – Drohne mit KI-gestützter Müllerkennung als mobile System Projektteam Name Individuelle Themenstellung (200 Zeichen) Stunden Mohamed SAAD FastAPI-Backend für die Drohnensteuerung (inkl. Firmware) und Benutzerverwaltung 180 Hasan DEMIRCI Mobile Flutter-App für die Drohnensteuerung über Missions und zur Anzeige von Müllstatistiken 180 Diego MAYER Entwicklung einer KI zur Müllerkennung für ein mobiles Drohnensystem 180 Hinweise zur Titelformulierung der individuellen Arbeiten: https://www.scribbr.de/aufbau-und- gliederung/titel-bachelorarbeit/ Ausgangslage (400 Zeichen) Illegale Müllablagerungen sind ein wachsendes Umweltproblem. Gemeinden und Organisationen haben kein",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-diplomarbeit.pdf",
+      "project_slug": "airchif",
+      "parser": "pymupdf",
+      "page_count": 90,
+      "sampled_pages": 5,
+      "sample_text_chars": 9624,
+      "chars_per_sampled_page": 1924,
+      "image_count_sample": 2,
+      "images_per_sampled_page": 0.4,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 71,
+        "english_hits": 43
+      },
+      "excerpt": "Projektnummer: 22IF2615 Schuljahr: 2025/26 htl donaustadt Donaustadtstraße 45 1220 Wien office@htl-donaustadt.at www.htl-donaustadt.at DIPLOMARBEIT AirChif Drohne mit KI-gestützter Müllerkennung als mobiles System Verfasser: Hasan Rasid DEMIRCI Diego Hernan MAYER Mohamed SAAD Betreuer: Mag. Clemens Wiesinger, MBA Abteilung für Informatik – Software Engineering, 5CHIF AirChif Diego Mayer, Mohamed Saad, Hasan Demirci 22IF2615 Seite 2 von 90 27.04.2026 VERFASSERERKLÄRUNG Ich erkläre, dass ich die vorliegende Diplomarbeit selbstständig und ohne fremde Hilfe verfasst, andere als die angegebenen Quellen und Hilfsmittel nicht benutzt, die aus anderen Werken übernommene Inhalte durch Quellenangaben ",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-poster.pdf",
+      "project_slug": "airchif",
+      "parser": "pymupdf",
+      "page_count": 1,
+      "sampled_pages": 1,
+      "sample_text_chars": 859,
+      "chars_per_sampled_page": 859,
+      "image_count_sample": 5,
+      "images_per_sampled_page": 5.0,
+      "text_yield": "medium",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 15,
+        "english_hits": 0
+      },
+      "excerpt": "PROJEKT-ERGEBNISSE: Im Rahmen des Projekts sind folgende Ergebnisse geplant: • Modulares Backend mit Benutzer- und Missionsverwaltung • Mobile-App zur Drohnensteuerung und Darstellung von Müllfunden • Kartenansicht mit Müllstandorten und Statistikfunktionen für den Benutzer • KI-Modell zur zuverlässigen Erkennung von Müll aus der Luft • Automatisierte Speicherung von GPS- und Erkennungsdaten ZIELSETZUNG: Illegale Müllablagerungen belasten Natur und Gemeinden. Das Projekt verfolgt daher folgende Ziele: • KI-gestützte Müllerkennung durch Drohne in definierten Gebieten. • Automatische Datenauswertung und Kartierung von Fundorten • Anwenderfreundliche mobile App zur Unterstützung der Umwelt AirC",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-vorstudie.pdf",
+      "project_slug": "airchif",
+      "parser": "pymupdf",
+      "page_count": 21,
+      "sampled_pages": 5,
+      "sample_text_chars": 6348,
+      "chars_per_sampled_page": 1269,
+      "image_count_sample": 1,
+      "images_per_sampled_page": 0.2,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 40,
+        "english_hits": 15
+      },
+      "excerpt": "htl donaustadt Donaustadtstraße 45 1220 Wien office@htl-donaustadt.at www.htl-donaustadt.at Vorstudie Projekt: AirChif Verfasser: Saad, Demirci, Daxböck, Mayer Abteilung für Informatik – Software Engineering, 4CHIF Schuljahr 2024/25 AirChif Saad, Demirci, Daxböck, Mayer KURZFASSUNG Das Projekt \"AirChif\" ist eine Handy-App, mit der Nutzer eine Drohne steuern können, die mithilfe von KI Müll erkennt und eine Heatmap von Müll-Hotspots erstellt. Ziel ist es, Umweltschutz einfacher, effizienter und für jeden zugänglich zu machen. Die App richtet sich an Umweltschutzorganisationen, freiwillige Helfer, Städte und Technik-Enthusiasten. Sie basiert auf Python-Frameworks wie KivyMD und verwendet KI-Mo",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindIn-abnahmeprotokoll.pdf",
+      "project_slug": "blindin",
+      "parser": "pymupdf",
+      "page_count": 10,
+      "sampled_pages": 5,
+      "sample_text_chars": 5657,
+      "chars_per_sampled_page": 1131,
+      "image_count_sample": 4,
+      "images_per_sampled_page": 0.8,
+      "text_yield": "medium",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "high",
+        "german_hits": 35,
+        "english_hits": 0
+      },
+      "excerpt": "Abnahmeprotokoll HTL-Diplomarbeit PROJEKTTEAM Brainutilizers Daniel Schwarzenberger Lukas Brainovic Alexander Schnabl Federico Hu BETREUER DI. Goldack Wien, April 2026 Inhaltsverzeichnis Inhaltsverzeichnis............................................................................................................. 1 1 Einleitung...................................................................................................................... 2 2 Geleistete Stunden pro Projektmitglied.......................................................................... 3 3 Leistungsumfang........................................................................................................... 4 4 Mäng",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindin-diplomarbeit.pdf",
+      "project_slug": "blindin",
+      "parser": "pymupdf",
+      "page_count": 105,
+      "sampled_pages": 5,
+      "sample_text_chars": 2975,
+      "chars_per_sampled_page": 595,
+      "image_count_sample": 3,
+      "images_per_sampled_page": 0.6,
+      "text_yield": "medium",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "high",
+        "german_hits": 47,
+        "english_hits": 1
+      },
+      "excerpt": "DIPLOMARBEIT Sportassistent für Blinde und Sehbeeinträchtigte Personen Ausgeführt im Schuljahr 2025/26 von: Betreuer/Betreuerin: Lukas Brainovic, 5BHIF DI Daniel Goldack Alexander Schnabl, 5BHIF Federico Hu, 5BHIF Daniel Schwarzenberger, 5BHIF Wien, 24. April 2026 Eidesstattliche Erklärung Ich erkläre an Eides statt, dass ich die vorliegende Diplomarbeit selbständig und ohne fremde Hilfe verfasst, andere als die angegebenen Quellen und Hilfsmittel nicht benutzt und die den benutzten Quellen wörtlich und inhaltlich entnommenen Stellen als solche erkenntlich gemacht habe. Zur Gewährleistung der sprachlichen Korrektheit im Deutschen, zur Unterstützung bei der Formatierung mittels LaTeX sowie zu",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindin-ideenpräsentation.pdf",
+      "project_slug": "blindin",
+      "parser": "pymupdf",
+      "page_count": 12,
+      "sampled_pages": 5,
+      "sample_text_chars": 68,
+      "chars_per_sampled_page": 13,
+      "image_count_sample": 5,
+      "images_per_sampled_page": 1.0,
+      "text_yield": "low",
+      "ocr_candidate": true,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 1,
+        "english_hits": 0
+      },
+      "excerpt": "DAS INTERAKTIVE SENIOREN- ÜBUNGSSTATIV Von Blindheit betroffen",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindin-projekt-antrag.pdf",
+      "project_slug": "blindin",
+      "parser": "pymupdf",
+      "page_count": 7,
+      "sampled_pages": 5,
+      "sample_text_chars": 6744,
+      "chars_per_sampled_page": 1348,
+      "image_count_sample": 0,
+      "images_per_sampled_page": 0.0,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "high",
+        "german_hits": 90,
+        "english_hits": 6
+      },
+      "excerpt": "Detailansicht ABA - Detailansicht https://aba.bildung.gv.at/themen/details/e8d26750-24f3-4284-8c77-418... 1 von 7 10.04.2026, 14:23 Allgemein Typ der Arbeit* Diplomarbeit Schulart* Technische, gewerbliche und kunstgewerbliche Schulen Thema (max. 200 Zeichen)* BlindIn – Der sprechende Sportassistent für sehbeeinträchtigte Senior Verantwortliche/r Schüler/in* Daniel SCHWARZENBERGER Verordneter, spätester Abgabetermin* 27 . 04 . 2026 Klasse 5BHIF Abteilung IF Individuelle Themenstellung des verantwortlichen Schülers / der verantwortlichen Schülerin (max. 200 Zeichen)* Ermöglichung korrekter Bewegungsausführung mittels State- Machines-Optimierung von Sportübungen. Geschätzter Arbeitsaufwand (in ",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindin-projektbericht.pdf",
+      "project_slug": "blindin",
+      "parser": "pymupdf",
+      "page_count": 1,
+      "sampled_pages": 1,
+      "sample_text_chars": 1680,
+      "chars_per_sampled_page": 1680,
+      "image_count_sample": 4,
+      "images_per_sampled_page": 4.0,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 15,
+        "english_hits": 2
+      },
+      "excerpt": "HTL Donaustadt • Abteilung Informatik • Schuljahr 2025/26 Abteilung Informatik | Schuljahr 2025/26 Betreuer: Daniel Goldack D I P L O M A R B E I T BlindIn Der sprechende Sportassistenz für sehbeeinträchtigte Senioren K U R Z B E S C H R E I B U N G Regelmäßige Bewegung fördert Gesundheit und Selbstständigkeit im Alter — doch für sehbeeinträchtigte Menschen ist das sichere und korrekte Durchführen von Sportübungen alleine oft eine große Herausforderung. Bestehende Lösungen setzen meist ausreichende Sehkraft, technisches Wissen oder eine ständige menschliche Betreuung voraus. BlindIn ist ein sprachgesteuertes Trainingsgerät, das speziell für sehbeeinträchtigte Pensionisten entwickelt wurde, u",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-abschlusspräsentation.pdf",
+      "project_slug": "dailybuddy",
+      "parser": "pymupdf",
+      "page_count": 20,
+      "sampled_pages": 5,
+      "sample_text_chars": 1259,
+      "chars_per_sampled_page": 251,
+      "image_count_sample": 6,
+      "images_per_sampled_page": 1.2,
+      "text_yield": "low",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 6,
+        "english_hits": 0
+      },
+      "excerpt": "DailyBuddy – Abschlusspräsentation Niklas Zahora, André Köth, Daniela Mace, Gracjan Krzeminski Problem / Hintergrund des Projektes • App-Chaos: 3 verschiedene Apps für Schlaf, Essen & Co • Abo-Falle: Aggressive Abo-Modelle und Paywalls • Stress statt Hilfe: Ständiges Hin- und Herwechseln kostet Zeit • Kein Zusammenhang: Für jedes Tracking, wird eine eigene App benötigt • Speicherplatz: Handy wird zugemüllt mit zu vielen Apps die eigentlich das Gleiche machen • Verlorene Daten: Wenn eine App gelöscht wird, sind die Daten weg weil keine Verknüpfung besteht Lösungsansatz • All-in-One Prinzip: Eine einzige App für alles – Schluss mit App-Hopping • Voller Funktionsumfang – Kostenlos: Alle wichtig",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-antrag.pdf",
+      "project_slug": "dailybuddy",
+      "parser": "pymupdf",
+      "page_count": 2,
+      "sampled_pages": 2,
+      "sample_text_chars": 5520,
+      "chars_per_sampled_page": 2760,
+      "image_count_sample": 0,
+      "images_per_sampled_page": 0.0,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "high",
+        "german_hits": 89,
+        "english_hits": 3
+      },
+      "excerpt": "DA-Antrag Vorlage Titel: DailyBuddy Projektteam Name Individuelle Themenstellung (200 Zeichen) Stunden Gracjan Piotr Krzeminski Monitoring von Vitalparametern und Datenaustausch mit Smartwatches 180 Niklas Zahora Effiziente Umsetzung von CRUD-Operationen und komplexen Datenbankabfragen in Spring Boot mit Hilfe von JPA 180 André Köth Grafische Darstellung und Analyse von Vitaldaten sowie Erkennung von Gesundheit relevanten Zusammenhängen. 180 Daniela Mace Erstellung und Evaluation eines modernen adaptiv barrierefreien UI/UX Designs 180 Ausgangslage (400 Zeichen) Viele Apps erfassen den Tagesablauf, schränken jedoch wichtige Funktionen hinter Bezahlschranken ein. Eine zentrale Anwendung zur ga",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-charter.pdf",
+      "project_slug": "dailybuddy",
+      "parser": "pymupdf",
+      "page_count": 6,
+      "sampled_pages": 5,
+      "sample_text_chars": 4398,
+      "chars_per_sampled_page": 879,
+      "image_count_sample": 6,
+      "images_per_sampled_page": 1.2,
+      "text_yield": "medium",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "en",
+        "confidence": "high",
+        "german_hits": 0,
+        "english_hits": 47
+      },
+      "excerpt": "Daily Buddy 1 Project Charter Daily Buddy 2 Project Title / Name: Daily Buddy Project Background: There are various apps that offer the option of tracking your daily routine. Many apps require users to purchase essential features before they can fully utilize their functionality. No app currently offers a complete solution for tracking all aspects of life in one place. People who want to understand how their sleep and their eating habits affect their mood would need our application. Expected Result: We aim to create an intuitive app that allows users to effortlessly document everyday moments and experiences. Our app is intended to offer everyone a free opportunity to get an overview of their",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-idee.pdf",
+      "project_slug": "dailybuddy",
+      "parser": "pymupdf",
+      "page_count": 11,
+      "sampled_pages": 5,
+      "sample_text_chars": 448,
+      "chars_per_sampled_page": 89,
+      "image_count_sample": 0,
+      "images_per_sampled_page": 0.0,
+      "text_yield": "low",
+      "ocr_candidate": true,
+      "language_guess": {
+        "language": "unknown",
+        "confidence": "low",
+        "german_hits": 0,
+        "english_hits": 0
+      },
+      "excerpt": "Diplomprojekt- Ideen Gracjan, André, Niklas, Daniela IDEEN • Lernwebsite fürs Programmieren • Kalender App mit Tagebuch Lernwebsite fürs Programmieren • Programmieren ist schwer zu lernen • Erklärungen findet man nur wenn man einen konkreten Suchbegriff hat • Mangel an simplen Erklärungen • Abonnierungskosten auf bestehenden Websiten Problemstellung Lösung • Benutzerfreundliche Website • Benutzbar ohne Vorwissen • Adaptiv an Wissensstand",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-poster.pdf",
+      "project_slug": "dailybuddy",
+      "parser": "pymupdf",
+      "page_count": 1,
+      "sampled_pages": 1,
+      "sample_text_chars": 1087,
+      "chars_per_sampled_page": 1087,
+      "image_count_sample": 6,
+      "images_per_sampled_page": 6.0,
+      "text_yield": "medium",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 18,
+        "english_hits": 0
+      },
+      "excerpt": "PROJEKT-ERGEBNISSE: Im Rahmen des Projekts wurde eine benutzerfreundliche App entwickelt, die eine einfache und strukturierte Dokumentation des Alltags ermöglicht. Die Anwendung bietet eine intuitive Oberfläche, über die Nutzer ihre täglichen Erlebnisse, Aktivitäten und Gewohnheiten erfassen können. Das Ergebnis ist eine vollständig funktionale, barrierefreie Applikation, die persönliche Daten sicher verwaltet und eine ganzheitliche Lebensanalyse auf einfache Weise ermöglicht. ZIELSETZUNG: Entwicklung einer App zur einfachen Dokumentation alltäglicher Erlebnisse und Momente. • Nutzer erhalten kostenlos einen umfassenden Überblick über ihr Leben und die Auswirkungen ihrer Gewohnheiten. • Die ",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-zwischenstandspräsentation.pdf",
+      "project_slug": "dailybuddy",
+      "parser": "pymupdf",
+      "page_count": 8,
+      "sampled_pages": 5,
+      "sample_text_chars": 611,
+      "chars_per_sampled_page": 122,
+      "image_count_sample": 4,
+      "images_per_sampled_page": 0.8,
+      "text_yield": "low",
+      "ocr_candidate": true,
+      "language_guess": {
+        "language": "en",
+        "confidence": "medium",
+        "german_hits": 0,
+        "english_hits": 2
+      },
+      "excerpt": "DailyBuddy Aktueller Status Daniela Mace, Gracjan Krzeminski, André Köth, Niklas Zahora Plan - Laut Timeline Fertig: •Fortbildung •User-Management •Hauptseite •ToDos •Ereignis In Arbeit: •Ernährungsfunktion Tatsächlich Erreichtes Fertig : •Fortbildung •User-Management •Hauptseite In Arbeit: • ToDos • Ereignis • Ernährungsfunktion Velocity Chart Probleme / Lösungen Probleme Lösungen Cloud Verbindung Port Freigabe vom Herr Prof. Zeiteinteilung Realistischere Einschätzungen Verbindung zwischen Frontend/Backend Bessere Kommunikation im Team JWT Token Implementierung Videos anschauen / Recherchieren",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy_dimplomarbeit.pdf",
+      "project_slug": "dailybuddy",
+      "parser": "pymupdf",
+      "page_count": 115,
+      "sampled_pages": 5,
+      "sample_text_chars": 10676,
+      "chars_per_sampled_page": 2135,
+      "image_count_sample": 1,
+      "images_per_sampled_page": 0.2,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "mixed-de-en",
+        "confidence": "medium",
+        "german_hits": 60,
+        "english_hits": 58
+      },
+      "excerpt": "Projektnummer: 22IF2603 Schuljahr: 2025/26 htl donaustadt Donaustadtstraße 45 1220 Wien office@htl-donaustadt.at www.htl-donaustadt.at DailyBuddy – Personal Wellbeing Hub Verfasser: N. Zahora, A. Köth, D. Mace, G. Krzeminski Betreuer: Dr. Martin Pazderka Abteilung für Informatik – Software-Engineering, 5AHIF DailyBuddy – Personal Wellbeing Hub D. Mace, N. Zahora, A. Köth, G. Krzeminski 22IF2603 Seite 2 von 115 22.04.2026 VERFASSERERKLÄRUNG Ich erkläre, dass ich die vorliegende Diplomarbeit selbstständig und ohne fremde Hilfe verfasst, andere als die angegebenen Quellen und Hilfsmittel nicht benutzt, die aus anderen Werken übernommenen Inhalte durch Quellenangaben erkenntlich gemacht, sowie d",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-abschlusspraesentation.pdf",
+      "project_slug": "gebaerdentrainer",
+      "parser": "pymupdf",
+      "page_count": 16,
+      "sampled_pages": 5,
+      "sample_text_chars": 982,
+      "chars_per_sampled_page": 196,
+      "image_count_sample": 16,
+      "images_per_sampled_page": 3.2,
+      "text_yield": "low",
+      "ocr_candidate": true,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 5,
+        "english_hits": 1
+      },
+      "excerpt": "AFZALI Mahdi CAKIC Nemanja FERENCI Daniel KOREY Harvinder Singh KOREY Jaswinder Singh 17.04.2026 Di gi ta ler Ein stie g in die Geb ärd en sp ra ch e Geringe Möglichkeiten, Gebärdensprache zu erlernen Dolmetscher sind kostenintensiv Förderung der Inklusion Fähigkeiten unabhängig von formellen Kursen entwickeln Spielerisches Lernen unabhängig von Ort und Zeit Hintergrund Idee Lerninhalte: Kombination aus Gebärdenvideos und zugehörigen Wörtern Künstliche Intelligenz: Wörterstapelgenerierung mithilfe von Prompts Gamification: Entwicklung von spielerischen User Experience Features Wörterstapel Wörterbuchsuche (ÖGS / DGS) Gebärden zum Wörterstapel hinzufügen Vorgefertigte Wörterstapel Fächersyste",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-antrag-unikate.pdf",
+      "project_slug": "gebaerdentrainer",
+      "parser": "pymupdf",
+      "page_count": 3,
+      "sampled_pages": 3,
+      "sample_text_chars": 4770,
+      "chars_per_sampled_page": 1590,
+      "image_count_sample": 3,
+      "images_per_sampled_page": 1.0,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "high",
+        "german_hits": 68,
+        "english_hits": 0
+      },
+      "excerpt": "GebärdenTrainer UNIKATE Ideenwettbewerb 2025 28.10.2024 1 Hintergrund Um die Kommunikation zwischen hörenden und gehörlosen Menschen weiter zu stärken, braucht es zeitgemäße, digitale Lernangebote für Gebärdensprachen. Viele hörende Personen möchten sich mit Gebärdensprache vertraut machen – sei es aus persönlichem Interesse, beruflichem Bedarf oder im sozialen Umfeld. Der Zugang zu formellen Kursen ist jedoch nicht immer einfach: Sie sind oft ortsgebunden, zeitlich wenig flexibel und mit Kosten verbunden. Auch Dolmetscherdienste stehen nicht überall in ausreichendem Maß zur Verfügung. Eine interaktive und erweiterbare Lernplattform kann hier Abhilfe schaffen. Sie ermöglicht es Nutzer:innen,",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-antrag.pdf",
+      "project_slug": "gebaerdentrainer",
+      "parser": "pymupdf",
+      "page_count": 5,
+      "sampled_pages": 5,
+      "sample_text_chars": 7537,
+      "chars_per_sampled_page": 1507,
+      "image_count_sample": 0,
+      "images_per_sampled_page": 0.0,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "high",
+        "german_hits": 110,
+        "english_hits": 4
+      },
+      "excerpt": "DA-Antrag Vorlage Titel: GebärdenTrainer – Digitaler Einstieg in die Gebärdensprache Projektteam Name Individuelle Themenstellung (200 Zeichen) Stunden Daniel Ferenci Management eines Backendsystems, bestehend aus mehreren Programmiersprachen, am Beispiel von Python und Rust 180 Mahdi Afzali Analyse von Lernmethoden und KI-Generierung von Wörterstapeln für die Grundbegriffe der Gebärdensprache 180 Nemanja Cakic Effiziente Entwicklung von Web- und Mobile- Anwendung mit React und React Native 180 Harvinder Singh Korey Entwicklung einer spielerischen User Experience zur Verbesserung des Lernerlebnisses 180 Jaswinder Singh Korey Entwicklung einer CI/CD-Pipeline mit Fokus auf Testautomatisierung ",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-bericht-ji.pdf",
+      "project_slug": "gebaerdentrainer",
+      "parser": "pymupdf",
+      "page_count": 14,
+      "sampled_pages": 5,
+      "sample_text_chars": 11403,
+      "chars_per_sampled_page": 2280,
+      "image_count_sample": 2,
+      "images_per_sampled_page": 0.4,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "high",
+        "german_hits": 159,
+        "english_hits": 2
+      },
+      "excerpt": "Projekt: P2514491 Schuljahr: 2025/26 htl donaustadt Donaustadtstraße 45 1220 Wien office@htl-donaustadt.at www.htl-donaustadt.at Projektbericht ICT GebärdenTrainer – Digitaler Einstieg in die Gebärdensprache Projektkoordinator: Dániel Ferenci E-Mail: 210192@studierende.htl-donaustadt.at Telefonnummer: +43 676 5867067 Projektteilnehemer: Mahdi Afzali Nemanja Cakic Harvinder Singh Korey Jaswinder Singh Korey Betreuer: Dr. Gerald BADER E-Mail: BADER@htl-doanustadt.at Abteilung für Informatik – Software Engineering, 5CHIF GebärdenTrainer – Digitaler Einstieg in die Gebärdensprache Projekt: P2514491 Schuljahr: 2025/26 1 INHALTSVERZEICHNIS 2.1 Projektentstehung und -planung .......................",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-diplomarbeit.pdf",
+      "project_slug": "gebaerdentrainer",
+      "parser": "pymupdf",
+      "page_count": 142,
+      "sampled_pages": 5,
+      "sample_text_chars": 10568,
+      "chars_per_sampled_page": 2113,
+      "image_count_sample": 2,
+      "images_per_sampled_page": 0.4,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 80,
+        "english_hits": 53
+      },
+      "excerpt": "htl donaustadt Donaustadtstraße 45 1220 Wien office@htl-donaustadt.at www.htl-donaustadt.at DIPLOMARBEIT GebärdenTrainer – Digitaler Einstieg in die Gebärdensprache Verfasser: Dániel Ferenci Mahdi Afzali Nemanja Cakic Harvinder Singh Korey Jaswinder Singh Korey Betreuer: Dr. Gerald Bader Abteilung für Informatik – Software Engineering, 5CHIF GebärdenTrainer Ferenci, Afzali, Cakic, Korey, Korey Projektnummer: 22IF2616 Seite 2 von 142 27. April 2026 VERFASSERERKLÄRUNG Ich erkläre, dass ich die vorliegende Diplomarbeit selbstständig und ohne fremde Hilfe verfasst, andere als die angegebenen Quellen und Hilfsmittel nicht benutzt, die aus anderen Werken übernommene Inhalte durch Quellenangaben er",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-ideenpraesentation.pdf",
+      "project_slug": "gebaerdentrainer",
+      "parser": "pymupdf",
+      "page_count": 24,
+      "sampled_pages": 5,
+      "sample_text_chars": 924,
+      "chars_per_sampled_page": 184,
+      "image_count_sample": 16,
+      "images_per_sampled_page": 3.2,
+      "text_yield": "low",
+      "ocr_candidate": true,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 9,
+        "english_hits": 0
+      },
+      "excerpt": "AFZALI Mahdi CAKIC Nemanja FERENCI Daniel KOREY Harvinder Singh KOREY Jaswinder Singh 28.05.2025 Ideenpräsentation G e bä rd en spr ach e le ich t g em ac h t Geringe Möglichkeiten, Gebärdensprache zu erlernen Dolmetscher sind kostenintensiv Förderung der Inklusion Fähigkeiten unabhängig von formellen Kursen entwickeln Spielerisches Lernen unabhängig von Ort und Zeit Hintergrund Idee Lerninhalte: Kombination aus Videos und zugehörigen Wörtern Gamification: Entwicklung von spielerischen Lernmethoden Küntliche Intelligenz: Automatische Satzgenerierung, Worstapelgenerierung mithilfe von Prompts Lernstapel wählen Übungsmodus auswählen Durchführung der Übung Wiederholung falscher Vokabeln Typisch",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-jahrbuch.pdf",
+      "project_slug": "gebaerdentrainer",
+      "parser": "pymupdf",
+      "page_count": 1,
+      "sampled_pages": 1,
+      "sample_text_chars": 2053,
+      "chars_per_sampled_page": 2053,
+      "image_count_sample": 12,
+      "images_per_sampled_page": 12.0,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "high",
+        "german_hits": 20,
+        "english_hits": 0
+      },
+      "excerpt": "DIGITALER EINSTIEG IN DIE GEBÄRDENSPRACHE KLASSE 5CHIF SCHULJAHR 2025/26 BETREUUNG Dr. Gerald Bader TEAM Daniel Ferenci Mahdi Afzali Nemanja Cakic Harvinder Singh Korey Jaswinder Singh Korey Hintergrund Projektergebnisse ▪ Unterstützung für österreichische und deutsche Gebärdensprache ▪ Wörterbuch zur Suche nach Gebärdensprachvideos ▪ Persönliche oder vordefinierte Wörterstapel ▪ KI-gestützter Wörterstapelgenerierung ▪ Innovatives Fächersystem mit Rückstufungslogik ▪ Quizze mit verschiedenen Fragetypen für abwechslungsreiches Lernen ▪ Multiplayer-Modus zur sozialen Interaktion ▪ Gamification-Elemente wie XP, Lebenspunkte, Timer, Abzeichen, Rekorde, Mystery-Box und Streaks ▪ Effiziente CI/CD-",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-logo.pdf",
+      "project_slug": "gebaerdentrainer",
+      "parser": "pymupdf",
+      "page_count": 2,
+      "sampled_pages": 2,
+      "sample_text_chars": 1,
+      "chars_per_sampled_page": 0,
+      "image_count_sample": 4,
+      "images_per_sampled_page": 2.0,
+      "text_yield": "none",
+      "ocr_candidate": true,
+      "language_guess": {
+        "language": "unknown",
+        "confidence": "none",
+        "german_hits": 0,
+        "english_hits": 0
+      },
+      "excerpt": "",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-poster.pdf",
+      "project_slug": "gebaerdentrainer",
+      "parser": "pymupdf",
+      "page_count": 1,
+      "sampled_pages": 1,
+      "sample_text_chars": 0,
+      "chars_per_sampled_page": 0,
+      "image_count_sample": 1,
+      "images_per_sampled_page": 1.0,
+      "text_yield": "none",
+      "ocr_candidate": true,
+      "language_guess": {
+        "language": "unknown",
+        "confidence": "none",
+        "german_hits": 0,
+        "english_hits": 0
+      },
+      "excerpt": "",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-vorstudie.pdf",
+      "project_slug": "gebaerdentrainer",
+      "parser": "pymupdf",
+      "page_count": 40,
+      "sampled_pages": 5,
+      "sample_text_chars": 7946,
+      "chars_per_sampled_page": 1589,
+      "image_count_sample": 1,
+      "images_per_sampled_page": 0.2,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "mixed-de-en",
+        "confidence": "medium",
+        "german_hits": 39,
+        "english_hits": 34
+      },
+      "excerpt": "htl donaustadt Donaustadtstraße 45 1220 Wien office@htl-donaustadt.at www.htl-donaustadt.at Vorstudie Projekt: GebärdenTrainer Verfasser: Afzali, Ferenci, Korey, Korey, Cakic Abteilung für Informatik – Software Engineering, 4CHIF Schuljahr 2024/25 GebärdenTrainer Afzali, Ferenci, Korey, Korey, Cakic KURZFASSUNG Das Projekt entwickelt die kostenlose Web-App „GebärdenTrainer“, um das Erlernen von Gebärdensprachen (ASL, ÖGS, DGS, DSGS) zu erleichtern. Die App kombiniert Karteikarten mit einem prüfungsorientierten Ansatz, einem integrierten Wörterbuch und KI-gestützter Gebärdenerkennung, die Echtzeit-Feedback zur Gebärdenqualität gibt. Sie richtet sich an Gehörlose, Schwerhörige und alle, die Ge",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-zwischenpraesentation.pdf",
+      "project_slug": "gebaerdentrainer",
+      "parser": "pymupdf",
+      "page_count": 12,
+      "sampled_pages": 5,
+      "sample_text_chars": 930,
+      "chars_per_sampled_page": 186,
+      "image_count_sample": 17,
+      "images_per_sampled_page": 3.4,
+      "text_yield": "low",
+      "ocr_candidate": true,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 10,
+        "english_hits": 1
+      },
+      "excerpt": "AFZALI Mahdi CAKIC Nemanja FERENCI Daniel KOREY Harvinder Singh KOREY Jaswinder Singh 20.01.2026 Zwischenstands -präsentation Di gi ta ler Ein stie g in die Geb ärd en sp ra ch e Geringe Möglichkeiten, Gebärdensprache zu erlernen Dolmetscher sind kostenintensiv Förderung der Inklusion Fähigkeiten unabhängig von formellen Kursen entwickeln Spielerisches Lernen unabhängig von Ort und Zeit Hintergrund Idee Lerninhalte: Kombination aus Gebärdenvideos und zugehörigen Wörtern Künstliche Intelligenz: Wörterstapelgenerierung mithilfe von Prompts Gamification: Entwicklung von spielerischen User Experience Erstellen und Bearbeiten von Wörterstapel Suche nach Gebärdenvideos im Wörterbuch Wörterstapel b",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-antrag.pdf",
+      "project_slug": "nook",
+      "parser": "pymupdf",
+      "page_count": 5,
+      "sampled_pages": 5,
+      "sample_text_chars": 8078,
+      "chars_per_sampled_page": 1615,
+      "image_count_sample": 0,
+      "images_per_sampled_page": 0.0,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "high",
+        "german_hits": 96,
+        "english_hits": 16
+      },
+      "excerpt": "Detailansicht Allgemein Typ der Arbeit* Diplomarbeit Schulart* Technische, gewerbliche und kunstgewerbliche Schulen Thema (max. 200 Zeichen)* NOOK – KI-gestützte App zur intuitiven Erstellung moderner One-Page Verantwortliche/r Schüler/in* Roland SZEGEDY Verordneter, spätester Abgabetermin* 27.04.2026 Klasse 5CHIF Abteilung IF Individuelle Themenstellung des verantwortlichen Schülers / der verantwortlichen Schülerin (max. 200 Zeichen)* Einsatz von UX-Prinzipien zur Gestaltung intuitiver Interfaces in einem Drag-and-Drop Website-Builder Geschätzter Arbeitsaufwand (in Stunden) des verantwortlichen Schülers / der verantwortlichen Schülerin* 180 Sperrvermerk ⓘ Beteiligte SchülerInnen Individuell",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-da.pdf",
+      "project_slug": "nook",
+      "parser": "pymupdf",
+      "page_count": 127,
+      "sampled_pages": 5,
+      "sample_text_chars": 8926,
+      "chars_per_sampled_page": 1785,
+      "image_count_sample": 2,
+      "images_per_sampled_page": 0.4,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "mixed-de-en",
+        "confidence": "medium",
+        "german_hits": 43,
+        "english_hits": 31
+      },
+      "excerpt": "Projektnummer: 22IF2617 Schuljahr: 2025/26 htl donaustadt Donaustadtstraße 45 1220 Wien office@htl-donaustadt.at www.htl-donaustadt.at DIPLOMARBEIT NOOK - KI-gestützte App zur intuitiven Erstellung moderner One-Page-Websites Verfasser: Florian SCHLÖGL Nicolas SEISER Roland SZEGEDY Julian TODOROVITSCH Moritz WENZL Betreuer: DI Wolf REITSAMER Abteilung für Informatik – Software Engineering, 5CHIF NOOK Einleitung 22IF2617 Seite 2 von 127 23. April 2026 VERFASSERERKLÄRUNG Ich erkläre, dass ich die vorliegende Diplomarbeit selbstständig und ohne fremde Hilfe verfasst, andere als die angegebenen Quellen und Hilfsmittel nicht benutzt, die aus anderen Werken übernommene Inhalte durch Quellenangaben ",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-ideenpraesentation.pdf",
+      "project_slug": "nook",
+      "parser": "pymupdf",
+      "page_count": 12,
+      "sampled_pages": 5,
+      "sample_text_chars": 4,
+      "chars_per_sampled_page": 0,
+      "image_count_sample": 5,
+      "images_per_sampled_page": 1.0,
+      "text_yield": "none",
+      "ocr_candidate": true,
+      "language_guess": {
+        "language": "unknown",
+        "confidence": "none",
+        "german_hits": 0,
+        "english_hits": 0
+      },
+      "excerpt": "",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-jahrbucheintrag.pdf",
+      "project_slug": "nook",
+      "parser": "pymupdf",
+      "page_count": 1,
+      "sampled_pages": 1,
+      "sample_text_chars": 831,
+      "chars_per_sampled_page": 831,
+      "image_count_sample": 7,
+      "images_per_sampled_page": 7.0,
+      "text_yield": "medium",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 7,
+        "english_hits": 0
+      },
+      "excerpt": "NOOK Abteilung für Informatik Diplomarbeit 5CHIF 2025/26 KI-gestützte App zur intuitiven Erstellung moderner One-Page-Websites Need a website? We make it fast. Team: SEISER Nicolas (Lead), SCHLÖGL Florian, SZEGEDY Roland, TODOROVITSCH Julian, WENZL Moritz Betreuer: DI Wolf REITSAMER Kurzbeschreibung (Nutzen): Diese Diplomarbeit behandelt die Entwicklung von NOOK, einer KI-gestützten Plattform zur intuitiven Erstellung und Veröffentlichung professioneller One-Page-Websites. Ziel ist es, Personen ohne Programmierkenntnisse eine schnelle, qualitativ hochwertige Webseitenerstellung zu ermöglichen und typische Hürden bestehender Website-Builder (Komplexität, Zeitaufwand, Kosten) zu reduzieren. Ar",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-poster.pdf",
+      "project_slug": "nook",
+      "parser": "pymupdf",
+      "page_count": 1,
+      "sampled_pages": 1,
+      "sample_text_chars": 211,
+      "chars_per_sampled_page": 211,
+      "image_count_sample": 15,
+      "images_per_sampled_page": 15.0,
+      "text_yield": "low",
+      "ocr_candidate": true,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 1,
+        "english_hits": 0
+      },
+      "excerpt": "Diplomarbeit 5CHIF 2025/2026 Team: Nicolas S., Florian S., Roland S., Moritz W., Julian T. Supervisor: Prof. Reitsamer Special Thanks: Prof. Putzinger htl donaustadt Abteilung für Informatik NOOK Our Ambitions",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-vorstudie.pdf",
+      "project_slug": "nook",
+      "parser": "pymupdf",
+      "page_count": 22,
+      "sampled_pages": 5,
+      "sample_text_chars": 9165,
+      "chars_per_sampled_page": 1833,
+      "image_count_sample": 1,
+      "images_per_sampled_page": 0.2,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "en",
+        "confidence": "high",
+        "german_hits": 1,
+        "english_hits": 73
+      },
+      "excerpt": "htl donaustadt Donaustadtstraße 45 1220 Wien office@htl-donaustadt.at www.htl-donaustadt.at Project Study Project: NOOK Authors: Schlögl, Seiser, Szegedy, Todorovitsch, Wenzl Abteilung für Informatik – Software Engineering, 4CHIF Schuljahr 2024/25 NOOK Schlögl, Seiser, Szegedy, Todorovitsch, Wenzl ABSTRACT This study explores the development of an AI-driven, user-friendly web-app for creating, editing, and sharing simple websites for personal and business use, addressing the gap in current market offerings. It assesses the technical feasibility of using the MERN-Stack in combination with GrapesJS and ReteJS to streamline implementation. The research identifies skill gaps within the team, pro",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-antrag.pdf",
+      "project_slug": "openmask",
+      "parser": "pymupdf",
+      "page_count": 4,
+      "sampled_pages": 4,
+      "sample_text_chars": 5930,
+      "chars_per_sampled_page": 1482,
+      "image_count_sample": 0,
+      "images_per_sampled_page": 0.0,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "high",
+        "german_hits": 79,
+        "english_hits": 0
+      },
+      "excerpt": "Detailansicht Allgemein Typ der Arbeit* Diplomarbeit Schulart* Technische, gewerbliche und kunstgewerbliche Schulen Thema (max. 200 Zeichen)* Open-Mask - Open-Source Augmented-Reality App für kreative Fotofil Verantwortliche/r Schüler/in* Matthias SPACEK Verordneter, spätester Abgabetermin* 27.04.2025 Klasse 5CHIF Abteilung IF Individuelle Themenstellung des verantwortlichen Schülers / der verantwortlichen Schülerin (max. 200 Zeichen)* Funktionsweise und Architektur von visuellen Filtern und ihr kreatives Potenzial Geschätzter Arbeitsaufwand (in Stunden) des verantwortlichen Schülers / der verantwortlichen Schülerin* 180 Sperrvermerk ⓘ 19.09.25, 11:04 ABA - Detailansicht https://aba.bildung.",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-da.pdf",
+      "project_slug": "openmask",
+      "parser": "pymupdf",
+      "page_count": 84,
+      "sampled_pages": 5,
+      "sample_text_chars": 10038,
+      "chars_per_sampled_page": 2007,
+      "image_count_sample": 2,
+      "images_per_sampled_page": 0.4,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 64,
+        "english_hits": 38
+      },
+      "excerpt": "Projektnummer: 22IF2614 Schuljahr: 2025/26 htl donaustadt Donaustadtstraße 45 1220 Wien office@htl-donaustadt.at www.htl-donaustadt.at DIPLOMARBEIT Open-Mask – Open-Source Augmented-Reality App für kreative Fotofilter Verfasser: Matthias SPACEK Maximilian BAUER Luca BRADLER Betreuer: Prof. Ing. DI Gerhard KRIZOVSKY, BEd Abteilung für Informatik – Software Engineering, 5CHIF Open-Mask – Open-Source Augmented-Reality App für kreative Fotofilter Matthias SPACEK, Maximilian BAUER, Luca BRADLER 22IF2614 Seite 2 von 84 27.04.2026 VERFASSERERKLÄRUNG Ich erkläre, dass ich die vorliegende Diplomarbeit selbstständig und ohne fremde Hilfe verfasst, andere als die angegebenen Quellen und Hilfsmittel nic",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-ideenpraesentation.pdf",
+      "project_slug": "openmask",
+      "parser": "pymupdf",
+      "page_count": 16,
+      "sampled_pages": 5,
+      "sample_text_chars": 1180,
+      "chars_per_sampled_page": 236,
+      "image_count_sample": 2,
+      "images_per_sampled_page": 0.4,
+      "text_yield": "low",
+      "ocr_candidate": true,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 6,
+        "english_hits": 0
+      },
+      "excerpt": "Open-Mask DA - Ideenpräsentation „Filter ohne Grenzen, Kreativität ohne Limits!“ ..2025 Bradler, Bauer, Spacek, März Open-Source AR-Foto-Filter-App Background • Kamerafilter auf Social-Media-Plattformen proprietär → Erstellung eigener Filter nicht möglich → kaum Anpassungsmöglichkeiten → kein Open-Source-Ansatz • Andere Software sehr kompliziert und nicht benutzerfreundlich Idee • Open-Source AR-Filter-App mit Flutter • Förderung der Kreativität der Nutzer • Erstellung eigener Filter ohne technisches Knowhow • Benutzerfreundlicher Filtereditor • Anwendung der Filter in der App • Ergebnisse & Filter teilen/veröffentlichen Hauptfunktionen Filterverwendung Gesichtserkennung Basisfilter Ergebnis",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-jahrbucheintrag.pdf",
+      "project_slug": "openmask",
+      "parser": "pymupdf",
+      "page_count": 1,
+      "sampled_pages": 1,
+      "sample_text_chars": 850,
+      "chars_per_sampled_page": 850,
+      "image_count_sample": 7,
+      "images_per_sampled_page": 7.0,
+      "text_yield": "medium",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 6,
+        "english_hits": 0
+      },
+      "excerpt": "Open-Mask Abteilung für Informatik Diplomarbeit 5CHIF 2025/26 Open-Source Augmented-Reality App für kreative Fotofilter „Filter ohne Grenzen, Kreativität ohne Limits!“ Team: Maximilian Bauer, Luca Bradler, Matthias Spacek Betreuer: Prof. Ing. DI Gerhard Krizovsky, BEd Kurzbeschreibung (Nutzen): Filter sind digitale Effekte, die per Bildverarbeitung Aufnahmen verändern. Diese gibt es heutzutage als Portraitfilter hauptsächlich auf Social-Media-Plattformen. Dort sind sie normalerweise nicht Open-Source und nicht mit anderen Plattformen kompatibel. Ohne Zusatzsoftware können sie weder erstellt noch bearbeitet werden. Ziel ist eine Open-Source App, mit der visuelle Filter erstellt, bearbeitet, a",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-poster.pdf",
+      "project_slug": "openmask",
+      "parser": "pymupdf",
+      "page_count": 1,
+      "sampled_pages": 1,
+      "sample_text_chars": 1065,
+      "chars_per_sampled_page": 1065,
+      "image_count_sample": 14,
+      "images_per_sampled_page": 14.0,
+      "text_yield": "medium",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 10,
+        "english_hits": 0
+      },
+      "excerpt": "PROJEKT-ERGEBNISSE: • Open-Source App mit Filtervorschau und intuitiver Oberfläche • Intuitive Filter-Werkstatt zur Erstellung und Bearbeitung visueller Effekte • Stabile Backend-Anbindung für Speicherung und Verwaltung • Modulares Filtersystem, erweiterbar für andere Anwendungen • Kompatible Filterformate für einfache Wiederverwendung ZIELSETZUNG: Visuelle Filter verändern Fotos und Videos durch digitale Effekte und Gesichtserkennung – meist aber nur in geschlossenen Social-Media- Systemen. Dafür entwickeln wir • eine Open-Source-Filterarchitektur, • eine kreative Filter-Werkstatt zum Gestalten eigener Effekte, • eine Echtzeit-Gesichtserkennung für präzise Filterplatzierung und • ein Backen",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-vorstudie.pdf",
+      "project_slug": "openmask",
+      "parser": "pymupdf",
+      "page_count": 25,
+      "sampled_pages": 5,
+      "sample_text_chars": 6647,
+      "chars_per_sampled_page": 1329,
+      "image_count_sample": 1,
+      "images_per_sampled_page": 0.2,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 39,
+        "english_hits": 21
+      },
+      "excerpt": "htl donaustadt Donaustadtstraße 45 1220 Wien office@htl-donaustadt.at www.htl-donaustadt.at Vorstudie Projekt: Open-Mask Verfasser: Spacek, Bradler, März, Bauer Abteilung für Informatik – Software Engineering, 4CHIF Schuljahr 2024/25 Open-Mask Spacek, Bradler, März, Bauer KURZFASSUNG Open-Mask ist eine offene, benutzerfreundliche und flexible Lösung für AR-Filter, die sich an Kreative und Filterentwickler richtet. Die Open-Source-Ausrichtung erlaubt es Nutzern, sowohl Filter als auch Ergebnisse zu teilen, was einen deutlichen Vorteil gegenüber proprietären Lösungen bietet. Wir haben uns für die Entwicklung einer mobilen App entschieden, da AR-Filter primär auf Smartphones erstellt und verwen",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-antrag.pdf",
+      "project_slug": "resona",
+      "parser": "pymupdf",
+      "page_count": 2,
+      "sampled_pages": 2,
+      "sample_text_chars": 4707,
+      "chars_per_sampled_page": 2353,
+      "image_count_sample": 0,
+      "images_per_sampled_page": 0.0,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "en",
+        "confidence": "high",
+        "german_hits": 10,
+        "english_hits": 87
+      },
+      "excerpt": "DA-Antrag Vorlage Titel: Resona -AI Noise Filter (200 Zeichen) Projektteam Name Individuelle Themenstellung (200 Zeichen) Stunden Muhammed Yusuf Özsoy Developing and training of an audio denoising Model 180 Benjamin Cepek Design and optimization of secure database systems for audio files 180 Benedikt Heuer Development of the Website and Design of the user interface 180 Robin David Barlow Improving File Upload and Error Handling between Frontend and Backend 180 Ausgangslage (400 Zeichen) Audio recordings often become incomprehensible in noisy environments, especially outdoors where most people lack quality microphones. Existing noise reduction tools are usually bundled into larger, costly sub",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-charter.pdf",
+      "project_slug": "resona",
+      "parser": "pymupdf",
+      "page_count": 6,
+      "sampled_pages": 5,
+      "sample_text_chars": 6308,
+      "chars_per_sampled_page": 1261,
+      "image_count_sample": 6,
+      "images_per_sampled_page": 1.2,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "en",
+        "confidence": "high",
+        "german_hits": 0,
+        "english_hits": 71
+      },
+      "excerpt": "Project Charter © htl22 in Anlehnung/Aufbauend: Schwab/Schwab-Matkovits Project Charter Project Title / Name: Resona Project Sponsor: A large mobile phone manufacturer who wants a preinstalled denoiser on their mobile phones to make their product more appealing to potential customers. Project Background: Many people’s audio files become incomprehensible when recorded in bad conditions, the most common one being noisy environments. Most people don’t have a sophisticated microphone, especially not if they are outdoor. All of this leads to misunderstandings and confusions. Our goal is to retroactively remove any unwanted background noise from the audio using AI and to make it more affordable th",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-diplomarbeit.pdf",
+      "project_slug": "resona",
+      "parser": "pymupdf",
+      "page_count": 101,
+      "sampled_pages": 5,
+      "sample_text_chars": 4586,
+      "chars_per_sampled_page": 917,
+      "image_count_sample": 6,
+      "images_per_sampled_page": 1.2,
+      "text_yield": "medium",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "en",
+        "confidence": "high",
+        "german_hits": 2,
+        "english_hits": 52
+      },
+      "excerpt": "HTL-Donaustadt Höhere Abteilung für Informatik DIPLOMA THESIS Resona AI Noise Filter Completed in the academic year 2025/26 by: Dr. Gerald Bader Muhammed Yusuf Özsoy, 5AHIF Benedikt Heuer, 5AHIF Benjamin Cepek, 5AHIF Robin David Barlow, 5AHIF Vienna, April 28, 2026 Project number: 22IF2602 Statutory Declaration I hereby declare under oath that I have authored this diploma thesis independently and without external assistance. I have not used any sources or resources other than those specified, and I have clearly marked all passages and ideas drawn literally or by content from the cited sources as such. Muhammed Yusuf Özsoy Benedikt Heuer Robin David Barlow Benjamin Cepek Vienna, April 28, 202",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-poster.pdf",
+      "project_slug": "resona",
+      "parser": "pymupdf",
+      "page_count": 1,
+      "sampled_pages": 1,
+      "sample_text_chars": 661,
+      "chars_per_sampled_page": 661,
+      "image_count_sample": 12,
+      "images_per_sampled_page": 12.0,
+      "text_yield": "medium",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 6,
+        "english_hits": 0
+      },
+      "excerpt": "Resona AI Resona AI M. Özsoy, B. Heuer, B. Cepek, R. Barlow Betreuer: Dr. Gerald Bader Abteilung für Informatik Zielsetzung: » Viele kennen das Problem stören­ der Hintergrundgeräusche in Audioaufnahmen » Unsere eigene KI entfernt Geräusche effizient » Auf unserer Website können Au­ dio files hoch und runtergeladen werden Ergebnisse: » Eine React basierte Website für File upload und download » Eine selbst trainierte KI, welche auf Basis neuronaler Netze funk­ tioniert » Unterstützung von Dateiformaten wie mp3, wav, mp4 » Audiodateien sind mittels Cloud jederzeit abrufbar und verfügbar Audio Danach: Audio Davor: Diplomarbeit 5AHIF 2025/26",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-acceptance-protocol.pdf",
+      "project_slug": "roomsense",
+      "parser": "pymupdf",
+      "page_count": 13,
+      "sampled_pages": 5,
+      "sample_text_chars": 8421,
+      "chars_per_sampled_page": 1684,
+      "image_count_sample": 2,
+      "images_per_sampled_page": 0.4,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "en",
+        "confidence": "high",
+        "german_hits": 2,
+        "english_hits": 37
+      },
+      "excerpt": "RoomSense Acceptance Report Project Group JetsGPT PROJECT TEAM Julian Irschik Eray Yesildag Tobias Nesvadba Sebastian Romano Supervisor Paul Jurassovits 14 April 2026 RoomSense JetsGPT 1 Introduction The following document provides a compact overview of the RoomSense project and its docu- mented implementation status. It summarizes recorded work items, sprint allocation, issue types, planned story points, logged effort, and the current completion level. 2 Delivery Overview Total Jira Tickets 264 All documented project work items. Completion Rate 70.8% 187 work items are marked as com- pleted. Logged Effort 778.4 h Total recorded effort across project work. Story Points 584 / 641 Completed ve",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-diplomarbeit.pdf",
+      "project_slug": "roomsense",
+      "parser": "pymupdf",
+      "page_count": 148,
+      "sampled_pages": 5,
+      "sample_text_chars": 2469,
+      "chars_per_sampled_page": 493,
+      "image_count_sample": 3,
+      "images_per_sampled_page": 0.6,
+      "text_yield": "medium",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "en",
+        "confidence": "high",
+        "german_hits": 1,
+        "english_hits": 42
+      },
+      "excerpt": "htl donaustadt Donaustadtstraße 45 1220 Vienna office@htl-donaustadt.at www.htl-donaustadt.at DIPLOMA THESIS RoomSense A Local Smart Home System for Security, Resilience, Usability, and Energy Efficiency Authors: Eray YESILDAG Sebastian ROMANO Tobias NESVADBA Julian IRSCHIK Supervisor: Paul JURASSOVITS Department of Computer Science – Software Engineering, 5BHIF Project Number: 22IF2612 Academic Year: 2025/26 RoomSense Yesildag, Romano, Nesvadba, Irschik Statutory Declaration I hereby declare on oath that I have written this thesis independently and without exter- nal assistance, have not used any sources or aids other than those indicated, and that passages taken verbatim or in substance fr",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-ideenpräsentation.pdf",
+      "project_slug": "roomsense",
+      "parser": "pymupdf",
+      "page_count": 23,
+      "sampled_pages": 5,
+      "sample_text_chars": 67,
+      "chars_per_sampled_page": 13,
+      "image_count_sample": 25,
+      "images_per_sampled_page": 5.0,
+      "text_yield": "low",
+      "ocr_candidate": true,
+      "language_guess": {
+        "language": "unknown",
+        "confidence": "low",
+        "german_hits": 0,
+        "english_hits": 0
+      },
+      "excerpt": "Um Smart Home einfach zu machen Mrs. Room Mrs. Room Mrs. Room",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-poster.pdf",
+      "project_slug": "roomsense",
+      "parser": "pymupdf",
+      "page_count": 1,
+      "sampled_pages": 1,
+      "sample_text_chars": 1351,
+      "chars_per_sampled_page": 1351,
+      "image_count_sample": 6,
+      "images_per_sampled_page": 6.0,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 16,
+        "english_hits": 2
+      },
+      "excerpt": "PROJEKT-ERGEBNISSE: Im Rahmen des Diplomarbeitsprojekts werden folgende Ergebnisse erzielt: • Funktionsfähiger Sensorbox-Prototyp für Temperatur, Feuchte, Luftqualität, Geräusch und Anwesenheit • Energie- und sicherheitsoptimierte Datenübertragung sowie Betrieb der Geräte im Stromsparmodus • Modulares System mit offener API zur einfachen Erweiterbarkeit • App/Website mit übersichtlicher, grafischer Visualisierung aller Messwerte • Umfassende Analyse von Sicherheitsaspekten (Datenverschlüsselung, Integritätsschutz) • Statistik- und Auswertungsfunktionen für Nutzung, Luftqualität und Raumklimaverläufe ZIELSETZUNG: Raumklima und Energieverbrauch in Gebäuden werden bisher selten gezielt überwach",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-projekt-antrag.pdf",
+      "project_slug": "roomsense",
+      "parser": "pymupdf",
+      "page_count": 9,
+      "sampled_pages": 5,
+      "sample_text_chars": 5743,
+      "chars_per_sampled_page": 1148,
+      "image_count_sample": 23,
+      "images_per_sampled_page": 4.6,
+      "text_yield": "medium",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "en",
+        "confidence": "high",
+        "german_hits": 7,
+        "english_hits": 118
+      },
+      "excerpt": "ⓘ ABA - Meine Arbeit https://aba.bildung.gv.at/meine-arbeit 2 von 9 09.04.2026, 12:47 Residential buildings, schools or homes etc. frequently suffer from the absence of a system that delivers precise, real-time environmental and occupancy data essential for informed decision-making. As a result, they can’t optimize certain aspects to their needs, like saving energy by automatically turning off lights when nobody is inside a room. Julian Prakisch: Smart home automation can save a significant amount of energy. Different protocols affect the energy consumption of IoT devices, while various sensors also influence how much energy is used. The impact of an IoT device in sleep mode can be considera",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-projektbericht.pdf",
+      "project_slug": "roomsense",
+      "parser": "pymupdf",
+      "page_count": 1,
+      "sampled_pages": 1,
+      "sample_text_chars": 1651,
+      "chars_per_sampled_page": 1651,
+      "image_count_sample": 4,
+      "images_per_sampled_page": 4.0,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 9,
+        "english_hits": 2
+      },
+      "excerpt": "Abteilung Informatik | Schuljahr 2025/26 Betreuer: Paul Jurassovits D I P L O M A R B E I T RoomSense Ein einfaches, modulares Smart-Home-System mit sicherem Fernzugriff K U R Z B E S C H R E I B U N G Raumklima beeinflusst Gesundheit, Konzentration und Wohlbefinden — doch die meisten Menschen haben keinen Überblick über die Luftqualität in ihren Räumen. Bestehende Lösungen sind oft teuer, komplex oder nicht erweiterbar. RoomSense ist ein modulares Open-Source-System zur Echtzeitüberwachung von Raumklimadaten. Kompakte Sensorboxen (ESP32) messen Temperatur, Luftfeuchtigkeit, Luftdruck und Lichtstärke. Die Daten werden über Bluetooth Low Energy an eine zentrale MasterBox (Raspberry Pi) übertr",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-unterlagen/SYP-Buch-3te.pdf",
+      "project_slug": "syp-unterlagen",
+      "parser": "pymupdf",
+      "page_count": 360,
+      "sampled_pages": 5,
+      "sample_text_chars": 10971,
+      "chars_per_sampled_page": 2194,
+      "image_count_sample": 7,
+      "images_per_sampled_page": 1.4,
+      "text_yield": "high",
+      "ocr_candidate": false,
+      "language_guess": {
+        "language": "de",
+        "confidence": "high",
+        "german_hits": 156,
+        "english_hits": 0
+      },
+      "excerpt": "UND PROJEKT- SYSTEMPLANUNG Felix Schwab, Ingrid Schwab-Matkovits Projektmanagement und Software-Entwicklung Unterstützt kompetenz- orientiertes Lernen HTL III ENTWICKLUNG I Systemplanung und Projektentwicklung HTL III Die Republik Österreich stellt Ihnen Buch und SbX für Ihre Ausbildung zur Verfügung. Ihre Professorinnen und Professoren helfen Ihnen, den Stoff zu erlernen und so eine gute Basis für Ihr späteres Berufsleben oder Ihr Studium zu legen. Übernehmen Sie aber auch selbst Verantwor- tung für Ihren Lern­erfolg und nutzen Sie die vielfältigen Möglichkeiten, die Ihnen dieses Buch und das zugehörige SbX zum Lernen, Üben, Sichern und Wissen bieten. Dieses Arbeitsbuch wurde vom Bundesmini",
+      "error": null
+    }
+  ],
+  "office_samples": [
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-abschlusspraesentation.pptx",
+      "project_slug": "airchif",
+      "suffix": ".pptx",
+      "text_chars": 3334,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 14,
+        "english_hits": 1
+      },
+      "excerpt": "Eine Diplomarbeit von Demirci, Mayer, Saad | Betreuer: Mag. Clemens Wiesinger MBA 17.04.2026 | Jahrgang 2025/26 Drohne mit KI-gestützter Müllerkennung als mobiles System Typische Abläufe Use Case: Daily-Goal Anzeige Hauptseite Daily-Goal Seite 9 Status [1] {A54B56C1-F492-4921-BDED-4ABCC3074471} Sprint Sprint-Goal Datum Probleme Lösungen Sprint 1: Setup & Design Datenbank & Willkommensseite 19.09 – 16.10 2025 Deployen der Flutter App Per USB-Kabel deployen Sprint 2: Steuerung & AI Drohnensteuerung, KI-Training, Hauptseite & Profilseite 20.10 – 16.11 2025 Unzureichende Hardware für KI-Training Google Colab Online GPU Sprint 3: Statistik Journey -Erstellung, Weitere UI-Seiten 26.11 – 17.12 2025 Fehlerhafter Videostream der DJI Tello, Teamkommunikation Hardware ordentlich verstehen, Bi-Weekly online halten Sprint 4: Journey Ablauf Manuelle Steuerung, KI –Integration, Offline-First erste Schritte 1.1 – 17.1 2026 Probleme mit der Integration des KI-Modells TFLite-Plugin verwenden 10 Status [2] {A54B56C1-F492-4921-BDED-4ABCC3074471} Sprint Sprint-Goal Datum Probleme Lösungen Sprint 5: Müllobjekterkennung KI-Training, Modell-Export & App-Integration, Kamerabild-Erkennung mit GPS 20.01 – 20",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-bericht-ji.docx",
+      "project_slug": "airchif",
+      "suffix": ".docx",
+      "text_chars": 38233,
+      "language_guess": {
+        "language": "de",
+        "confidence": "high",
+        "german_hits": 508,
+        "english_hits": 44
+      },
+      "excerpt": "﻿ Projektbericht – ICT & Digital AirChif Drohne mit KI-gestützter Müllerkennung als mobiles System Projektkoordinator : Mohamed Saad Tel.: +43 676 5221594 E-Mail: 210433@studierende.htl-donaustadt.at Projektbetreuer : Mag. C. Wiesinger, MBA E-Mail: wies@htl-donaustadt.at Projektteilnehmer : Hasan Demirci, 5CHIF Diego Mayer, 5CHIF Abteilung für Informatik – Software-Engineering , 5 C HIF Inhaltsverzeichnis TOC \\o \"1-3\" \\h \\z \\u 1 Inhaltsverzeichnis PAGEREF _Toc220708738 \\h 3 2 Projektdokumentation PAGEREF _Toc220708739 \\h 4 2.1 Projektentstehung- und planung PAGEREF _Toc220708740 \\h 4 2.2 Inhaltliche Beschreibung der Projektumsetzung und Ausblick PAGEREF _Toc220708741 \\h 4 2.2.1 Umsetzung und Innovationsgrad PAGEREF _Toc220708742 \\h 4 2.2.2 Erkenntnisgewinn und Nutzen für zukünftige Anwendungsbereiche PAGEREF _Toc220708743 \\h 8 2.2.3 Kommerzielle Verwertbarkeit bzw. Kundennutzen PAGEREF _Toc220708744 \\h 8 2.2.4 Ausblick PAGEREF _Toc220708745 \\h 8 2.2.5 Weiterverwendung der gewonnenen Erkenntnisse PAGEREF _Toc220708746 \\h 8 2.2.6 Wirtschaftliches Potenzial und Entrepreneurship-Charakter PAGEREF _Toc220708747 \\h 8 2.3 Bericht der Projektkoordinatorin bzw. des Projektkoordinators PAGER",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-ideenpraesentation.pptx",
+      "project_slug": "airchif",
+      "suffix": ".pptx",
+      "text_chars": 781,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 2,
+        "english_hits": 1
+      },
+      "excerpt": "AirChif Erkennung und Lokalisierung von Müll mittels KI- gestützter Müllerkennung und Drohnentechnologie Save the World from a Birds View! Saad, Demirci, Daxböck , Mayer 4CHIF UI Mock UP UI Mock Up.exe UI Mock Up.exe UI Mock Up.exe UI Mock Up.exe UI Mock Up.exe UI Mock Up.exe UI Mock Up.exe UI Mock Up.exe UI Mock Up.exe Herausforderungen UI Mock Up.exe UI Mock Up.exe Software-Architektur Software-Architektur.exe Technologien Technologien.exe Python Tello SDK- Drohne Tensor Flow Open CV GmPlot Folium Yolo OpenStreetMap Maps KIVVY MD Mobile Interface Firebase Database Teamvorstellung Teamvorstellung Hasan Demirci Designer, Frontend Liam Daxböck Logik, Designer, Logik Mohamed Saad Diego Hernan Mayer Designer, Frontend AI, Steuerung Steuerung , DB UI, UX, Hardware UI, UX, DB",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-jahrbucheintrag.docx",
+      "project_slug": "airchif",
+      "suffix": ".docx",
+      "text_chars": 870,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 10,
+        "english_hits": 3
+      },
+      "excerpt": "AirChif Drohne mit KI-gestützter Müllerkennung als mobiles System „Save the world from a bird’s eye view!“ Team : Hasan Demirci, Diego Mayer, Mohamed Saad Betreuer: Mag. C. Wiesinger, MBA 4419600 102870 0 0 Projektbeschreibung : Illegale Müllablagerungen stellen ein wachsendes Umweltproblem dar, da große Gebiete nur schwer effizient überwacht werden können. Bestehende Lösungen sind meist zeitaufwendig und nicht automatisiert. Das Projekt AirChif entwickelt ein KI-gestütztes Drohnensystem, das Müll während autonomer Flugmissionen erkennt, lokalisiert und dokumentiert. Die erfassten Daten werden strukturiert aufbereitet, sodass betroffene Gebiete schnell identifiziert werden können. Dadurch ermöglicht das System eine effizientere Umweltüberwachung, reduziert den personellen Aufwand und unterstützt gezielte Maßnahmen gegen Umweltverschmutzung. 1534795 33020 0 0",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-zwischenpraesentation.pptx",
+      "project_slug": "airchif",
+      "suffix": ".pptx",
+      "text_chars": 2098,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 13,
+        "english_hits": 1
+      },
+      "excerpt": "Eine Diplomarbeit von Demirci, Mayer, Saad JG. 2025/26 Drohne mit KI-gestützter Müllerkennung als mobiles System Typische Abläufe Use Case: Daily-Goal Anzeige Hauptseite Daily-Goal Seite 9 Status {A54B56C1-F492-4921-BDED-4ABCC3074471} Sprint Sprint-Goal Datum Probleme Lösungen Sprint 1: Setup & Design Datenbank & Willkommensseite 19.09 – 16.10 Deployen der Flutter App Per USB-Kabel deployen Sprint 2: Steuerung & AI Drohnensteuerung, KI-Training, Hauptseite & Profilseite 20.10 – 16.11 Unzureichende Hardware für KI-Training Google Colab Online GPU Sprint 3: Statistik Journey -Erstellung, Weitere UI-Seiten 26.11 – 17.12 Fehlerhafter Videostream der DJI Tello, Teamkommunikation Hardware ordentlich verstehen, Bi-Weekly online halten Sprint 4: Journey Ablauf Manuelle Steuerung, KI -Integration 1.1 – 17.1 Probleme mit der Integration des KI-Modells WIP 10 Roadmap – Entwicklung von AirChif 11 Systemarchitektur 12 13 Müllablagerungen => globales Problem, vergiftet die Umwelt, gefährdet die Tierwelt, sieht schlecht aus, teuer zu managen Globales Müllproblem Hintergrund Ausgangssituation: Müllablagerung entstehen sowohl in ländlichen sowie städtischen Gebieten Kontrollen erfolgen manuell Wird",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-abschlusspraesentation.pptx",
+      "project_slug": "nook",
+      "suffix": ".pptx",
+      "text_chars": 0,
+      "language_guess": {
+        "language": "unknown",
+        "confidence": "none",
+        "german_hits": 0,
+        "english_hits": 0
+      },
+      "excerpt": "",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-zwischenpraesentation.pptx",
+      "project_slug": "nook",
+      "suffix": ".pptx",
+      "text_chars": 0,
+      "language_guess": {
+        "language": "unknown",
+        "confidence": "none",
+        "german_hits": 0,
+        "english_hits": 0
+      },
+      "excerpt": "",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-abschlusspraesentation.pptx",
+      "project_slug": "openmask",
+      "suffix": ".pptx",
+      "text_chars": 2859,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 17,
+        "english_hits": 0
+      },
+      "excerpt": "Open-Mask DA - Abschlusspräsentation „Filter ohne Grenzen, Kreativität ohne Limits!“ 17.04.2026 Bauer, Bradler, Spacek Open-Source Augmented-Reality App für kreative Fotofilter Rückkamera Login Hauptfunktionen wurden umgesetzt und funktionieren Kombination aus Frontend, Backend und Datenbank funktioniert stabil Wichtige Erfahrungen im Bereich Teamarbeit und in weiteren Themen gesammelt Fazit Community und Nebenfunktionen ausbauen: z.B. Usermanagement, Security In-App-Funktion zum Teilen von Bildern Face Mesh Detection 3D-Filter Interaktive Filter Barrierefreiheit der UI Ausblick und offene Punkte Jetzt herunterladen und probieren : https://openmask.fabianmild.dev/apk/download Bauer, Bradler, Spacek 17.04.2026 Bradler, Bauer, Spacek ADD-ON FOLIEN Open-Mask DA - Abschlusspräsentation Latest Release: Source-Code: https://github.com/Saitthama/Open-Mask/releases/latest https://github.com/Saitthama/Open-Mask UI Mock-Up Login Registrieren Bestätigungscode UI Mock-Up: Einfache Verkleidung Filter Filterauswahl UI Mock-Up: Filterwerkstatt Filterübersicht Filter erstellen Background Kamerafilter auf Social -Media-Plattformen proprietär Erstellung eigener Filter nicht möglich kaum Anpassungsmö",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-zwischenpraesentation.pptx",
+      "project_slug": "openmask",
+      "suffix": ".pptx",
+      "text_chars": 2396,
+      "language_guess": {
+        "language": "de",
+        "confidence": "medium",
+        "german_hits": 14,
+        "english_hits": 0
+      },
+      "excerpt": "Open-Mask DA - Zwischenpräsentation „Filter ohne Grenzen, Kreativität ohne Limits!“ 20.01.2026 Bradler, Bauer, Spacek Open-Source AR-Foto-Filter-App style.visibility style.visibility 20.01.2026 Bradler, Bauer, Spacek ADD-ON FOLIEN Open-Mask DA - Zwischenpräsentation style.visibility style.visibility UI Mock-Up Login Registrieren Bestätigungscode UI Mock-Up Einstellungen Abmelden UI Mock-Up: Einfache Verkleidung Filter Filterauswahl UI Mock-Up: Filterwerkstatt Filterübersicht Filter erstellen UI Mock-Up: Filterwerkstatt Filter hinzufügen Filter bearbeiten Filter- Architektur Background Kamerafilter auf Social -Media-Plattformen proprietär Erstellung eigener Filter nicht möglich kaum Anpassungsmöglichkeiten kein Open-Source-Ansatz Andere Software sehr kompliziert und nicht benutzerfreundlich Idee Open-Source AR-Filter-App mit Flutter Förderung der Kreativität der Nutzer Erstellung eigener Filter ohne technisches Knowhow Benutzerfreundlicher Filtereditor Anwendung der Filter in der App Ergebnisse & Filter teilen/veröffentlichen Hauptfunktionen Verkleiden Filterwerkstatt Community Typischer Ablauf Filterwerkstatt öffnen Filter erstellen Filter speichern Filter testen Filter bearbeiten ",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-diplomaidea.pptx",
+      "project_slug": "resona",
+      "suffix": ".pptx",
+      "text_chars": 1009,
+      "language_guess": {
+        "language": "en",
+        "confidence": "medium",
+        "german_hits": 0,
+        "english_hits": 6
+      },
+      "excerpt": "Diploma Idea Benjamin Cepek, Benedikt Heuer, Robin David Barlow, Muhammed Yusuf Özsoy Thank you for your attention Background {5C22544A-7EE6-4342-B048-85BDC9FD1C3A} LALAL.AI Audo Studio Noisereducer Usable for free X Yes Yes Cheapest Subscription € 20 once € 18/ mo € 13/ mo User library X X X Problem Noisy environments Bad microphones Expensive alternatives No analytical information No user libraries Solution Compensation for microphone quality Free Website and Mobile App Cheaper subscriptions Spectrograms exact changes Individual libraries Functionality Cleanse audios Downloadable after cleanse Drag and drop for audio files Live audio recording Technical details React Native for Mobile App Javascript , HTML, CSS for website MongoDB for user management Google Cloud Storage for audio files Pytorch for AI AI Focus on voice Removes background noises Deep learning Data: automatically mix voice and noise Work split Robin: Frontend Benedikt: Frontend Muhammed: Fullstack Benjamin: Fullstack UI concept",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-projectreview.pptx",
+      "project_slug": "resona",
+      "suffix": ".pptx",
+      "text_chars": 937,
+      "language_guess": {
+        "language": "en",
+        "confidence": "medium",
+        "german_hits": 0,
+        "english_hits": 4
+      },
+      "excerpt": "Resona Status Presentation Benedikt Heuer, Muhammed Özsoy Benjamin Cepek, Robin Barlow Burndown Chart Sprint 3 Tickets: 26 Sprint: Webdesign and Functionality 2 Live Demo Outlook Audio Library User Page Improving AI Error handling Hosting Current State Uploading of Audio files Batch upload Denoising Registration Page Navigation Deviation from Plan Lower audio sample rate Mongodb instead of Google Cloud database Direct binary storage of audio files instead of object storage Live Denoising ( Spectogram ) not feasable Deviation from Plan Deviation from Plan Problems and Solutions {5C22544A-7EE6-4342-B048-85BDC9FD1C3A} Problem Solution Hardware limitations for neural network Training in 16khz Existing training date lacking variation Mixing own data No object storage Audio stored as type buffer Velocity Chart Burndown Chart Sprint 1 Tickets: 27 Sprint: Setup Burndown Chart Sprint 2 Tickets: 21 Sprint: Webdesign and Functionality",
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/Teams-DA-Posting-Beispiel.docx",
+      "project_slug": "_SYPCopilot-Share",
+      "suffix": ".docx",
+      "text_chars": 3276,
+      "language_guess": {
+        "language": "de",
+        "confidence": "high",
+        "german_hits": 32,
+        "english_hits": 0
+      },
+      "excerpt": "﻿ Folgend ein typisches Projektp osting zu einem Diplomprojekt in Teams am Beispiel des heurigen Diplomp rojekts NOOK. So ein Posting mit Verlinkungen auf einen Projektablageordner (im Hintergrund) wird in Zukunft von der 3. (zweites Halbjahr) bis zur 5. Klasse i m SYP -Unterricht en tstehen . Abgeschlossen wird das Posting in der 5. Klasse (entweder kurz vor oder nach der Diplomprüfung). Dh . das ist die Datenstruktur für die SYP-Projekte, die ich mir überlegt habe, damit in Zukunft besser die Projektdaten gesammelt werden können . Viele der Links in dem Beispielp osting führen auf einen schulinternen Teamroom . Ich gehe davon aus, dass du auf die dabei verlinkten Dateien keinen Zugriff hast . Falls du Zugriff haben solltest , wäre es super , wenn du mir das sagen könntest. Ich habe jetzt nicht so sehr darauf geachtet, aber die paar Projektablageordner, die ich mit dir über diesen geteilten Ordner teile, beinhalten insgesamt einige GB an Daten. Das ist deshalb, weil es eben nicht nur “klassische” Projektdokumente in den Projektablageo rdnern gibt, sondern auch Präsentationen mit Videosequenzen und verschiedene Projektvideos – dh . die Projektdokumentation ist insgesamt multimedial",
+      "error": null
+    }
+  ],
+  "video_samples": [
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-video-kurz.mov",
+      "project_slug": "airchif",
+      "size_bytes": 78451642,
+      "duration_seconds": 37.12,
+      "width": 1080,
+      "height": 1920,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-video-lang.MOV",
+      "project_slug": "airchif",
+      "size_bytes": 345315080,
+      "duration_seconds": 169.54,
+      "width": 1920,
+      "height": 1080,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindin-video-kurz.mp4",
+      "project_slug": "blindin",
+      "size_bytes": 39887214,
+      "duration_seconds": 35.39,
+      "width": 1080,
+      "height": 1920,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindin-video-lang.mp4",
+      "project_slug": "blindin",
+      "size_bytes": 265306427,
+      "duration_seconds": 264.01,
+      "width": 1908,
+      "height": 1080,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-video-kurz.mp4",
+      "project_slug": "dailybuddy",
+      "size_bytes": 35986190,
+      "duration_seconds": 29.28,
+      "width": 1080,
+      "height": 1920,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-video-lang.mp4",
+      "project_slug": "dailybuddy",
+      "size_bytes": 232643753,
+      "duration_seconds": 185.88,
+      "width": 1920,
+      "height": 1080,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-video-lang.mp4",
+      "project_slug": "gebaerdentrainer",
+      "size_bytes": 266025419,
+      "duration_seconds": 266.77,
+      "width": 1920,
+      "height": 1080,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentreiner-video-kurz.mp4",
+      "project_slug": "gebaerdentrainer",
+      "size_bytes": 6947312,
+      "duration_seconds": 41.76,
+      "width": 1080,
+      "height": 1920,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-video-kurz.mp4",
+      "project_slug": "nook",
+      "size_bytes": 9053092,
+      "duration_seconds": 26.77,
+      "width": 1080,
+      "height": 1920,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-video-lang.mov",
+      "project_slug": "nook",
+      "size_bytes": 1115819106,
+      "duration_seconds": 251.37,
+      "width": 1920,
+      "height": 1080,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-video-kurz.mp4",
+      "project_slug": "openmask",
+      "size_bytes": 66849755,
+      "duration_seconds": 49.8,
+      "width": 1080,
+      "height": 1920,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-video-lang.mp4",
+      "project_slug": "openmask",
+      "size_bytes": 892407936,
+      "duration_seconds": 359.67,
+      "width": 1920,
+      "height": 1080,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-video-kurz.mov",
+      "project_slug": "resona",
+      "size_bytes": 69349581,
+      "duration_seconds": 34.9,
+      "width": 1080,
+      "height": 1920,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-video-lang.mp4",
+      "project_slug": "resona",
+      "size_bytes": 511657555,
+      "duration_seconds": 332.02,
+      "width": 2560,
+      "height": 1440,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-video-kurz.mp4",
+      "project_slug": "roomsense",
+      "size_bytes": 75266971,
+      "duration_seconds": 40.9,
+      "width": 1080,
+      "height": 1920,
+      "error": null
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-video-lang.mp4",
+      "project_slug": "roomsense",
+      "size_bytes": 153124085,
+      "duration_seconds": 307.46,
+      "width": 1930,
+      "height": 1080,
+      "error": null
+    }
+  ]
+}

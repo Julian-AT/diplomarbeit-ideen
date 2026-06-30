@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-06-30T21:08:44+00:00",
+  "status": "proposed",
+  "recommendations": {
+    "parser_strategy": {
+      "pdf": "Use PyMuPDF/pypdf text extraction first; queue OCR only for low-text or image-heavy PDFs flagged by discovery.",
+      "presentations": "Extract slide text and speaker notes; retain slide-level provenance. Treat slide images as visual evidence only if multimodal indexing is approved.",
+      "word_documents": "Extract body text and core properties; use as metadata/supporting material rather than primary thesis text when a full thesis PDF exists.",
+      "video": "Store metadata and links in v1. Do not index video content unless transcripts or a user-approved transcription path is added."
+    },
+    "metadata_schema": [
+      "thesis_id",
+      "project_slug",
+      "title",
+      "document_type",
+      "source_path",
+      "file_name",
+      "file_ext",
+      "year",
+      "language",
+      "authors",
+      "advisor",
+      "page_start",
+      "page_end",
+      "chunk_id",
+      "chunk_index",
+      "extraction_method",
+      "text_yield",
+      "ocr_required",
+      "citation_label"
+    ],
+    "chunking": "Chunk primary thesis/report PDFs by structural headings when available, otherwise by page windows with overlap; keep posters, proposals, and presentations as short supporting chunks with explicit document_type.",
+    "retrieval": "Use Qdrant hybrid dense+sparse retrieval with RRF. Add payload indexes for project_slug, document_type, language, year, and ocr_required after approval.",
+    "embedding_recommendation": "Evaluate Gemini Embedding 2 Preview for multimodal/visual coverage; use gemini-embedding-001 only if OCR/text extraction is approved as sufficient.",
+    "language_summary": [
+      [
+        "de",
+        41
+      ],
+      [
+        "en",
+        11
+      ],
+      [
+        "unknown",
+        7
+      ],
+      [
+        "mixed-de-en",
+        3
+      ]
+    ],
+    "confidence": {
+      "text_extraction": "good",
+      "visual_density": "high",
+      "metadata_completeness": "medium"
+    },
+    "blocked_until_approval": [
+      "embedding model and vector dimensions",
+      "OCR/multimodal strategy",
+      "metadata schema fields",
+      "chunking rules",
+      "sparse tokenization strategy",
+      "Qdrant payload indexes",
+      "citation provenance fields"
+    ]
+  }
+}

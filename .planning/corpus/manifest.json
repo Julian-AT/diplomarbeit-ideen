@@ -1,0 +1,779 @@
+{
+  "generated_at": "2026-06-30T21:08:44+00:00",
+  "files": [
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-aba-antrag.pdf",
+      "name": "airchif-aba-antrag.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 347420,
+      "modified_utc": "2026-06-30T21:03:18+00:00",
+      "project_slug": "airchif",
+      "document_type": "proposal"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-abschlusspraesentation.pptx",
+      "name": "airchif-abschlusspraesentation.pptx",
+      "suffix": ".pptx",
+      "size_bytes": 323030408,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "airchif",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-bericht-ji.docx",
+      "name": "airchif-bericht-ji.docx",
+      "suffix": ".docx",
+      "size_bytes": 876653,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "airchif",
+      "document_type": "report"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-diplomarbeit.pdf",
+      "name": "airchif-diplomarbeit.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 4742766,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "airchif",
+      "document_type": "thesis"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-ideenpraesentation.pptx",
+      "name": "airchif-ideenpraesentation.pptx",
+      "suffix": ".pptx",
+      "size_bytes": 20515959,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "airchif",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-jahrbucheintrag.docx",
+      "name": "airchif-jahrbucheintrag.docx",
+      "suffix": ".docx",
+      "size_bytes": 388824,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "airchif",
+      "document_type": "word-document"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-logo.png",
+      "name": "airchif-logo.png",
+      "suffix": ".png",
+      "size_bytes": 88768,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "airchif",
+      "document_type": "image"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-poster.pdf",
+      "name": "airchif-poster.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 585889,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "airchif",
+      "document_type": "poster"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-video-kurz.mov",
+      "name": "airchif-video-kurz.mov",
+      "suffix": ".mov",
+      "size_bytes": 78451642,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "airchif",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-video-lang.MOV",
+      "name": "airchif-video-lang.MOV",
+      "suffix": ".mov",
+      "size_bytes": 345315080,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "airchif",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-vorstudie.pdf",
+      "name": "airchif-vorstudie.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 1036444,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "airchif",
+      "document_type": "planning"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/airchif/airchif-zwischenpraesentation.pptx",
+      "name": "airchif-zwischenpraesentation.pptx",
+      "suffix": ".pptx",
+      "size_bytes": 188501478,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "airchif",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindIn-abnahmeprotokoll.pdf",
+      "name": "blindIn-abnahmeprotokoll.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 644593,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "blindin",
+      "document_type": "pdf-other"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindin-diplomarbeit.pdf",
+      "name": "blindin-diplomarbeit.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 664354,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "blindin",
+      "document_type": "thesis"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindin-ideenpräsentation.pdf",
+      "name": "blindin-ideenpräsentation.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 1268862,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "blindin",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindin-logo.png",
+      "name": "blindin-logo.png",
+      "suffix": ".png",
+      "size_bytes": 558680,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "blindin",
+      "document_type": "image"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindin-poster.png",
+      "name": "blindin-poster.png",
+      "suffix": ".png",
+      "size_bytes": 124679,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "blindin",
+      "document_type": "image"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindin-projekt-antrag.pdf",
+      "name": "blindin-projekt-antrag.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 106314,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "blindin",
+      "document_type": "proposal"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindin-projektbericht.pdf",
+      "name": "blindin-projektbericht.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 352671,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "blindin",
+      "document_type": "report"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindin-video-kurz.mp4",
+      "name": "blindin-video-kurz.mp4",
+      "suffix": ".mp4",
+      "size_bytes": 39887214,
+      "modified_utc": "2026-06-30T21:03:19+00:00",
+      "project_slug": "blindin",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/blindin/blindin-video-lang.mp4",
+      "name": "blindin-video-lang.mp4",
+      "suffix": ".mp4",
+      "size_bytes": 265306427,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "blindin",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-abschlusspräsentation.pdf",
+      "name": "dailybuddy-abschlusspräsentation.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 621129,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "dailybuddy",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-antrag.pdf",
+      "name": "dailybuddy-antrag.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 228326,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "dailybuddy",
+      "document_type": "proposal"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-charter.pdf",
+      "name": "dailybuddy-charter.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 360262,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "dailybuddy",
+      "document_type": "planning"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-idee.pdf",
+      "name": "dailybuddy-idee.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 152577,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "dailybuddy",
+      "document_type": "idea"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-logo.png",
+      "name": "dailybuddy-logo.png",
+      "suffix": ".png",
+      "size_bytes": 28491,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "dailybuddy",
+      "document_type": "image"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-poster.pdf",
+      "name": "dailybuddy-poster.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 517254,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "dailybuddy",
+      "document_type": "poster"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-video-kurz.mp4",
+      "name": "dailybuddy-video-kurz.mp4",
+      "suffix": ".mp4",
+      "size_bytes": 35986190,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "dailybuddy",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-video-lang.mp4",
+      "name": "dailybuddy-video-lang.mp4",
+      "suffix": ".mp4",
+      "size_bytes": 232643753,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "dailybuddy",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-zwischenstandspräsentation.pdf",
+      "name": "dailybuddy-zwischenstandspräsentation.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 527828,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "dailybuddy",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy_dimplomarbeit.pdf",
+      "name": "dailybuddy_dimplomarbeit.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 2909268,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "dailybuddy",
+      "document_type": "thesis"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-abschlusspraesentation.pdf",
+      "name": "gebaerdentrainer-abschlusspraesentation.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 1607390,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "gebaerdentrainer",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-antrag-unikate.pdf",
+      "name": "gebaerdentrainer-antrag-unikate.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 435236,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "gebaerdentrainer",
+      "document_type": "proposal"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-antrag.pdf",
+      "name": "gebaerdentrainer-antrag.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 238666,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "gebaerdentrainer",
+      "document_type": "proposal"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-bericht-ji.pdf",
+      "name": "gebaerdentrainer-bericht-ji.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 451767,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "gebaerdentrainer",
+      "document_type": "report"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-diplomarbeit.pdf",
+      "name": "gebaerdentrainer-diplomarbeit.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 8902499,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "gebaerdentrainer",
+      "document_type": "thesis"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-ideenpraesentation.pdf",
+      "name": "gebaerdentrainer-ideenpraesentation.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 2810516,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "gebaerdentrainer",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-jahrbuch.pdf",
+      "name": "gebaerdentrainer-jahrbuch.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 414056,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "gebaerdentrainer",
+      "document_type": "pdf-other"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-logo.pdf",
+      "name": "gebaerdentrainer-logo.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 157053,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "gebaerdentrainer",
+      "document_type": "logo"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-poster.pdf",
+      "name": "gebaerdentrainer-poster.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 1193739,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "gebaerdentrainer",
+      "document_type": "poster"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-video-lang.mp4",
+      "name": "gebaerdentrainer-video-lang.mp4",
+      "suffix": ".mp4",
+      "size_bytes": 266025419,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "gebaerdentrainer",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-vorstudie.pdf",
+      "name": "gebaerdentrainer-vorstudie.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 4619977,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "gebaerdentrainer",
+      "document_type": "planning"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-zwischenpraesentation.pdf",
+      "name": "gebaerdentrainer-zwischenpraesentation.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 1050490,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "gebaerdentrainer",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentreiner-video-kurz.mp4",
+      "name": "gebaerdentreiner-video-kurz.mp4",
+      "suffix": ".mp4",
+      "size_bytes": 6947312,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "gebaerdentrainer",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-abschlusspraesentation.pptx",
+      "name": "nook-abschlusspraesentation.pptx",
+      "suffix": ".pptx",
+      "size_bytes": 88314809,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "nook",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-antrag.pdf",
+      "name": "nook-antrag.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 159346,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "nook",
+      "document_type": "proposal"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-da.pdf",
+      "name": "nook-da.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 3814261,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "nook",
+      "document_type": "pdf-other"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-ideenpraesentation.pdf",
+      "name": "nook-ideenpraesentation.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 3993135,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "nook",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-jahrbucheintrag.pdf",
+      "name": "nook-jahrbucheintrag.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 249861,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "nook",
+      "document_type": "pdf-other"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-logo.png",
+      "name": "nook-logo.png",
+      "suffix": ".png",
+      "size_bytes": 13206,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "nook",
+      "document_type": "image"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-poster.pdf",
+      "name": "nook-poster.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 3213229,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "nook",
+      "document_type": "poster"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-video-kurz.mp4",
+      "name": "nook-video-kurz.mp4",
+      "suffix": ".mp4",
+      "size_bytes": 9053092,
+      "modified_utc": "2026-06-30T21:03:20+00:00",
+      "project_slug": "nook",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-video-lang.mov",
+      "name": "nook-video-lang.mov",
+      "suffix": ".mov",
+      "size_bytes": 1115819106,
+      "modified_utc": "2026-06-30T21:03:22+00:00",
+      "project_slug": "nook",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-vorstudie.pdf",
+      "name": "nook-vorstudie.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 651242,
+      "modified_utc": "2026-06-30T21:03:22+00:00",
+      "project_slug": "nook",
+      "document_type": "planning"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/nook/nook-zwischenpraesentation.pptx",
+      "name": "nook-zwischenpraesentation.pptx",
+      "suffix": ".pptx",
+      "size_bytes": 94649959,
+      "modified_utc": "2026-06-30T21:03:22+00:00",
+      "project_slug": "nook",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-abschlusspraesentation.pptx",
+      "name": "openmask-abschlusspraesentation.pptx",
+      "suffix": ".pptx",
+      "size_bytes": 65719251,
+      "modified_utc": "2026-06-30T21:03:22+00:00",
+      "project_slug": "openmask",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-antrag.pdf",
+      "name": "openmask-antrag.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 169324,
+      "modified_utc": "2026-06-30T21:03:22+00:00",
+      "project_slug": "openmask",
+      "document_type": "proposal"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-da.pdf",
+      "name": "openmask-da.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 1975646,
+      "modified_utc": "2026-06-30T21:03:22+00:00",
+      "project_slug": "openmask",
+      "document_type": "pdf-other"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-ideenpraesentation.pdf",
+      "name": "openmask-ideenpraesentation.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 2328005,
+      "modified_utc": "2026-06-30T21:03:22+00:00",
+      "project_slug": "openmask",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-jahrbucheintrag.pdf",
+      "name": "openmask-jahrbucheintrag.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 331887,
+      "modified_utc": "2026-06-30T21:03:22+00:00",
+      "project_slug": "openmask",
+      "document_type": "pdf-other"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-logo.png",
+      "name": "openmask-logo.png",
+      "suffix": ".png",
+      "size_bytes": 644056,
+      "modified_utc": "2026-06-30T21:03:22+00:00",
+      "project_slug": "openmask",
+      "document_type": "image"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-poster.pdf",
+      "name": "openmask-poster.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 775944,
+      "modified_utc": "2026-06-30T21:03:22+00:00",
+      "project_slug": "openmask",
+      "document_type": "poster"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-video-kurz.mp4",
+      "name": "openmask-video-kurz.mp4",
+      "suffix": ".mp4",
+      "size_bytes": 66849755,
+      "modified_utc": "2026-06-30T21:03:22+00:00",
+      "project_slug": "openmask",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-video-lang.mp4",
+      "name": "openmask-video-lang.mp4",
+      "suffix": ".mp4",
+      "size_bytes": 892407936,
+      "modified_utc": "2026-06-30T21:03:23+00:00",
+      "project_slug": "openmask",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-vorstudie.pdf",
+      "name": "openmask-vorstudie.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 572257,
+      "modified_utc": "2026-06-30T21:03:23+00:00",
+      "project_slug": "openmask",
+      "document_type": "planning"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/openmask/openmask-zwischenpraesentation.pptx",
+      "name": "openmask-zwischenpraesentation.pptx",
+      "suffix": ".pptx",
+      "size_bytes": 83457612,
+      "modified_utc": "2026-06-30T21:03:23+00:00",
+      "project_slug": "openmask",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-antrag.pdf",
+      "name": "resona-antrag.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 138486,
+      "modified_utc": "2026-06-30T21:03:23+00:00",
+      "project_slug": "resona",
+      "document_type": "proposal"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-charter.pdf",
+      "name": "resona-charter.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 439390,
+      "modified_utc": "2026-06-30T21:03:23+00:00",
+      "project_slug": "resona",
+      "document_type": "planning"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-diplomaidea.pptx",
+      "name": "resona-diplomaidea.pptx",
+      "suffix": ".pptx",
+      "size_bytes": 57357,
+      "modified_utc": "2026-06-30T21:03:23+00:00",
+      "project_slug": "resona",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-diplomarbeit.pdf",
+      "name": "resona-diplomarbeit.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 4185303,
+      "modified_utc": "2026-06-30T21:03:23+00:00",
+      "project_slug": "resona",
+      "document_type": "thesis"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-logo.png",
+      "name": "resona-logo.png",
+      "suffix": ".png",
+      "size_bytes": 8404,
+      "modified_utc": "2026-06-30T21:03:23+00:00",
+      "project_slug": "resona",
+      "document_type": "image"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-poster.pdf",
+      "name": "resona-poster.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 1002861,
+      "modified_utc": "2026-06-30T21:03:23+00:00",
+      "project_slug": "resona",
+      "document_type": "poster"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-projectreview.pptx",
+      "name": "resona-projectreview.pptx",
+      "suffix": ".pptx",
+      "size_bytes": 986469,
+      "modified_utc": "2026-06-30T21:03:23+00:00",
+      "project_slug": "resona",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-video-kurz.mov",
+      "name": "resona-video-kurz.mov",
+      "suffix": ".mov",
+      "size_bytes": 69349581,
+      "modified_utc": "2026-06-30T21:03:23+00:00",
+      "project_slug": "resona",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/resona/resona-video-lang.mp4",
+      "name": "resona-video-lang.mp4",
+      "suffix": ".mp4",
+      "size_bytes": 511657555,
+      "modified_utc": "2026-06-30T21:03:24+00:00",
+      "project_slug": "resona",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-acceptance-protocol.pdf",
+      "name": "roomsense-acceptance-protocol.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 322223,
+      "modified_utc": "2026-06-30T21:03:24+00:00",
+      "project_slug": "roomsense",
+      "document_type": "pdf-other"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-diplomarbeit.pdf",
+      "name": "roomsense-diplomarbeit.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 10223382,
+      "modified_utc": "2026-06-30T21:03:24+00:00",
+      "project_slug": "roomsense",
+      "document_type": "thesis"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-ideenpräsentation.pdf",
+      "name": "roomsense-ideenpräsentation.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 1150017,
+      "modified_utc": "2026-06-30T21:03:24+00:00",
+      "project_slug": "roomsense",
+      "document_type": "presentation"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-logo.png",
+      "name": "roomsense-logo.png",
+      "suffix": ".png",
+      "size_bytes": 243888,
+      "modified_utc": "2026-06-30T21:03:24+00:00",
+      "project_slug": "roomsense",
+      "document_type": "image"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-poster.pdf",
+      "name": "roomsense-poster.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 690856,
+      "modified_utc": "2026-06-30T21:03:24+00:00",
+      "project_slug": "roomsense",
+      "document_type": "poster"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-projekt-antrag.pdf",
+      "name": "roomsense-projekt-antrag.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 2015155,
+      "modified_utc": "2026-06-30T21:03:24+00:00",
+      "project_slug": "roomsense",
+      "document_type": "proposal"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-projektbericht.pdf",
+      "name": "roomsense-projektbericht.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 361769,
+      "modified_utc": "2026-06-30T21:03:24+00:00",
+      "project_slug": "roomsense",
+      "document_type": "report"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-video-kurz.mp4",
+      "name": "roomsense-video-kurz.mp4",
+      "suffix": ".mp4",
+      "size_bytes": 75266971,
+      "modified_utc": "2026-06-30T21:03:24+00:00",
+      "project_slug": "roomsense",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-video-lang.mp4",
+      "name": "roomsense-video-lang.mp4",
+      "suffix": ".mp4",
+      "size_bytes": 153124085,
+      "modified_utc": "2026-06-30T21:03:24+00:00",
+      "project_slug": "roomsense",
+      "document_type": "video"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/syp-unterlagen/SYP-Buch-3te.pdf",
+      "name": "SYP-Buch-3te.pdf",
+      "suffix": ".pdf",
+      "size_bytes": 44396212,
+      "modified_utc": "2026-06-30T21:03:24+00:00",
+      "project_slug": "syp-unterlagen",
+      "document_type": "pdf-other"
+    },
+    {
+      "relative_path": "_SYPCopilot-Share/Teams-DA-Posting-Beispiel.docx",
+      "name": "Teams-DA-Posting-Beispiel.docx",
+      "suffix": ".docx",
+      "size_bytes": 24087,
+      "modified_utc": "2026-06-30T21:03:18+00:00",
+      "project_slug": "_SYPCopilot-Share",
+      "document_type": "word-document"
+    }
+  ]
+}

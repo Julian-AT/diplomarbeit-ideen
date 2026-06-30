@@ -1,0 +1,516 @@
+{
+  "generated_at": "2026-06-30T21:08:44+00:00",
+  "file_count": 86,
+  "total_size_bytes": 5152431293,
+  "extensions": [
+    [
+      ".pdf",
+      50
+    ],
+    [
+      ".mp4",
+      12
+    ],
+    [
+      ".pptx",
+      9
+    ],
+    [
+      ".png",
+      8
+    ],
+    [
+      ".mov",
+      4
+    ],
+    [
+      ".docx",
+      3
+    ]
+  ],
+  "document_types": [
+    [
+      "presentation",
+      18
+    ],
+    [
+      "video",
+      16
+    ],
+    [
+      "proposal",
+      9
+    ],
+    [
+      "image",
+      8
+    ],
+    [
+      "pdf-other",
+      8
+    ],
+    [
+      "poster",
+      7
+    ],
+    [
+      "thesis",
+      6
+    ],
+    [
+      "planning",
+      6
+    ],
+    [
+      "report",
+      4
+    ],
+    [
+      "word-document",
+      2
+    ],
+    [
+      "idea",
+      1
+    ],
+    [
+      "logo",
+      1
+    ]
+  ],
+  "project_count": 10,
+  "projects": [
+    {
+      "project_slug": "_SYPCopilot-Share",
+      "file_count": 1,
+      "total_size_bytes": 24087,
+      "types": [
+        [
+          "word-document",
+          1
+        ]
+      ],
+      "files": [
+        "_SYPCopilot-Share/Teams-DA-Posting-Beispiel.docx"
+      ]
+    },
+    {
+      "project_slug": "airchif",
+      "file_count": 12,
+      "total_size_bytes": 963881331,
+      "types": [
+        [
+          "presentation",
+          3
+        ],
+        [
+          "video",
+          2
+        ],
+        [
+          "proposal",
+          1
+        ],
+        [
+          "report",
+          1
+        ],
+        [
+          "thesis",
+          1
+        ],
+        [
+          "word-document",
+          1
+        ],
+        [
+          "image",
+          1
+        ],
+        [
+          "poster",
+          1
+        ],
+        [
+          "planning",
+          1
+        ]
+      ],
+      "files": [
+        "_SYPCopilot-Share/syp-projekte/airchif/airchif-aba-antrag.pdf",
+        "_SYPCopilot-Share/syp-projekte/airchif/airchif-abschlusspraesentation.pptx",
+        "_SYPCopilot-Share/syp-projekte/airchif/airchif-bericht-ji.docx",
+        "_SYPCopilot-Share/syp-projekte/airchif/airchif-diplomarbeit.pdf",
+        "_SYPCopilot-Share/syp-projekte/airchif/airchif-ideenpraesentation.pptx",
+        "_SYPCopilot-Share/syp-projekte/airchif/airchif-jahrbucheintrag.docx",
+        "_SYPCopilot-Share/syp-projekte/airchif/airchif-logo.png",
+        "_SYPCopilot-Share/syp-projekte/airchif/airchif-poster.pdf",
+        "_SYPCopilot-Share/syp-projekte/airchif/airchif-video-kurz.mov",
+        "_SYPCopilot-Share/syp-projekte/airchif/airchif-video-lang.MOV",
+        "_SYPCopilot-Share/syp-projekte/airchif/airchif-vorstudie.pdf",
+        "_SYPCopilot-Share/syp-projekte/airchif/airchif-zwischenpraesentation.pptx"
+      ]
+    },
+    {
+      "project_slug": "blindin",
+      "file_count": 9,
+      "total_size_bytes": 308913794,
+      "types": [
+        [
+          "image",
+          2
+        ],
+        [
+          "video",
+          2
+        ],
+        [
+          "pdf-other",
+          1
+        ],
+        [
+          "thesis",
+          1
+        ],
+        [
+          "presentation",
+          1
+        ],
+        [
+          "proposal",
+          1
+        ],
+        [
+          "report",
+          1
+        ]
+      ],
+      "files": [
+        "_SYPCopilot-Share/syp-projekte/blindin/blindIn-abnahmeprotokoll.pdf",
+        "_SYPCopilot-Share/syp-projekte/blindin/blindin-diplomarbeit.pdf",
+        "_SYPCopilot-Share/syp-projekte/blindin/blindin-ideenpräsentation.pdf",
+        "_SYPCopilot-Share/syp-projekte/blindin/blindin-logo.png",
+        "_SYPCopilot-Share/syp-projekte/blindin/blindin-poster.png",
+        "_SYPCopilot-Share/syp-projekte/blindin/blindin-projekt-antrag.pdf",
+        "_SYPCopilot-Share/syp-projekte/blindin/blindin-projektbericht.pdf",
+        "_SYPCopilot-Share/syp-projekte/blindin/blindin-video-kurz.mp4",
+        "_SYPCopilot-Share/syp-projekte/blindin/blindin-video-lang.mp4"
+      ]
+    },
+    {
+      "project_slug": "dailybuddy",
+      "file_count": 10,
+      "total_size_bytes": 273975078,
+      "types": [
+        [
+          "presentation",
+          2
+        ],
+        [
+          "video",
+          2
+        ],
+        [
+          "proposal",
+          1
+        ],
+        [
+          "planning",
+          1
+        ],
+        [
+          "idea",
+          1
+        ],
+        [
+          "image",
+          1
+        ],
+        [
+          "poster",
+          1
+        ],
+        [
+          "thesis",
+          1
+        ]
+      ],
+      "files": [
+        "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-abschlusspräsentation.pdf",
+        "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-antrag.pdf",
+        "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-charter.pdf",
+        "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-idee.pdf",
+        "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-logo.png",
+        "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-poster.pdf",
+        "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-video-kurz.mp4",
+        "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-video-lang.mp4",
+        "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy-zwischenstandspräsentation.pdf",
+        "_SYPCopilot-Share/syp-projekte/dailybuddy/dailybuddy_dimplomarbeit.pdf"
+      ]
+    },
+    {
+      "project_slug": "gebaerdentrainer",
+      "file_count": 13,
+      "total_size_bytes": 294854120,
+      "types": [
+        [
+          "presentation",
+          3
+        ],
+        [
+          "proposal",
+          2
+        ],
+        [
+          "video",
+          2
+        ],
+        [
+          "report",
+          1
+        ],
+        [
+          "thesis",
+          1
+        ],
+        [
+          "pdf-other",
+          1
+        ],
+        [
+          "logo",
+          1
+        ],
+        [
+          "poster",
+          1
+        ],
+        [
+          "planning",
+          1
+        ]
+      ],
+      "files": [
+        "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-abschlusspraesentation.pdf",
+        "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-antrag-unikate.pdf",
+        "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-antrag.pdf",
+        "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-bericht-ji.pdf",
+        "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-diplomarbeit.pdf",
+        "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-ideenpraesentation.pdf",
+        "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-jahrbuch.pdf",
+        "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-logo.pdf",
+        "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-poster.pdf",
+        "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-video-lang.mp4",
+        "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-vorstudie.pdf",
+        "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentrainer-zwischenpraesentation.pdf",
+        "_SYPCopilot-Share/syp-projekte/gebaerdentrainer/gebaerdentreiner-video-kurz.mp4"
+      ]
+    },
+    {
+      "project_slug": "nook",
+      "file_count": 11,
+      "total_size_bytes": 1319931246,
+      "types": [
+        [
+          "presentation",
+          3
+        ],
+        [
+          "pdf-other",
+          2
+        ],
+        [
+          "video",
+          2
+        ],
+        [
+          "proposal",
+          1
+        ],
+        [
+          "image",
+          1
+        ],
+        [
+          "poster",
+          1
+        ],
+        [
+          "planning",
+          1
+        ]
+      ],
+      "files": [
+        "_SYPCopilot-Share/syp-projekte/nook/nook-abschlusspraesentation.pptx",
+        "_SYPCopilot-Share/syp-projekte/nook/nook-antrag.pdf",
+        "_SYPCopilot-Share/syp-projekte/nook/nook-da.pdf",
+        "_SYPCopilot-Share/syp-projekte/nook/nook-ideenpraesentation.pdf",
+        "_SYPCopilot-Share/syp-projekte/nook/nook-jahrbucheintrag.pdf",
+        "_SYPCopilot-Share/syp-projekte/nook/nook-logo.png",
+        "_SYPCopilot-Share/syp-projekte/nook/nook-poster.pdf",
+        "_SYPCopilot-Share/syp-projekte/nook/nook-video-kurz.mp4",
+        "_SYPCopilot-Share/syp-projekte/nook/nook-video-lang.mov",
+        "_SYPCopilot-Share/syp-projekte/nook/nook-vorstudie.pdf",
+        "_SYPCopilot-Share/syp-projekte/nook/nook-zwischenpraesentation.pptx"
+      ]
+    },
+    {
+      "project_slug": "openmask",
+      "file_count": 11,
+      "total_size_bytes": 1115231673,
+      "types": [
+        [
+          "presentation",
+          3
+        ],
+        [
+          "pdf-other",
+          2
+        ],
+        [
+          "video",
+          2
+        ],
+        [
+          "proposal",
+          1
+        ],
+        [
+          "image",
+          1
+        ],
+        [
+          "poster",
+          1
+        ],
+        [
+          "planning",
+          1
+        ]
+      ],
+      "files": [
+        "_SYPCopilot-Share/syp-projekte/openmask/openmask-abschlusspraesentation.pptx",
+        "_SYPCopilot-Share/syp-projekte/openmask/openmask-antrag.pdf",
+        "_SYPCopilot-Share/syp-projekte/openmask/openmask-da.pdf",
+        "_SYPCopilot-Share/syp-projekte/openmask/openmask-ideenpraesentation.pdf",
+        "_SYPCopilot-Share/syp-projekte/openmask/openmask-jahrbucheintrag.pdf",
+        "_SYPCopilot-Share/syp-projekte/openmask/openmask-logo.png",
+        "_SYPCopilot-Share/syp-projekte/openmask/openmask-poster.pdf",
+        "_SYPCopilot-Share/syp-projekte/openmask/openmask-video-kurz.mp4",
+        "_SYPCopilot-Share/syp-projekte/openmask/openmask-video-lang.mp4",
+        "_SYPCopilot-Share/syp-projekte/openmask/openmask-vorstudie.pdf",
+        "_SYPCopilot-Share/syp-projekte/openmask/openmask-zwischenpraesentation.pptx"
+      ]
+    },
+    {
+      "project_slug": "resona",
+      "file_count": 9,
+      "total_size_bytes": 587825406,
+      "types": [
+        [
+          "presentation",
+          2
+        ],
+        [
+          "video",
+          2
+        ],
+        [
+          "proposal",
+          1
+        ],
+        [
+          "planning",
+          1
+        ],
+        [
+          "thesis",
+          1
+        ],
+        [
+          "image",
+          1
+        ],
+        [
+          "poster",
+          1
+        ]
+      ],
+      "files": [
+        "_SYPCopilot-Share/syp-projekte/resona/resona-antrag.pdf",
+        "_SYPCopilot-Share/syp-projekte/resona/resona-charter.pdf",
+        "_SYPCopilot-Share/syp-projekte/resona/resona-diplomaidea.pptx",
+        "_SYPCopilot-Share/syp-projekte/resona/resona-diplomarbeit.pdf",
+        "_SYPCopilot-Share/syp-projekte/resona/resona-logo.png",
+        "_SYPCopilot-Share/syp-projekte/resona/resona-poster.pdf",
+        "_SYPCopilot-Share/syp-projekte/resona/resona-projectreview.pptx",
+        "_SYPCopilot-Share/syp-projekte/resona/resona-video-kurz.mov",
+        "_SYPCopilot-Share/syp-projekte/resona/resona-video-lang.mp4"
+      ]
+    },
+    {
+      "project_slug": "roomsense",
+      "file_count": 9,
+      "total_size_bytes": 243398346,
+      "types": [
+        [
+          "video",
+          2
+        ],
+        [
+          "pdf-other",
+          1
+        ],
+        [
+          "thesis",
+          1
+        ],
+        [
+          "presentation",
+          1
+        ],
+        [
+          "image",
+          1
+        ],
+        [
+          "poster",
+          1
+        ],
+        [
+          "proposal",
+          1
+        ],
+        [
+          "report",
+          1
+        ]
+      ],
+      "files": [
+        "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-acceptance-protocol.pdf",
+        "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-diplomarbeit.pdf",
+        "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-ideenpräsentation.pdf",
+        "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-logo.png",
+        "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-poster.pdf",
+        "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-projekt-antrag.pdf",
+        "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-projektbericht.pdf",
+        "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-video-kurz.mp4",
+        "_SYPCopilot-Share/syp-projekte/roomsense/roomsense-video-lang.mp4"
+      ]
+    },
+    {
+      "project_slug": "syp-unterlagen",
+      "file_count": 1,
+      "total_size_bytes": 44396212,
+      "types": [
+        [
+          "pdf-other",
+          1
+        ]
+      ],
+      "files": [
+        "_SYPCopilot-Share/syp-unterlagen/SYP-Buch-3te.pdf"
+      ]
+    }
+  ]
+}

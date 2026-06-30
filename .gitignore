@@ -1,0 +1,5 @@
+# Local corpus inputs and extracted raw material
+*.zip
+.planning/corpus/raw/
+.planning/corpus/tmp/
+__pycache__/
