@@ -13,7 +13,7 @@ Build the product in four vertical MVP phases. Start by discovering the real cor
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Corpus Discovery and Design Approval** - Inspect the archive and confirm the ingestion/retrieval design before indexing.
+- [x] **Phase 1: Corpus Discovery and Design Approval** - Inspect the archive and confirm the ingestion/retrieval design before indexing. (completed 2026-06-30)
 - [ ] **Phase 2: Template and Cloud Foundation** - Set up the Vercel Chatbot baseline, cloud configuration, and test harness.
 - [ ] **Phase 3: Ingestion and Hybrid Retrieval Engine** - Build idempotent corpus indexing and Qdrant hybrid retrieval.
 - [ ] **Phase 4: Grounded Ideation Flows and Proposal Artifact** - Deliver both chat modes, citations, quality checks, and the custom artifact.
@@ -117,7 +117,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Corpus Discovery and Design Approval | 3/3 | Needs approval | - |
+| 1. Corpus Discovery and Design Approval | 3/3 | Complete    | 2026-06-30 |
 | 2. Template and Cloud Foundation | 0/3 | Not started | - |
 | 3. Ingestion and Hybrid Retrieval Engine | 0/3 | Not started | - |
 | 4. Grounded Ideation Flows and Proposal Artifact | 0/3 | Not started | - |

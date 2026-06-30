@@ -1,15 +1,15 @@
 ---
-status: human_needed
+status: passed
 phase: 1
 phase_name: Corpus Discovery and Design Approval
 checked_at: "2026-06-30T21:06:00Z"
 automated_checks: passed
-human_verification_count: 1
+human_verification_count: 0
 ---
 
 # Phase 1 Verification: Corpus Discovery and Design Approval
 
-Automated verification passed, but Phase 1 requires human approval before it can be closed.
+Automated verification passed and the user approved the corpus-derived indexing contract on 2026-06-30.
 
 ## Automated Checks
 
@@ -31,11 +31,9 @@ Automated verification passed, but Phase 1 requires human approval before it can
 | CORP-02 | passed | Inventory includes file types, project folders, language signals, and metadata evidence |
 | CORP-03 | passed | Content samples include text yield, visual density, OCR candidates, and parsing notes |
 | CORP-04 | passed | Corpus Report includes proposed ingestion, metadata, chunking, retrieval, and embedding design |
-| CORP-05 | human_needed | User approval or requested changes are still required before indexing |
+| CORP-05 | passed | User approved the proposed corpus design on 2026-06-30 |
 
 ## Human Verification
 
-Review `.planning/corpus/CORPUS-REPORT.md` and `.planning/corpus/APPROVAL-MANIFEST.json`, then approve the proposed choices or request changes.
-
-Approval is required for embedding model and vector dimensions, OCR/multimodal strategy, metadata schema fields, chunking rules, sparse tokenization strategy, Qdrant payload indexes, and citation provenance fields.
+Passed. User approved the proposed choices on 2026-06-30. `.planning/corpus/APPROVAL-MANIFEST.json` now has `status: approved` and `blocked_downstream: false`.
 

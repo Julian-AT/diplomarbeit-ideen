@@ -1,8 +1,8 @@
 {
   "generated_at": "2026-06-30T21:08:44+00:00",
-  "status": "pending_user_approval",
+  "status": "approved",
   "phase": 1,
-  "blocked_downstream": true,
+  "blocked_downstream": false,
   "approval_required_for": [
     "embedding model and vector dimensions",
     "OCR/multimodal strategy",
@@ -83,5 +83,8 @@
     ".planning/corpus/content-samples.json",
     ".planning/corpus/proposed-schema.json",
     ".planning/corpus/CORPUS-REPORT.md"
-  ]
+  ],
+  "approved_at": "2026-06-30T21:10:00Z",
+  "approved_by": "user",
+  "approval_note": "User replied approved in the autonomous workflow approval checkpoint."
 }

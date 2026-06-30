@@ -2,19 +2,19 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 1
-current_phase_name: Corpus Discovery and Design Approval
-status: human_needed
-stopped_at: Phase 1 corpus design approval checkpoint
-last_updated: "2026-06-30T21:06:00Z"
+current_phase: 2
+current_phase_name: Template and Cloud Foundation
+status: ready_for_discuss
+stopped_at: Phase 2 context needed
+last_updated: "2026-06-30T21:12:37.060Z"
 last_activity: 2026-06-30
-last_activity_desc: Corpus archive discovered, unpacked, characterized, and reported; user approval required before indexing.
+last_activity_desc: Phase 1 complete, transitioned to Phase 2
 progress:
   total_phases: 4
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
   completed_plans: 3
-  percent: 0
+  percent: 25
 ---
 
 # Project State
@@ -28,12 +28,12 @@ See: .planning/PROJECT.md (updated 2026-06-30)
 
 ## Current Position
 
-Phase: 1 of 4 (Corpus Discovery and Design Approval)
-Plan: 3 of 3 in current phase
-Status: Human approval needed - corpus design approval checkpoint
-Last activity: 2026-06-30 - Corpus archive discovered, unpacked, characterized, and reported; approval is required before indexing or downstream phases.
+Phase: 2 of 4 (Template and Cloud Foundation)
+Plan: 0 of 3 in current phase
+Status: Ready to discuss
+Last activity: 2026-06-30 — Phase 1 complete, transitioned to Phase 2
 
-Progress: [----------] 0%
+Progress: [##--------] 25%
 
 ## Performance Metrics
 
@@ -72,13 +72,11 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-- Review `.planning/corpus/CORPUS-REPORT.md` and `.planning/corpus/APPROVAL-MANIFEST.json`.
-- Approve or request changes to embedding model/dimensions, OCR/multimodal strategy, metadata schema, chunking, sparse tokenization, Qdrant payload indexes, and citation provenance fields.
+- Gather Phase 2 context for the Vercel Chatbot template and cloud foundation work.
 
 ### Blockers/Concerns
 
-- User confirmation is required after Phase 1 before full indexing.
-- Downstream indexing remains blocked while `.planning/corpus/APPROVAL-MANIFEST.json` has `status: pending_user_approval`.
+None currently.
 
 ## Deferred Items
 
@@ -90,5 +88,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-06-30T21:06:00Z
-Stopped at: Phase 1 corpus design approval checkpoint
-Resume file: .planning/phases/01-corpus-discovery-and-design-approval/01-UAT.md
+Stopped at: Phase 2 context needed
+Resume file: .planning/ROADMAP.md

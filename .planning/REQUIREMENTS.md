@@ -7,11 +7,11 @@
 
 ### Corpus Discovery
 
-- [ ] **CORP-01**: User can run a discovery workflow that locates and unpacks the thesis archive from the project directory.
-- [ ] **CORP-02**: User can view an inventory of archive file types, counts, languages, folder structure, naming conventions, and existing metadata.
-- [ ] **CORP-03**: User can view a content characterization covering text density, visual/slide/diagram density, structure consistency, OCR needs, and missing metadata.
-- [ ] **CORP-04**: User can review a Corpus Report with proposed ingestion, metadata, chunking, retrieval, and embedding design derived from the real corpus.
-- [ ] **CORP-05**: User can approve or request changes to the proposed corpus design before full indexing begins.
+- [x] **CORP-01**: User can run a discovery workflow that locates and unpacks the thesis archive from the project directory.
+- [x] **CORP-02**: User can view an inventory of archive file types, counts, languages, folder structure, naming conventions, and existing metadata.
+- [x] **CORP-03**: User can view a content characterization covering text density, visual/slide/diagram density, structure consistency, OCR needs, and missing metadata.
+- [x] **CORP-04**: User can review a Corpus Report with proposed ingestion, metadata, chunking, retrieval, and embedding design derived from the real corpus.
+- [x] **CORP-05**: User can approve or request changes to the proposed corpus design before full indexing begins.
 
 ### Foundation
 
@@ -78,11 +78,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CORP-01 | Phase 1 | Pending |
-| CORP-02 | Phase 1 | Pending |
-| CORP-03 | Phase 1 | Pending |
-| CORP-04 | Phase 1 | Pending |
-| CORP-05 | Phase 1 | Pending |
+| CORP-01 | Phase 1 | Complete |
+| CORP-02 | Phase 1 | Complete |
+| CORP-03 | Phase 1 | Complete |
+| CORP-04 | Phase 1 | Complete |
+| CORP-05 | Phase 1 | Complete |
 | FND-01 | Phase 2 | Pending |
 | FND-02 | Phase 2 | Pending |
 | FND-03 | Phase 2 | Pending |
@@ -101,6 +101,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | QUAL-03 | Phase 4 | Pending |
 
 **Coverage:**
+
 - v1 requirements: 21 total
 - Mapped to phases: 21
 - Unmapped: 0
