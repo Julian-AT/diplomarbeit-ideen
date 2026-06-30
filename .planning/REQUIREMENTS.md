@@ -15,9 +15,9 @@
 
 ### Foundation
 
-- [ ] **FND-01**: Developer can set up the Vercel Chatbot template while preserving auth, persistence, multimodal input, artifacts, and in-browser code execution.
-- [ ] **FND-02**: Developer can validate required environment configuration for Vercel, Qdrant Cloud, Neon Postgres, and Gemini embeddings before runtime or ingestion work.
-- [ ] **FND-03**: Developer can run focused Vitest and Playwright test commands in the project.
+- [x] **FND-01**: Developer can set up the Vercel Chatbot template while preserving auth, persistence, multimodal input, artifacts, and in-browser code execution.
+- [x] **FND-02**: Developer can validate required environment configuration for Vercel, Qdrant Cloud, Neon Postgres, and Gemini embeddings before runtime or ingestion work.
+- [x] **FND-03**: Developer can run focused Vitest and Playwright test commands in the project.
 
 ### Retrieval Engine
 
@@ -83,9 +83,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CORP-03 | Phase 1 | Complete |
 | CORP-04 | Phase 1 | Complete |
 | CORP-05 | Phase 1 | Complete |
-| FND-01 | Phase 2 | Pending |
-| FND-02 | Phase 2 | Pending |
-| FND-03 | Phase 2 | Pending |
+| FND-01 | Phase 2 | Complete |
+| FND-02 | Phase 2 | Complete |
+| FND-03 | Phase 2 | Complete |
 | RETR-01 | Phase 3 | Pending |
 | RETR-02 | Phase 3 | Pending |
 | RETR-03 | Phase 3 | Pending |
