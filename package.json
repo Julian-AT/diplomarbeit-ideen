@@ -20,7 +20,10 @@
     "test:e2e": "cross-env PLAYWRIGHT=True pnpm exec playwright test",
     "typecheck": "tsc --noEmit",
     "env:check": "tsx scripts/validate-env.ts",
-    "env:check:example": "tsx scripts/validate-env.ts --example"
+    "env:check:example": "tsx scripts/validate-env.ts --example",
+    "corpus:extract": "python scripts/extract-corpus-text.py",
+    "corpus:ingest:dry-run": "tsx scripts/ingest-corpus.ts --dry-run --mock-embeddings",
+    "corpus:ingest": "tsx scripts/ingest-corpus.ts --upsert"
   },
   "dependencies": {
     "@ai-sdk/provider": "^3.0.3",

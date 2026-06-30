@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Corpus Discovery and Design Approval** - Inspect the archive and confirm the ingestion/retrieval design before indexing. (completed 2026-06-30)
 - [x] **Phase 2: Template and Cloud Foundation** - Set up the Vercel Chatbot baseline, cloud configuration, and test harness. (completed 2026-06-30)
-- [ ] **Phase 3: Ingestion and Hybrid Retrieval Engine** - Build idempotent corpus indexing and Qdrant hybrid retrieval.
+- [x] **Phase 3: Ingestion and Hybrid Retrieval Engine** - Build idempotent corpus indexing and Qdrant hybrid retrieval. (completed 2026-06-30)
 - [ ] **Phase 4: Grounded Ideation Flows and Proposal Artifact** - Deliver both chat modes, citations, quality checks, and the custom artifact.
 
 ## Phase Details
@@ -82,9 +82,9 @@ Plans:
 
 Plans:
 
-- [ ] 03-01: Implement corpus-derived extraction, chunking, metadata, and deterministic IDs.
-- [ ] 03-02: Create Qdrant collection, sparse/dense indexing, payload indexes, and idempotent upserts.
-- [ ] 03-03: Implement retrieval wrapper and focused unit tests.
+- [x] 03-01: Implement corpus-derived extraction, chunking, metadata, and deterministic IDs.
+- [x] 03-02: Create Qdrant collection, sparse/dense indexing, payload indexes, and idempotent upserts.
+- [x] 03-03: Implement retrieval wrapper and focused unit tests.
 
 ### Phase 4: Grounded Ideation Flows and Proposal Artifact
 
@@ -119,5 +119,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Corpus Discovery and Design Approval | 3/3 | Complete    | 2026-06-30 |
 | 2. Template and Cloud Foundation | 3/3 | Complete    | 2026-06-30 |
-| 3. Ingestion and Hybrid Retrieval Engine | 0/3 | Not started | - |
+| 3. Ingestion and Hybrid Retrieval Engine | 3/3 | Complete    | 2026-06-30 |
 | 4. Grounded Ideation Flows and Proposal Artifact | 0/3 | Not started | - |

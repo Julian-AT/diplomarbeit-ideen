@@ -41,3 +41,5 @@ __pycache__/
 *.zip
 .planning/corpus/raw/
 .planning/corpus/tmp/
+.planning/corpus/extracted/
+.planning/corpus/index/

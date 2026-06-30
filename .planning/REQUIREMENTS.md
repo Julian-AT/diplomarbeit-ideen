@@ -21,10 +21,10 @@
 
 ### Retrieval Engine
 
-- [ ] **RETR-01**: Developer can run an idempotent ingestion CLI after the corpus design is approved.
-- [ ] **RETR-02**: The Qdrant collection stores chunk-level points with dense vectors, sparse vectors, and corpus-derived payload metadata.
-- [ ] **RETR-03**: The retrieval wrapper can execute hybrid dense+sparse searches with RRF fusion and confirmed payload filters.
-- [ ] **RETR-04**: Retrieval results include structured provenance with thesis ID, chunk ID, title, source path, excerpt, and any available metadata.
+- [x] **RETR-01**: Developer can run an idempotent ingestion CLI after the corpus design is approved.
+- [x] **RETR-02**: The Qdrant collection stores chunk-level points with dense vectors, sparse vectors, and corpus-derived payload metadata.
+- [x] **RETR-03**: The retrieval wrapper can execute hybrid dense+sparse searches with RRF fusion and confirmed payload filters.
+- [x] **RETR-04**: Retrieval results include structured provenance with thesis ID, chunk ID, title, source path, excerpt, and any available metadata.
 
 ### Chat Flows
 
@@ -40,7 +40,7 @@
 
 ### Quality
 
-- [ ] **QUAL-01**: Developer can run unit tests covering chunking, metadata extraction, Qdrant wrapper behavior, and hybrid retrieval/fusion logic.
+- [x] **QUAL-01**: Developer can run unit tests covering chunking, metadata extraction, Qdrant wrapper behavior, and hybrid retrieval/fusion logic.
 - [ ] **QUAL-02**: Developer can run E2E tests covering Spark-to-ideas, Build-on-top, and proposal artifact editing/versioning.
 - [ ] **QUAL-03**: Developer can run or apply a lightweight idea-quality check covering groundedness, novelty, feasibility, scope, and citation quality.
 
@@ -86,17 +86,17 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FND-01 | Phase 2 | Complete |
 | FND-02 | Phase 2 | Complete |
 | FND-03 | Phase 2 | Complete |
-| RETR-01 | Phase 3 | Pending |
-| RETR-02 | Phase 3 | Pending |
-| RETR-03 | Phase 3 | Pending |
-| RETR-04 | Phase 3 | Pending |
+| RETR-01 | Phase 3 | Complete |
+| RETR-02 | Phase 3 | Complete |
+| RETR-03 | Phase 3 | Complete |
+| RETR-04 | Phase 3 | Complete |
 | CHAT-01 | Phase 4 | Pending |
 | CHAT-02 | Phase 4 | Pending |
 | CHAT-03 | Phase 4 | Pending |
 | CHAT-04 | Phase 4 | Pending |
 | ART-01 | Phase 4 | Pending |
 | ART-02 | Phase 4 | Pending |
-| QUAL-01 | Phase 3 | Pending |
+| QUAL-01 | Phase 3 | Complete |
 | QUAL-02 | Phase 4 | Pending |
 | QUAL-03 | Phase 4 | Pending |
 
